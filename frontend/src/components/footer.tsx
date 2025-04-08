@@ -1,8 +1,31 @@
+'use client';
+
 import Image from "next/image";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6"; // for X (Twitter)
 
+import { useState } from 'react';
+
 export default function Footer() {
+  const [form, setForm] = useState({ name: '', brand: '', email: '', number: '', industry: '', services: '' });
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  };
+  
   return (
     <>
       {/* Bottom Section */}
@@ -54,40 +77,52 @@ export default function Footer() {
             </div>
 
             {/* Form Section */}
-            <form className="grid grid-cols-1 gap-2 w-full">
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-2 w-full">
               <label className="text-white text-sm">Your name</label>
               <input
                 type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
                 placeholder="Your name"
                 className="px-4 py-2 rounded text-black"
               />
               <label className="text-white text-sm">Brand Name</label>
               <input
                 type="text"
+                name="brand"
+                value={form.brand}
+                onChange={handleChange}
                 placeholder="Brand Name"
                 className="px-4 py-2 rounded text-black"
               />
               <label className="text-white text-sm">Email</label>
               <input
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder="Email"
                 className="px-4 py-2 rounded text-black"
               />
               <label className="text-white text-sm">Whatsapp Number</label>
               <input
                 type="text"
+                name="number"
+                value={form.number}
+                onChange={handleChange}
                 placeholder="Whatsapp Number"
                 className="px-4 py-2 rounded text-black"
               />
               <label className="text-white text-sm">Industry</label>
-              <select className="px-4 py-2 rounded text-black">
+              <select className="px-4 py-2 rounded text-black" name="industry" onChange={handleChange} value={form.industry}>
                 <option>Industry</option>
                 <option>Technology</option>
                 <option>Health</option>
                 <option>Education</option>
               </select>
               <label className="text-white text-sm">Services</label>
-              <select className="px-4 py-2 rounded text-black">
+              <select className="px-4 py-2 rounded text-black" name="services" onChange={handleChange} value={form.services}>
                 <option>Services</option>
                 <option>Meta Ads</option>
                 <option>Website Development</option>
