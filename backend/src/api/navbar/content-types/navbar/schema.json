@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navbars",
+  "info": {
+    "singularName": "navbar",
+    "pluralName": "navbars",
+    "displayName": "Navbar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "menu": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "menu"
+    }
+  }
+}
