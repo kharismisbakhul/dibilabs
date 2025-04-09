@@ -38,7 +38,7 @@ export default function Footer() {
               <div className="relative w-full max-w-3xl z-10 overflow-visible">
                 {/* Bubble Image */}
                 <Image
-                  src="/bubble.png"
+                  src="/assets/core/bubble.png"
                   alt="Speech Bubble"
                   width={600}
                   height={400}
@@ -67,7 +67,7 @@ export default function Footer() {
               {/* Mascot centered below the bubble */}
               <div className="absolute -bottom-11 right-[130px] w-[500px] z-30">
                 <Image
-                  src="/mascot.png"
+                  src="/assets/core/mascot.png"
                   alt="Mascot"
                   width={400}
                   height={400}
@@ -153,12 +153,14 @@ export default function Footer() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
             {/* Column 1 - Branding */}
             <div>
-              <Image
-                src="/logo.png"
-                alt="Dibilabs Logo"
-                width={120}
-                height={40}
-              />
+              <a href="/homepage">
+                <Image
+                  src="/assets/core/logo.png"
+                  alt="Dibilabs Logo"
+                  width={120}
+                  height={40}
+                />
+              </a>
               <br />
               <p className="text-sm mb-4">
                 Dibilabs.id is a Digital <br />
