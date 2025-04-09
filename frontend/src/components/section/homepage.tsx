@@ -427,7 +427,7 @@ export default function Homepage() {
         </div> */}
       </section>
 
-      {/* Article */}
+      {/* Article Desc*/}
       <section className="relative bg-white pt-16 pb-10">
         {/* Top-right SVG illustration */}
         <Image
@@ -452,10 +452,25 @@ export default function Homepage() {
             </p>
           </div>
 
+        </div>
+
+        {/* YUM! Badge SVG */}
+        <Image
+          src="/yum.svg"
+          alt="YUM Badge"
+          width={100}
+          height={100}
+          className="absolute right-6 bottom-16 z-0 pointer-events-none"
+        />
+      </section>
+
+      {/* Article */}
+
+      <section className="relative bg-white">
           {/* Article cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {articles.map((item, idx) => (
-              <div key={idx} className="relative h-64 overflow-hidden rounded-md shadow-md">
+              <div key={idx} className="relative h-64 overflow-hidden shadow-md">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -472,23 +487,12 @@ export default function Homepage() {
           </div>
 
           {/* Browse Articles Button */}
-          <div className="flex justify-end">
-            <button className="bg-blue-600 text-white font-medium text-sm px-5 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
+          <div className="flex justify-end pt-8 pb-10 bg-black">
+            <button className="bg-blue-600 text-white font-medium text-sm px-6 mr-8 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
               Browse Articles <span className="text-xl">→</span>
             </button>
           </div>
-        </div>
-
-        {/* YUM! Badge SVG */}
-        <Image
-          src="/yum.svg"
-          alt="YUM Badge"
-          width={100}
-          height={100}
-          className="absolute right-6 bottom-96 z-0 pointer-events-none"
-        />
       </section>
-
       <Footer/>
     </>
   );
