@@ -18,16 +18,16 @@ export default function Navbar() {
               </div>
             </a>
             <ul className="hidden md:flex gap-20 font-medium">
-              <li className="cursor-pointer">
+              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
                 <a href="/about">About Us</a>
               </li>
-              <li className="cursor-pointer">
+              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
                 <a href="/service">Services</a>
               </li>
-              <li className="cursor-pointer">
+              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
                 <a href="/article">Article</a>
               </li>
-              <li className="cursor-pointer">
+              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
                 <a href="/contact">Contact Us</a>
               </li>
             </ul>
