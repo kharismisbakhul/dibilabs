@@ -1,14 +1,14 @@
-import Service from "@/components/section/service";
+import Webdev from "@/components/section/service/menu/webdev";
 
 export const metadata = {
-  title: "Services",
+  title: "Service - Website Development",
   description: "Read the latest news and updates from our brand.",
 };
 
 export default function Home() {
   return (
     <>
-      <Service/>
+      <Webdev/>
     </>
   );
 }

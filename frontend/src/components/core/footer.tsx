@@ -177,22 +177,22 @@ export default function Footer() {
               <h3 className="font-semibold">Services</h3>
               <ul className="text-sm space-y-1 mt-2">
                 <li>
-                  <a href="/meta">Meta Ads</a>
+                  <a href="/service/meta">Meta Ads</a>
                 </li>
                 <li>
-                  <a href="/google">Google Ads</a>
+                  <a href="/service/google">Google Ads</a>
                 </li>
                 <li>
-                  <a href="/sosmed">Social Media Management</a>
+                  <a href="/service/sosmed">Social Media Management</a>
                 </li>
                 <li>
-                  <a href="/seo">Search Engine Optimization Service</a>
+                  <a href="/service/seo">Search Engine Optimization Service</a>
                 </li>
                 <li>
-                  <a href="/software">Software and Web App Development</a>
+                  <a href="/service/software">Software and Web App Development</a>
                 </li>
                 <li>
-                  <a href="/webdev">Website Development</a>
+                  <a href="/service/webdev">Website Development</a>
                 </li>
               </ul>
             </div>

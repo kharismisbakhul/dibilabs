@@ -1,14 +1,14 @@
-import Service from "@/components/section/service";
+import Seo from "@/components/section/service/menu/seo";
 
 export const metadata = {
-  title: "Services",
+  title: "Service - SEO",
   description: "Read the latest news and updates from our brand.",
 };
 
 export default function Home() {
   return (
     <>
-      <Service/>
+      <Seo/>
     </>
   );
 }

@@ -13,8 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dibilabs",
-  description: "Digital Marketing Agency",
+  title: {
+    default: "Dibilabs",              // Fallback title
+    template: "%s | Dibilabs",        // Title format
+  },
+  description: "Your digital marketing agency partner to develop your products.",
+  keywords: "blog, news, marketing, ads, development, web, apps, seo",
 };
 
 export default function RootLayout({
