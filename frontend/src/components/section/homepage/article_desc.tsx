@@ -9,9 +9,9 @@ export default function Article_desc() {
         <Image
           src="/assets/homepage/bite-cookies.svg"
           alt="Bite Cookie"
-          width={400}
-          height={400}
-          className="absolute top-0 right-0 z-0 pointer-events-none"
+          width={500}
+          height={500}
+          className="absolute -top-[100px] right-0 z-20 pointer-events-none"
         />
 
         {/* Content container */}
@@ -35,9 +35,9 @@ export default function Article_desc() {
         <Image
           src="/assets/homepage/yum.svg"
           alt="YUM Badge"
-          width={100}
-          height={100}
-          className="absolute right-6 bottom-16 z-0 pointer-events-none"
+          width={150}
+          height={150}
+          className="absolute right-6 bottom-24 z-0 pointer-events-none"
         />
       </section>
     </>

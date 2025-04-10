@@ -16,10 +16,9 @@ export default function Services() {
 
         {/* Orange Section */}
         <div className="bg-orange-500 pt-[10vw] pb-[12vw] py-6 px-6 text-white text-center relative">
-          <h2 className="text-2xl md:text-3xl font-semibold">
-            We offer a wide array of services to assist your
-            <br />
-            <span className="font-bold">Digital Marketing Journey</span>
+          <h2 className="text-2xl md:text-3xl">
+            We offer a wide array of services to assist <br />
+            your <span className="font-extrabold text-4xl">Digital Marketing Journey</span>
           </h2>
           <Image
             src="/assets/homepage/right_bubble_white.svg"
@@ -32,7 +31,7 @@ export default function Services() {
 
         {/* Black Cards Section */}
         <div className="bg-orange-500">
-          <div className="bg-[#1A1617] rounded-t-[60px] py-14 px-4 md:px-10 text-white text-center relative z-10">
+          <div className="bg-black rounded-t-[60px] py-14 px-4 md:px-10 text-white text-center relative z-10 pb-[200px]">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
