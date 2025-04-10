@@ -1,9 +1,9 @@
-import Ads from "@/components/section/ads";
+import Google from "@/components/section/google";
 
 export default function Home() {
   return (
     <>
-      <Ads/>
+      <Google/>
     </>
   );
 }
