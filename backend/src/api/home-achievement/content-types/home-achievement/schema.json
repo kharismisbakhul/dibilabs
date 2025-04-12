@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_achievements",
+  "info": {
+    "singularName": "home-achievement",
+    "pluralName": "home-achievements",
+    "displayName": "HomeAchievement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "color": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

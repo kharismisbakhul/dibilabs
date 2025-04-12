@@ -37,12 +37,6 @@
     "cta_link": {
       "type": "text"
     },
-    "service": {
-      "displayName": "Service",
-      "type": "component",
-      "repeatable": false,
-      "component": "service.service"
-    },
     "testimonials": {
       "type": "dynamiczone",
       "components": [
