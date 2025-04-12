@@ -1,103 +1,102 @@
-import React from "react";
 import Image from "next/image";
 
-const services = [
-  {
-    title: "Digital Advertising",
-    bgColor: "bg-black",
-    textColor: "text-white",
-    buttonColor: "bg-[#f26322] text-white",
-    arrowColor: "text-white",
-    size: "w-64 h-64",
-    position: "top-[80px] left-[-20px]",
-  },
-  {
-    title: "Social Media Handling",
-    bgColor: "bg-[#004785]",
-    textColor: "text-white",
-    buttonColor: "bg-white text-black",
-    arrowColor: "text-[#f26322]",
-    size: "w-52 h-52",
-    position: "top-[60px] right-[20px]",
-  },
-  {
-    title: "Shoppertainment Hacks",
-    bgColor: "bg-[#f26322]",
-    textColor: "text-white",
-    buttonColor: "bg-[#004785] text-white",
-    arrowColor: "text-white",
-    size: "w-60 h-60",
-    position: "top-[220px] right-[10px]",
-  },
-  {
-    title: "Influencer Marketing",
-    bgColor: "bg-[#004785]",
-    textColor: "text-white",
-    buttonColor: "bg-white text-black",
-    arrowColor: "text-[#f26322]",
-    size: "w-72 h-72",
-    position: "top-[300px] left-[-20px]",
-  },
-];
-
 export default function Brand_marketing() {
-    return (
-        <>
-        <div className="relative w-full overflow-hidden bg-white py-10 px-4 md:px-12">
-      {/* Header Text */}
-      <p className="text-black text-center text-sm font-medium mb-2">
-        Creative, Marketing, and Communications
-      </p>
-      <h2 className="text-[#f26322] text-center text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-md">
-        <span className="block text-black -mb-2 relative z-10">Brand and</span>
-        <span className="relative z-10">Marketing Services</span>
-      </h2>
+  return (
+    <>
+      <div className="relative w-full min-h-screen bg-white overflow-hidden">
+        {/* Fullscreen background bubbles */}
+        <div className="relative inset-0 z-20 pointer-events-none">
+          <Image
+            src="/assets/service/bg_dots.svg"
+            alt="Bubbles Background"
+            width={1900}
+            height={1900}
+            className="object-contain"
+            priority
+          />
+        </div>
 
-      {/* Bubbles */}
-      <div className="relative w-full mt-8 min-h-[700px]">
-        {services.map((service, idx) => (
-          <div
-            key={idx}
-            className={`absolute ${service.size} ${service.position} ${service.bgColor} rounded-full flex flex-col items-center justify-center p-4 text-center shadow-lg`}
-          >
-            <h3 className={`font-bold text-lg ${service.textColor}`}>{service.title.split(" ")[0]}</h3>
-            <p className={`text-base ${service.textColor}`}>{service.title.split(" ").slice(1).join(" ")}</p>
-            <a
-              href="#"
-              className={`mt-3 inline-flex items-center px-4 py-1 rounded-full font-semibold text-sm ${service.buttonColor}`}
-            >
-              Learn more <span className={`ml-2 font-bold ${service.arrowColor}`}>→</span>
-            </a>
+        {/* Header Section */}
+        <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-10 text-center z-0">
+          <p className="text-4xl italic text-center font-semibold text-black -rotate-[6deg]">
+            Creative, Marketing, and Communications
+          </p>
+          <div className="mt-2">
+            <Image
+              src="/assets/service/title.svg"
+              alt="Brand and Marketing Services Title"
+              width={1200}
+              height={400}
+            />
           </div>
-        ))}
+        </div>
 
-        {/* Decorative dots or stars */}
-        <Image
-          src="/image.png"
-          alt="Decorative Background"
-          width={600}
-          height={600}
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-60 pointer-events-none"
-        />
-      </div>
+        <div className="absolute z-30 top-[1050px] left-[100px] text-white">
+          <h2 className="text-7xl font-bold">Digital</h2>
+          <p className="text-7xl mb-4">Advertising</p>
+          <button className="bg-orange-500 text-white py-1 px-4 rounded-full text-lg">
+            Learn more →
+          </button>
+        </div>
 
-      {/* Bottom Section */}
-      <div className="mt-10 relative">
+        <div className="absolute z-30 top-[850px] right-[300px] text-white text-center">
+          <h2 className="text-7xl font-semibold">Social Media</h2>
+          <p className="text-7xl mb-4">Handling</p>
+          <button className="bg-white text-blue-800 py-1 px-4 rounded-full text-lg font-semibold">
+            Learn more →
+          </button>
+        </div>
+
+        <div className="absolute z-30 top-[1580px] right-[100px] text-white text-right">
+          <h2 className="text-5xl font-semibold">Shoppertainment</h2>
+          <p className="text-9xl mb-4">Hacks</p>
+          <button className="bg-white text-orange-600 py-1 px-4 rounded-full text-lg font-semibold">
+            Learn more →
+          </button>
+        </div>
+
+        <div className="absolute z-30 top-[2000px] left-[250px] text-white text-center">
+          <h2 className="text-9xl font-bold">Influencer</h2>
+          <p className="text-9xl mb-4">Marketing</p>
+          <button className="bg-white text-blue-700 py-1 px-4 rounded-full text-lg font-semibold">
+            Learn more →
+          </button>
+        </div>
+
         <Image
-          src="/assets/service/office.png"
-          alt="People Collaborating"
-          width={600}
-          height={300}
-          className="relative w-full object-cover"
+          src="/assets/service/office_mask.png"
+          alt="People working"
+          height={1900}
+          width={1900}
+          className="absolute -bottom-[400px] z-0"
+          priority
         />
-        <div className="absolute bottom-4 left-4 text-white">
-          <p className="text-sm font-medium">Digital Infrastructure Solutions</p>
-          <h3 className="text-xl font-bold max-w-sm leading-snug">
-            Streamline and Digitize Your Business Process
-          </h3>
+
+        {/* Overlay content */}
+        <div className="relative z-30 max-w-6xl mx-auto px-4 py-[250px]">
+          <div className="max-w-2xl">
+            <p className="text-xl font-semibold text-white">
+              Digital Infrastructure Solutions
+            </p>
+            <h1 className="text-6xl font-bold leading-tight mt-2 text-white">
+              Streamline and <br />
+              Digitize Your <br />
+              Business Process
+            </h1>
+          </div>
+        </div>
+
+        {/* Floating SVGs on the right */}
+        <div className="absolute bottom-0 right-0 z-30">
+          <Image
+            src="/assets/service/bubble_white.svg"
+            alt="circle 1"
+            width={300}
+            height={300}
+            className="object-contain"
+          />
         </div>
       </div>
-    </div>
-        </>
-    )
+    </>
+  );
 }
