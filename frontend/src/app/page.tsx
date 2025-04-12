@@ -1,7 +1,7 @@
 import Homepage from "@/components/section/homepage";
 
 export const metadata = {
-  title: "Homepage",
+  title: "Homepage | Dibilabs",
   description: "Read the latest news and updates from our brand.",
 };
 
