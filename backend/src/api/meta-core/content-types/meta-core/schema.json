@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meta_cores",
+  "info": {
+    "singularName": "meta-core",
+    "pluralName": "meta-cores",
+    "displayName": "Meta Core"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "background_bubble": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
+    }
+  }
+}

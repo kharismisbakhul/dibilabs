@@ -1,29 +1,27 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_partners",
+  "collectionName": "web_trusted_bies",
   "info": {
-    "singularName": "home-partner",
-    "pluralName": "home-partners",
-    "displayName": "Home Partner",
-    "description": ""
+    "singularName": "web-trusted-by",
+    "pluralName": "web-trusted-bies",
+    "displayName": "Web Trusted By"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "brand": {
       "type": "string"
     },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

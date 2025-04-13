@@ -1,23 +1,20 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_services",
+  "collectionName": "sosmed_trusted_bies",
   "info": {
-    "singularName": "home-service",
-    "pluralName": "home-services",
-    "displayName": "Home Service",
+    "singularName": "sosmed-trusted-by",
+    "pluralName": "sosmed-trusted-bies",
+    "displayName": "Sosmed Trusted By",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "brand": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "icon": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,

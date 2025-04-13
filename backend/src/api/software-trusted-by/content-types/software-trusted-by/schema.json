@@ -1,23 +1,20 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_services",
+  "collectionName": "software_trusted_bies",
   "info": {
-    "singularName": "home-service",
-    "pluralName": "home-services",
-    "displayName": "Home Service",
+    "singularName": "software-trusted-by",
+    "pluralName": "software-trusted-bies",
+    "displayName": "Software Trusted By",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "brand": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "icon": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": false,

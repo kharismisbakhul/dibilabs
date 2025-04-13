@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "web_cores",
+  "info": {
+    "singularName": "web-core",
+    "pluralName": "web-cores",
+    "displayName": "Web Core"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "background_bubble": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
+    }
+  }
+}

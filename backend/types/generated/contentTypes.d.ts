@@ -369,6 +369,64 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutPhotoAboutPhoto extends Struct.SingleTypeSchema {
+  collectionName: 'about_photos';
+  info: {
+    displayName: 'AboutPhoto';
+    pluralName: 'about-photos';
+    singularName: 'about-photo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-photo.about-photo'
+    > &
+      Schema.Attribute.Private;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAboutTeamAboutTeam extends Struct.CollectionTypeSchema {
+  collectionName: 'about_teams';
+  info: {
+    description: '';
+    displayName: 'About Team';
+    pluralName: 'about-teams';
+    singularName: 'about-team';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-team.about-team'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
@@ -404,11 +462,108 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGoogleAchievementGoogleAchievement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'google_achievements';
+  info: {
+    displayName: 'Google Achievement';
+    pluralName: 'google-achievements';
+    singularName: 'google-achievement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    achievement: Schema.Attribute.String;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::google-achievement.google-achievement'
+    > &
+      Schema.Attribute.Private;
+    parameter: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGoogleCoreGoogleCore extends Struct.CollectionTypeSchema {
+  collectionName: 'google_cores';
+  info: {
+    displayName: 'Google Core';
+    pluralName: 'google-cores';
+    singularName: 'google-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_bubble: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::google-core.google-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiGoogleTrustedByGoogleTrustedBy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'google_trusted_bies';
+  info: {
+    displayName: 'Google Trusted By';
+    pluralName: 'google-trusted-bies';
+    singularName: 'google-trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::google-trusted-by.google-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeAchievementHomeAchievement
   extends Struct.CollectionTypeSchema {
   collectionName: 'home_achievements';
   info: {
-    displayName: 'HomeAchievement';
+    description: '';
+    displayName: 'Home Achievement';
     pluralName: 'home-achievements';
     singularName: 'home-achievement';
   };
@@ -416,7 +571,7 @@ export interface ApiHomeAchievementHomeAchievement
     draftAndPublish: true;
   };
   attributes: {
-    color: Schema.Attribute.String;
+    background_color: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -439,7 +594,8 @@ export interface ApiHomeAchievementHomeAchievement
 export interface ApiHomePartnerHomePartner extends Struct.CollectionTypeSchema {
   collectionName: 'home_partners';
   info: {
-    displayName: 'HomePartner';
+    description: '';
+    displayName: 'Home Partner';
     pluralName: 'home-partners';
     singularName: 'home-partner';
   };
@@ -468,7 +624,8 @@ export interface ApiHomePartnerHomePartner extends Struct.CollectionTypeSchema {
 export interface ApiHomeServiceHomeService extends Struct.CollectionTypeSchema {
   collectionName: 'home_services';
   info: {
-    displayName: 'HomeService';
+    description: '';
+    displayName: 'Home Service';
     pluralName: 'home-services';
     singularName: 'home-service';
   };
@@ -495,41 +652,524 @@ export interface ApiHomeServiceHomeService extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
-  collectionName: 'landing_pages';
+export interface ApiMetaAchievementMetaAchievement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'meta_achievements';
   info: {
-    description: '';
-    displayName: 'Landing';
-    pluralName: 'landing-pages';
-    singularName: 'landing-page';
+    displayName: 'Meta Achievement';
+    pluralName: 'meta-achievements';
+    singularName: 'meta-achievement';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    created: Schema.Attribute.DateTime;
+    achievement: Schema.Attribute.String;
+    background_color: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    cta_link: Schema.Attribute.Text;
-    cta_text: Schema.Attribute.Text;
-    description: Schema.Attribute.Blocks;
-    hero_image: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
-    is_published: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::landing-page.landing-page'
+      'api::meta-achievement.meta-achievement'
     > &
       Schema.Attribute.Private;
-    meta_description: Schema.Attribute.RichText;
-    meta_title: Schema.Attribute.String;
+    parameter: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    subtitle: Schema.Attribute.String;
-    testimonials: Schema.Attribute.DynamicZone<['testimonial.testimonials']>;
+    text_color: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMetaCoreMetaCore extends Struct.CollectionTypeSchema {
+  collectionName: 'meta_cores';
+  info: {
+    displayName: 'Meta Core';
+    pluralName: 'meta-cores';
+    singularName: 'meta-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_bubble: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::meta-core.meta-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMetaTrustedByMetaTrustedBy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'meta_trusted_bies';
+  info: {
+    displayName: 'Meta Trusted By';
+    pluralName: 'meta-trusted-bies';
+    singularName: 'meta-trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::meta-trusted-by.meta-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSeoAchievementSeoAchievement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'seo_achievements';
+  info: {
+    displayName: 'SEO Achievement';
+    pluralName: 'seo-achievements';
+    singularName: 'seo-achievement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::seo-achievement.seo-achievement'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ApiSeoCoreSeoCore extends Struct.CollectionTypeSchema {
+  collectionName: 'seo_cores';
+  info: {
+    displayName: 'SEO Core';
+    pluralName: 'seo-cores';
+    singularName: 'seo-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_bubble: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::seo-core.seo-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSeoTrustedBySeoTrustedBy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'seo_trusted_bies';
+  info: {
+    displayName: 'SEO Trusted By';
+    pluralName: 'seo-trusted-bies';
+    singularName: 'seo-trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::seo-trusted-by.seo-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServiceCardServiceCard extends Struct.CollectionTypeSchema {
+  collectionName: 'service_cards';
+  info: {
+    description: '';
+    displayName: 'Service Card';
+    pluralName: 'service-cards';
+    singularName: 'service-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_color: Schema.Attribute.String;
+    button_color: Schema.Attribute.String;
+    button_text_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-card.service-card'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServiceListServiceList extends Struct.CollectionTypeSchema {
+  collectionName: 'service_lists';
+  info: {
+    description: '';
+    displayName: 'Service List';
+    pluralName: 'service-lists';
+    singularName: 'service-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_color: Schema.Attribute.String;
+    button_color: Schema.Attribute.String;
+    button_text_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-list.service-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServicesCoreServicesCore
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'services_cores';
+  info: {
+    description: '';
+    displayName: 'Services Core';
+    pluralName: 'services-cores';
+    singularName: 'services-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    background_color: Schema.Attribute.String;
+    background_image_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services-core.services-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text1: Schema.Attribute.String;
+    text2: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSoftwareCoreSoftwareCore
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'software_cores';
+  info: {
+    description: '';
+    displayName: 'Software Core';
+    pluralName: 'software-cores';
+    singularName: 'software-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_bubble: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::software-core.software-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSoftwareTrustedBySoftwareTrustedBy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'software_trusted_bies';
+  info: {
+    description: '';
+    displayName: 'Software Trusted By';
+    pluralName: 'software-trusted-bies';
+    singularName: 'software-trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::software-trusted-by.software-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSosmedAchievementSosmedAchievement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sosmed_achievements';
+  info: {
+    description: '';
+    displayName: 'Sosmed Achievement';
+    pluralName: 'sosmed-achievements';
+    singularName: 'sosmed-achievement';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    achievement: Schema.Attribute.String;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sosmed-achievement.sosmed-achievement'
+    > &
+      Schema.Attribute.Private;
+    parameter: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSosmedCoreSosmedCore extends Struct.CollectionTypeSchema {
+  collectionName: 'sosmed_cores';
+  info: {
+    description: '';
+    displayName: 'Sosmed Core';
+    pluralName: 'sosmed-cores';
+    singularName: 'sosmed-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_bubble: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sosmed-core.sosmed-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSosmedTrustedBySosmedTrustedBy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sosmed_trusted_bies';
+  info: {
+    description: '';
+    displayName: 'Sosmed Trusted By';
+    pluralName: 'sosmed-trusted-bies';
+    singularName: 'sosmed-trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sosmed-trusted-by.sosmed-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebCoreWebCore extends Struct.CollectionTypeSchema {
+  collectionName: 'web_cores';
+  info: {
+    displayName: 'Web Core';
+    pluralName: 'web-cores';
+    singularName: 'web-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background_bubble: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::web-core.web-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_color: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebTrustedByWebTrustedBy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'web_trusted_bies';
+  info: {
+    displayName: 'Web Trusted By';
+    pluralName: 'web-trusted-bies';
+    singularName: 'web-trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::web-trusted-by.web-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1198,11 +1838,31 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-photo.about-photo': ApiAboutPhotoAboutPhoto;
+      'api::about-team.about-team': ApiAboutTeamAboutTeam;
       'api::article.article': ApiArticleArticle;
+      'api::google-achievement.google-achievement': ApiGoogleAchievementGoogleAchievement;
+      'api::google-core.google-core': ApiGoogleCoreGoogleCore;
+      'api::google-trusted-by.google-trusted-by': ApiGoogleTrustedByGoogleTrustedBy;
       'api::home-achievement.home-achievement': ApiHomeAchievementHomeAchievement;
       'api::home-partner.home-partner': ApiHomePartnerHomePartner;
       'api::home-service.home-service': ApiHomeServiceHomeService;
-      'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::meta-achievement.meta-achievement': ApiMetaAchievementMetaAchievement;
+      'api::meta-core.meta-core': ApiMetaCoreMetaCore;
+      'api::meta-trusted-by.meta-trusted-by': ApiMetaTrustedByMetaTrustedBy;
+      'api::seo-achievement.seo-achievement': ApiSeoAchievementSeoAchievement;
+      'api::seo-core.seo-core': ApiSeoCoreSeoCore;
+      'api::seo-trusted-by.seo-trusted-by': ApiSeoTrustedBySeoTrustedBy;
+      'api::service-card.service-card': ApiServiceCardServiceCard;
+      'api::service-list.service-list': ApiServiceListServiceList;
+      'api::services-core.services-core': ApiServicesCoreServicesCore;
+      'api::software-core.software-core': ApiSoftwareCoreSoftwareCore;
+      'api::software-trusted-by.software-trusted-by': ApiSoftwareTrustedBySoftwareTrustedBy;
+      'api::sosmed-achievement.sosmed-achievement': ApiSosmedAchievementSosmedAchievement;
+      'api::sosmed-core.sosmed-core': ApiSosmedCoreSosmedCore;
+      'api::sosmed-trusted-by.sosmed-trusted-by': ApiSosmedTrustedBySosmedTrustedBy;
+      'api::web-core.web-core': ApiWebCoreWebCore;
+      'api::web-trusted-by.web-trusted-by': ApiWebTrustedByWebTrustedBy;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

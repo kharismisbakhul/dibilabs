@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_lists",
+  "info": {
+    "singularName": "service-list",
+    "pluralName": "service-lists",
+    "displayName": "Service List",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "button_color": {
+      "type": "string"
+    },
+    "button_text_color": {
+      "type": "string"
+    }
+  }
+}

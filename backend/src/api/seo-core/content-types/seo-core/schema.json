@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seo_cores",
+  "info": {
+    "singularName": "seo-core",
+    "pluralName": "seo-cores",
+    "displayName": "SEO Core"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "background_bubble": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
+    }
+  }
+}

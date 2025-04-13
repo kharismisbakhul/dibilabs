@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seo_achievements",
+  "info": {
+    "singularName": "seo-achievement",
+    "pluralName": "seo-achievements",
+    "displayName": "SEO Achievement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "background_color": {
+      "type": "string"
+    }
+  }
+}

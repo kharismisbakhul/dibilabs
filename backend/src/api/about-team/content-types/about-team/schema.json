@@ -1,23 +1,20 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_services",
+  "collectionName": "about_teams",
   "info": {
-    "singularName": "home-service",
-    "pluralName": "home-services",
-    "displayName": "Home Service",
+    "singularName": "about-team",
+    "pluralName": "about-teams",
+    "displayName": "About Team",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "icon": {
+    "photo": {
       "type": "media",
       "multiple": false,
       "required": false,

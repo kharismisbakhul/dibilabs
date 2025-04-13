@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "google_cores",
+  "info": {
+    "singularName": "google-core",
+    "pluralName": "google-cores",
+    "displayName": "Google Core"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "background_bubble": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
+    }
+  }
+}

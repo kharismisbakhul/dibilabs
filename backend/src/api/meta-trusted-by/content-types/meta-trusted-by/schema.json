@@ -1,29 +1,27 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_partners",
+  "collectionName": "meta_trusted_bies",
   "info": {
-    "singularName": "home-partner",
-    "pluralName": "home-partners",
-    "displayName": "Home Partner",
-    "description": ""
+    "singularName": "meta-trusted-by",
+    "pluralName": "meta-trusted-bies",
+    "displayName": "Meta Trusted By"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "name": {
+    "brand": {
       "type": "string"
     },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

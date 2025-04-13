@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sosmed_achievements",
+  "info": {
+    "singularName": "sosmed-achievement",
+    "pluralName": "sosmed-achievements",
+    "displayName": "Sosmed Achievement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "achievement": {
+      "type": "string"
+    },
+    "parameter": {
+      "type": "string"
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
+    }
+  }
+}

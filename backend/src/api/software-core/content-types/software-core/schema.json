@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_services",
+  "collectionName": "software_cores",
   "info": {
-    "singularName": "home-service",
-    "pluralName": "home-services",
-    "displayName": "Home Service",
+    "singularName": "software-core",
+    "pluralName": "software-cores",
+    "displayName": "Software Core",
     "description": ""
   },
   "options": {
@@ -17,7 +17,7 @@
     "description": {
       "type": "text"
     },
-    "icon": {
+    "background_bubble": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -27,6 +27,12 @@
         "videos",
         "audios"
       ]
+    },
+    "background_color": {
+      "type": "string"
+    },
+    "text_color": {
+      "type": "string"
     }
   }
 }

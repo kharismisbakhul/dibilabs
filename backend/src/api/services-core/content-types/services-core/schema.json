@@ -1,28 +1,25 @@
 {
   "kind": "collectionType",
-  "collectionName": "home_achievements",
+  "collectionName": "services_cores",
   "info": {
-    "singularName": "home-achievement",
-    "pluralName": "home-achievements",
-    "displayName": "Home Achievement",
+    "singularName": "services-core",
+    "pluralName": "services-cores",
+    "displayName": "Services Core",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "value": {
+    "text1": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "background_color": {
+    "text2": {
       "type": "string"
     },
-    "image": {
+    "background": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -30,6 +27,12 @@
         "videos",
         "audios"
       ]
+    },
+    "background_image_color": {
+      "type": "string"
+    },
+    "background_color": {
+      "type": "string"
     }
   }
 }

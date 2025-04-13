@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_photos",
+  "info": {
+    "singularName": "about-photo",
+    "pluralName": "about-photos",
+    "displayName": "AboutPhoto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
