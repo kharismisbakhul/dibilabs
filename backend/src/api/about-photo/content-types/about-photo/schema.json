@@ -4,21 +4,23 @@
   "info": {
     "singularName": "about-photo",
     "pluralName": "about-photos",
-    "displayName": "AboutPhoto"
+    "displayName": "About Photo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

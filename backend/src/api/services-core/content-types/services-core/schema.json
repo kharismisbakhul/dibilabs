@@ -28,9 +28,6 @@
         "audios"
       ]
     },
-    "background_image_color": {
-      "type": "string"
-    },
     "background_color": {
       "type": "string"
     }

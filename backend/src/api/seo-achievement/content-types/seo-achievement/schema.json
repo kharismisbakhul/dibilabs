@@ -4,7 +4,8 @@
   "info": {
     "singularName": "seo-achievement",
     "pluralName": "seo-achievements",
-    "displayName": "SEO Achievement"
+    "displayName": "SEO Achievement",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,10 +15,21 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "background_color": {
       "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

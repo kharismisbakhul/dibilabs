@@ -372,7 +372,8 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAboutPhotoAboutPhoto extends Struct.SingleTypeSchema {
   collectionName: 'about_photos';
   info: {
-    displayName: 'AboutPhoto';
+    description: '';
+    displayName: 'About Photo';
     pluralName: 'about-photos';
     singularName: 'about-photo';
   };
@@ -497,6 +498,7 @@ export interface ApiGoogleAchievementGoogleAchievement
 export interface ApiGoogleCoreGoogleCore extends Struct.CollectionTypeSchema {
   collectionName: 'google_cores';
   info: {
+    description: '';
     displayName: 'Google Core';
     pluralName: 'google-cores';
     singularName: 'google-core';
@@ -512,7 +514,7 @@ export interface ApiGoogleCoreGoogleCore extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -752,6 +754,7 @@ export interface ApiSeoAchievementSeoAchievement
   extends Struct.CollectionTypeSchema {
   collectionName: 'seo_achievements';
   info: {
+    description: '';
     displayName: 'SEO Achievement';
     pluralName: 'seo-achievements';
     singularName: 'seo-achievement';
@@ -764,7 +767,8 @@ export interface ApiSeoAchievementSeoAchievement
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -855,6 +859,7 @@ export interface ApiServiceCardServiceCard extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    arrow_color: Schema.Attribute.String;
     background_color: Schema.Attribute.String;
     button_color: Schema.Attribute.String;
     button_text_color: Schema.Attribute.String;
@@ -888,6 +893,7 @@ export interface ApiServiceListServiceList extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    arrow_color: Schema.Attribute.String;
     background_color: Schema.Attribute.String;
     button_color: Schema.Attribute.String;
     button_text_color: Schema.Attribute.String;
@@ -927,7 +933,6 @@ export interface ApiServicesCoreServicesCore
       true
     >;
     background_color: Schema.Attribute.String;
-    background_image_color: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1031,6 +1036,7 @@ export interface ApiSosmedAchievementSosmedAchievement
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
