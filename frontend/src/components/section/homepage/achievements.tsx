@@ -5,12 +5,11 @@ export default function Achievements() {
     <>
       <section className="bg-white py-12 px-4 md:px-16 lg:px-24 relative overflow-hidden">
         {/* Top Right Bubble Decoration */}
-        <div className="absolute right-0 top-0 z-0">
+        <div className="absolute right-0 top-0 z-0 w-[180px] h-[180px]">
           <Image
             src="/assets/homepage/right_bubble.svg"
             alt="Bubbles Decoration"
-            width={180}
-            height={180}
+            fill
             className="opacity-80"
           />
         </div>
@@ -78,13 +77,14 @@ export default function Achievements() {
                 <span className="text-lg font-bold">{item.text1}</span>
                 <span className="text-xs">{item.text2}</span>
               </div>
-              <Image
-                src={item.image}
-                alt={item.alt}
-                width={80}
-                height={80}
-                className="mt-4"
-              />
+              <div className="relative w-[100px] h-[100px] mt-4">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           ))}
         </div>

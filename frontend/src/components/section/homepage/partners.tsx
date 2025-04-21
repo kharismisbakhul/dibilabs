@@ -112,13 +112,15 @@ export default function Partners() {
                   key={idx}
                   className="bg-white rounded-xl p-4 flex items-center justify-center shadow-md"
                 >
+                  <div className="relative w-[120px] h-[80px]">
                   <Image
                     src={`/assets/homepage/${logo}`}
                     alt={`Logo ${idx}`}
-                    width={120}
-                    height={80}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-contain"
                   />
+                  </div>
                 </div>
               ))}
             </div>

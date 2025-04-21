@@ -1,31 +1,40 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6"; // for X (Twitter)
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Footer() {
-  const [form, setForm] = useState({ name: '', brand: '', email: '', number: '', industry: '', services: '' });
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const [form, setForm] = useState({
+    name: "",
+    brand: "",
+    email: "",
+    number: "",
+    industry: "",
+    services: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch('/api/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("/api/core/cta", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
 
     const data = await res.json();
     alert(data.message);
   };
-  
+
   return (
     <>
       {/* Bottom Section */}
@@ -77,7 +86,10 @@ export default function Footer() {
             </div>
 
             {/* Form Section */}
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-2 w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 gap-2 w-full"
+            >
               <label className="text-white text-sm">Your name</label>
               <input
                 type="text"
@@ -115,14 +127,24 @@ export default function Footer() {
                 className="px-4 py-2 rounded text-black"
               />
               <label className="text-white text-sm">Industry</label>
-              <select className="px-4 py-2 rounded text-black" name="industry" onChange={handleChange} value={form.industry}>
+              <select
+                className="px-4 py-2 rounded text-black"
+                name="industry"
+                onChange={handleChange}
+                value={form.industry}
+              >
                 <option>Industry</option>
                 <option>Technology</option>
                 <option>Health</option>
                 <option>Education</option>
               </select>
               <label className="text-white text-sm">Services</label>
-              <select className="px-4 py-2 rounded text-black" name="services" onChange={handleChange} value={form.services}>
+              <select
+                className="px-4 py-2 rounded text-black"
+                name="services"
+                onChange={handleChange}
+                value={form.services}
+              >
                 <option>Services</option>
                 <option>Meta Ads</option>
                 <option>Website Development</option>
@@ -154,12 +176,15 @@ export default function Footer() {
             {/* Column 1 - Branding */}
             <div>
               <a href="/homepage">
-                <Image
-                  src="/assets/core/logo.png"
-                  alt="Dibilabs Logo"
-                  width={120}
-                  height={40}
-                />
+                <div className="relative w-[120px] h-[60px]">
+                  <Image
+                    src="/assets/core/logo.png"
+                    alt="Dibilabs Logo"
+                    fill
+                    sizes="(max-width: 768px) 120px, 160px"
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <br />
               <p className="text-sm mb-4">
@@ -189,7 +214,9 @@ export default function Footer() {
                   <a href="/service/seo">Search Engine Optimization Service</a>
                 </li>
                 <li>
-                  <a href="/service/software">Software and Web App Development</a>
+                  <a href="/service/software">
+                    Software and Web App Development
+                  </a>
                 </li>
                 <li>
                   <a href="/service/webdev">Website Development</a>

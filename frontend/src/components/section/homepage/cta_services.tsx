@@ -13,6 +13,7 @@ export default function Cta_services() {
             width={800}
             height={600}
             className="w-full h-full object-cover"
+            priority
           />
         </div>
 

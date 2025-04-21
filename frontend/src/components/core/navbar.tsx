@@ -8,13 +8,16 @@ export default function Navbar() {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between px-6 py-4">
             <a href="/homepage">
-              <div className="flex items-center space-x-2">
-                <Image
-                  src="/assets/core/logo.png"
-                  alt="Dibilabs Logo"
-                  width={120}
-                  height={40}
-                />
+              <div className="flex items-center space-x-2 mt-4">
+                <div className="relative w-[120px] h-[40px]">
+                  <Image
+                    src="/assets/core/logo.png"
+                    alt="Dibilabs Logo"
+                    fill
+                    sizes="(max-width: 768px) 120px, 160px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </a>
             <ul className="hidden md:flex gap-20 font-medium">
