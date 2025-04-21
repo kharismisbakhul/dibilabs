@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "services_cores",
+  "collectionName": "service_cores",
   "info": {
-    "singularName": "services-core",
-    "pluralName": "services-cores",
-    "displayName": "Services Core",
-    "description": ""
+    "singularName": "service-core",
+    "pluralName": "service-cores",
+    "displayName": "Service Core"
   },
   "options": {
     "draftAndPublish": true
@@ -18,15 +17,14 @@
       "type": "string"
     },
     "background": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     },
     "background_color": {
       "type": "string"

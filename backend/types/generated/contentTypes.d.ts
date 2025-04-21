@@ -881,6 +881,39 @@ export interface ApiServiceCardServiceCard extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiServiceCoreServiceCore extends Struct.CollectionTypeSchema {
+  collectionName: 'service_cores';
+  info: {
+    displayName: 'Service Core';
+    pluralName: 'service-cores';
+    singularName: 'service-core';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_color: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-core.service-core'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text1: Schema.Attribute.String;
+    text2: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceListServiceList extends Struct.CollectionTypeSchema {
   collectionName: 'service_lists';
   info: {
@@ -909,42 +942,6 @@ export interface ApiServiceListServiceList extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     text_color: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiServicesCoreServicesCore
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'services_cores';
-  info: {
-    description: '';
-    displayName: 'Services Core';
-    pluralName: 'services-cores';
-    singularName: 'services-core';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    background: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    background_color: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::services-core.services-core'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    text1: Schema.Attribute.String;
-    text2: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1860,8 +1857,8 @@ declare module '@strapi/strapi' {
       'api::seo-core.seo-core': ApiSeoCoreSeoCore;
       'api::seo-trusted-by.seo-trusted-by': ApiSeoTrustedBySeoTrustedBy;
       'api::service-card.service-card': ApiServiceCardServiceCard;
+      'api::service-core.service-core': ApiServiceCoreServiceCore;
       'api::service-list.service-list': ApiServiceListServiceList;
-      'api::services-core.services-core': ApiServicesCoreServicesCore;
       'api::software-core.software-core': ApiSoftwareCoreSoftwareCore;
       'api::software-trusted-by.software-trusted-by': ApiSoftwareTrustedBySoftwareTrustedBy;
       'api::sosmed-achievement.sosmed-achievement': ApiSosmedAchievementSosmedAchievement;
