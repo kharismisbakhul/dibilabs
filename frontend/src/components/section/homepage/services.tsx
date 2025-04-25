@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function Services() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function Services({ data }: Props) {
   return (
     <>
       {/* Services */}
@@ -33,47 +37,31 @@ export default function Services() {
         <div className="bg-orange-500">
           <div className="bg-black rounded-t-[60px] py-14 px-4 md:px-10 text-white text-center relative z-10 pb-[200px]">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Creative, Marketing, & Communication",
-                  desc: "Brand and marketing services, from social media, creative campaigns, to performance marketing. Be a part of the growing list of our partners success stories",
-                  icon: "/assets/homepage/icon-left.svg",
-                },
-                {
-                  title: "Digital Infrastructure Solutions",
-                  desc: "From wordpress based website development, e-commerce store, custom LMS, CMS, ERP, web application, or software, we got you covered for your businesses digital infrastructures.",
-                  icon: "/assets/homepage/icon-center.svg",
-                },
-                {
-                  title: "Strategic Business Laboratory",
-                  desc: "Learn insights, open new market, strategise new market strategies by our digital laboratory. We help you do your research from UI/UX, market research, professional consulting, and tailored training for your custom company needs.",
-                  icon: "/assets/homepage/icon-right.svg",
-                },
-              ].map((service, idx) => (
+              {data.map((item, idx) => (
                 <div
                   key={idx}
                   className="bg-white text-black rounded-2xl shadow-md p-6 flex flex-col items-center relative mt-6"
                 >
                   <div className="absolute -top-14 left-1/2 transform -translate-x-1/2">
                     <Image
-                      src={service.icon}
-                      alt="Icon"
+                      src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.icon.url}`}
+                      alt={item.icon.name}
                       width={200}
                       height={200}
                       className="z-30"
                     />
                   </div>
                   <Image
-                    src={service.icon}
-                    alt="Icon"
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.icon.url}`}
+                    alt={item.icon.name}
                     width={120}
                     height={120}
                     className="opacity-0"
                   />
                   <h3 className="mt-4 text-lg font-bold text-center text-orange-500">
-                    {service.title}
+                    {item.title}
                   </h3>
-                  <p className="text-sm text-center mt-2">{service.desc}</p>
+                  <p className="text-sm text-center mt-2">{item.description}</p>
                   <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-full text-sm">
                     Learn more →
                   </button>

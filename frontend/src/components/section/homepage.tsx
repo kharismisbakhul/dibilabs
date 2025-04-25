@@ -13,9 +13,9 @@ import Articles from "./homepage/articles";
 import { useEffect, useState } from 'react';
 
 export default function Homepage() {
-  const [achievements, setAchievements] = useState(null);
-  const [partners, setPartners] = useState(null);
-  const [services, setServices] = useState(null);
+  const [achievements, setAchievements] = useState<any[] | null>(null);
+  const [partners, setPartners] = useState<any[] | null>(null);
+  const [services, setServices] = useState<any[] | null>(null);
 
   const fetchDataAchievements = async () => {
     try {
@@ -67,15 +67,17 @@ export default function Homepage() {
 
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <Achievements/>
-      <Partners/>
-      <Cta_services/>
-      <Services/>
-      <Article_desc/>
-      <Articles/>
-      <Footer/>
+      <>
+      <Navbar />
+      <Hero />
+      {achievements && <Achievements data={achievements} />}
+      {partners && <Partners data={partners} />}
+      <Cta_services />
+      {services && <Services data={services} />}
+      <Article_desc />
+      <Articles />
+      <Footer />
+    </>
     </>
   );
 }

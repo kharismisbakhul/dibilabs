@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { motion } from 'framer-motion';
 
-export default function Partners() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function Partners({ data }: Props) {
   return (
     <>
       {/* Partners */}
@@ -97,25 +101,15 @@ export default function Partners() {
           <div className="container mx-auto px-4 pt-[2vw]">
             {/* Logos Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10 px-4 md:px-10">
-              {[
-                "cakrawala.png",
-                "somethinc.png",
-                "pemanas-air.png",
-                "jualmobilmu.png",
-                // 'gama.png',
-                "facetology.png",
-                "facetology.png",
-                "etacefit.png",
-                "domessa.png",
-              ].map((logo, idx) => (
+              {data.map((item, idx) => (
                 <div
                   key={idx}
                   className="bg-white rounded-xl p-4 flex items-center justify-center shadow-md"
                 >
                   <div className="relative w-[120px] h-[80px]">
                   <Image
-                    src={`/assets/homepage/${logo}`}
-                    alt={`Logo ${idx}`}
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
+                    alt={item.image.name}
                     fill
                     sizes="(max-width: 768px) 50vw, 25vw"
                     className="object-contain"
