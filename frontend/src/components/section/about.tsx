@@ -10,8 +10,8 @@ import Vission_mission from "./about/vission_mission";
 import { useEffect, useState } from 'react';
 
 export default function About() {
-  const [photo, setPhoto] = useState(null);
-  const [teams, setTeams] = useState(null);
+  const [photo, setPhoto] = useState<any | null>(null);
+  const [teams, setTeams] = useState<any[] | null>(null);
 
   const fetchDataPhoto = async () => {
     try {
@@ -50,9 +50,9 @@ export default function About() {
     <>
       <Navbar />
       <Hero_about/>
-      <About_us/>
+      {photo && <About_us data={photo}/>}
       <Vission_mission/>
-      <Team/>
+      {teams && <Team data={teams}/>}
       <Footer />
     </>
   );

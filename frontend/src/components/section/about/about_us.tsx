@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function About_us() {
+type Props = {
+  data: any; // or Record<string, any>
+};
+
+export default function About_us({ data }: Props) {
   return (
     <>
       {/* About us */}
@@ -8,8 +12,8 @@ export default function About_us() {
         {/* Top Group Photo */}
         <div className="relative w-full h-auto">
           <Image
-            src="/assets/about/teams.jpg" // Replace with your actual path
-            alt="Team Photo"
+            src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${data.photo.url}`}
+            alt={data.photo.name}
             width={1920}
             height={1080}
             className="w-full h-auto object-cover"
