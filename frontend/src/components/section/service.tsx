@@ -10,22 +10,8 @@ import Service_stack from "./service/service_stack";
 import { useEffect, useState } from 'react';
 
 export default function Service() {
-  const [cores, setCores] = useState(null);
-  const [lists, setLists] = useState(null);
-
-  const fetchDataCores = async () => {
-    try {
-      const res = await fetch('/api/service/cores');
-      if (!res.ok) {
-        throw new Error('Failed to fetch cores');
-      }
-      const json = await res.json();
-      setCores(json.data);
-      console.log(json.data);
-    } catch (error) {
-      console.error('Failed to fetch cores:', error);
-    }
-  };
+  const [lists, setLists] = useState<any[] | null>(null);
+  const [cards, setCards] = useState<any[] | null>(null);
 
   const fetchDataLists = async () => {
     try {
@@ -41,9 +27,23 @@ export default function Service() {
     }
   };
 
+  const fetchDataCards = async () => {
+    try {
+      const res = await fetch('/api/service/cards');
+      if (!res.ok) {
+        throw new Error('Failed to fetch cards');
+      }
+      const json = await res.json();
+      setCards(json.data);
+      console.log(json.data);
+    } catch (error) {
+      console.error('Failed to fetch cards:', error);
+    }
+  };
+
   useEffect(() => {
-    fetchDataCores();
     fetchDataLists();
+    fetchDataCards();
   }, []);
 
   return (
@@ -51,8 +51,8 @@ export default function Service() {
       <Navbar />
       <Hero_service/>
       <Brand_marketing/>
-      <Service_stack/>
-      <Data_decision/>
+      {lists && <Service_stack data={lists}/>}
+      {cards && <Data_decision data={cards}/>}
       <Footer />
     </>
   );

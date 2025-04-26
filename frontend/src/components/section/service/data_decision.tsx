@@ -1,42 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-const services = [
-  {
-    title: "UX & Market Research",
-    color: "bg-[#f26322]",
-    textColor: "text-black",
-    buttonColor: "bg-white text-black",
-    arrowColor: "text-[#f26322]",
-    link: "#",
-  },
-  {
-    title: "Data Management & Analysis",
-    color: "bg-[#004785]",
-    textColor: "text-[#f26322]",
-    buttonColor: "bg-black text-white",
-    arrowColor: "text-[#f26322]",
-    link: "#",
-  },
-  {
-    title: "Digital Marketing Consultation",
-    color: "bg-black",
-    textColor: "text-white",
-    buttonColor: "bg-[#004785] text-[#f26322]",
-    arrowColor: "text-white",
-    link: "#",
-  },
-  {
-    title: "Information and Technology Consultation",
-    color: "bg-[#d9d9d9]",
-    textColor: "text-[#004785]",
-    buttonColor: "bg-[#f26322] text-white",
-    arrowColor: "text-white",
-    link: "#",
-  },
-];
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
 
-export default function Data_decision() {
+export default function Data_decision({ data }: Props) {
   return (
     <>
       <div className="bg-white px-6 py-12 md:px-12 lg:px-20 text-left mt-[250px]">
@@ -66,19 +35,19 @@ export default function Data_decision() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6 max-w-7xl mx-auto">
-          {services.map((service, idx) => (
+          {data.map((item, idx) => (
             <div
               key={idx}
-              className={`rounded-none p-6 pt-[250px] min-h-[180px] ${service.color}`}
+              className={`rounded-none p-6 pt-[250px] min-h-[180px] ${item.background_color}`}
             >
-              <h3 className={`text-lg font-semibold mb-4 ${service.textColor}`}>
-                {service.title}
+              <h3 className={`text-lg font-semibold mb-4 ${item.text_color}`}>
+                {item.title}
               </h3>
               <a
-                href={service.link}
-                className={`inline-flex items-center gap-1 text-sm font-semibold px-4 py-2 rounded-full ${service.buttonColor}`}
+                href="#"
+                className={`inline-flex items-center gap-1 text-sm font-semibold px-4 py-2 rounded-full ${item.button_color}`}
               >
-                Learn more <span className={`${service.arrowColor}`}>→</span>
+                <span className={`${item.button_text_color}`}>Learn more</span> <span className={`${item.arrow_color}`}>→</span>
               </a>
             </div>
           ))}
