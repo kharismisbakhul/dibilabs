@@ -10,8 +10,23 @@ import TrustedByWebdev from "../webdev/trustedByWebdev";
 import { useEffect, useState } from 'react';
 
 export default function Webdev() {
-  const [cores, setCores] = useState(null);
-  const [trustedBy, setTrustedBy] = useState(null);
+  const [cores, setCores] = useState<any[] | null>(null);
+  const [trustedBy, setTrustedBy] = useState<any[] | null>(null);
+  const [serviceCores, setServiceCores] = useState<any[] | null>(null);
+
+  const fetchDataServiceCores = async () => {
+    try {
+      const res = await fetch('/api/service/cores');
+      if (!res.ok) {
+        throw new Error('Failed to fetch service cores');
+      }
+      const json = await res.json();
+      setServiceCores(json.data);
+      console.log(json.data);
+    } catch (error) {
+      console.error('Failed to fetch service cores:', error);
+    }
+  };
 
   const fetchDataCores = async () => {
     try {
@@ -42,6 +57,7 @@ export default function Webdev() {
   };
 
   useEffect(() => {
+    fetchDataServiceCores();
     fetchDataCores();
     fetchDataTrustedBy();
   }, []);
