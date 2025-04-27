@@ -2,12 +2,16 @@
 
 import Image from "next/image";
 
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
 const brands = [
   "/assets/service/software/trustedby1.png",
   "/assets/service/software/trustedby2.png",
 ];
 
-export default function TrustedBySoftware() {
+export default function TrustedBySoftware({ data }: Props) {
   return (
     <section className="py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">

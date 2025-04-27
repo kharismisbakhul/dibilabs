@@ -83,10 +83,10 @@ export default function Meta() {
     <>
       <Navbar />
       <HeroMeta />
-      <AchievementMeta />
-      <TrustedByMeta />
-      <CoreMeta />
-      <DetailCoreMeta />
+      {achievements && <AchievementMeta data={achievements}/>}
+      {trustedBy && <TrustedByMeta data={trustedBy}/>}
+      {cores && <CoreMeta data={cores}/>}
+      {serviceCores && <DetailCoreMeta data={serviceCores}/>}
       <Footer />
     </>
   );

@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function AchievementSosmed() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function AchievementSosmed({ data }: Props) {
   return (
     <>
       <section className="relative bg-white py-12 px-4 md:px-0 flex justify-center">

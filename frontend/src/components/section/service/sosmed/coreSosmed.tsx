@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default function CoreSosmed() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function CoreSosmed({ data }: Props) {
   return (
     <>
       <section className="bg-white py-16 px-6 md:px-20">

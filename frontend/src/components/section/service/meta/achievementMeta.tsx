@@ -1,4 +1,8 @@
-export default function AchievementMeta() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function AchievementMeta({ data }: Props) {
   return (
     <>
       <section className="relative bg-white py-12 px-4 md:px-0 flex justify-center">

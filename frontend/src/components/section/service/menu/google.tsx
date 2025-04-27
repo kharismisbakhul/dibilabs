@@ -83,10 +83,10 @@ export default function Google() {
     <>
       <Navbar />
       <HeroGoogle />
-      <AchievementGoogle/>
-      <TrustedByGoogle />
-      <CoreGoogle />
-      <DetailCoreGoogle />
+      {achievements && <AchievementGoogle data={achievements}/>}
+      {trustedBy && <TrustedByGoogle data={trustedBy}/>}
+      {cores && <CoreGoogle data={cores}/>}
+      {serviceCores && <DetailCoreGoogle data={serviceCores}/>}
       <Footer />
     </>
   );

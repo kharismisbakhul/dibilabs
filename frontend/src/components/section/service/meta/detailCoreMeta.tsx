@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function DetailCoreMeta() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function DetailCoreMeta({ data }: Props) {
   return (
     <div className="relative bg-[#1C1C1C] px-4 md:px-20 py-16">
       {/* Hands Animation */}

@@ -4,9 +4,9 @@ import Footer from "../../../core/footer";
 import Navbar from "../../../core/navbar";
 import AchievementSosmed from "../sosmed/achievementSosmed";
 import CoreSosmed from "../sosmed/coreSosmed";
-import DetailCore from "../sosmed/detailCore";
+import DetailCoreSosmed from "../sosmed/detailCoreSosmed";
 import HeroSosmed from "../sosmed/heroSosmed";
-import TrustedBy from "../sosmed/trustedBy";
+import TrustedBySosmed from "../sosmed/trustedBySosmed";
 
 import { useEffect, useState } from 'react';
 
@@ -83,10 +83,10 @@ export default function Sosmed() {
     <>
       <Navbar />
       <HeroSosmed/>
-      <AchievementSosmed/>
-      <TrustedBy/>
-      <CoreSosmed/>
-      <DetailCore/>
+      {achievements && <AchievementSosmed data={achievements}/>}
+      {trustedBy && <TrustedBySosmed data={trustedBy}/>}
+      {cores && <CoreSosmed data={cores}/>}
+      {serviceCores && <DetailCoreSosmed data={serviceCores}/>}
       <Footer />
     </>
   );

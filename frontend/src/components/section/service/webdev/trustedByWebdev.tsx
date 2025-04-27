@@ -2,6 +2,10 @@
 
 import Image from "next/image";
 
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
 const brands = [
   "/assets/service/webdev/trustedby1.png",
   "/assets/service/webdev/trustedby2.png",
@@ -9,7 +13,7 @@ const brands = [
   "/assets/service/webdev/trustedby4.png",
 ];
 
-export default function TrustedByWebdev() {
+export default function TrustedByWebdev({ data }: Props) {
   return (
     <section className="py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">
