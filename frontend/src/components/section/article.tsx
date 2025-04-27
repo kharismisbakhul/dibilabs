@@ -8,7 +8,7 @@ import NewestArticle from "./article/newestArticle";
 import { useEffect, useState } from "react";
 
 export default function Article() {
-  const [articles, setArticles] = useState(null);
+  const [articles, setArticles] = useState<any[] | null>(null);
 
   const fetchDataArticles = async () => {
     try {
@@ -32,7 +32,7 @@ export default function Article() {
     <>
       <Navbar />
       <HeroArticle />
-      <NewestArticle />
+      {articles && <NewestArticle data={articles}/>}
       <Footer />
     </>
   );

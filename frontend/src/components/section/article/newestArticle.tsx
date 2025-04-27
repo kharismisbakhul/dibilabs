@@ -1,6 +1,24 @@
 import Image from "next/image";
 
-export default function NewestArticle() {
+type Props = {
+  data: any[]; // or Record<string, any>[]
+};
+
+export default function NewestArticle({ data }: Props) {
+  const headerArticle = data[0];
+  const dateString = headerArticle.published;
+  const date = new Date(dateString);
+
+  // Format options
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = date.toLocaleDateString('en-US', options);
+
+  // const headerArticle = data.shift();
+  // data.shift();
+  // console.log(headerArticle)
+  // data.map(article => console.log(article))
+
+  const articles = [data[1], data[2]];
   return (
     <>
       <section className="font-sans">
@@ -45,27 +63,26 @@ export default function NewestArticle() {
               className="absolute top-[90px] left-0"
             />
             <p className="absolute text-lg text-white right-20 top-10 text-right">
-              August 29, 2024
+              {/* August 29, 2024 */}
+              {formattedDate}
             </p>
           </div>
 
           {/* Right - Text */}
-          <div className="flex flex-col justify-center gap-4">
+          <div className="flex flex-col justify-left gap-4">
             <h4 className="text-3xl md:text-3xl font-semibold leading-snug">
-              Efektif Buat Dicoba! Ini <br />
-              5 Jenis Brand Activation <br /> 
-              untuk Bisnis
+              {/* Efektif Buat Dicoba! Ini <br />
+              5 Jenis Brand Activation <br />
+              untuk Bisnis */}
+              {headerArticle.title}
             </h4>
             <p className="text-xl text-white leading-relaxed">
-              Brand activation jadi strategi marketing <br />
+              {/* Brand activation jadi strategi marketing <br />
               yang populer. Tapi tau gak sih kalau <br />
-              brand activation ada banyak jenisnya <br /> 
-              Cek 5 jenisnya...
+              brand activation ada banyak jenisnya <br />
+              Cek 5 jenisnya... */}
+              {headerArticle.content[0].children[0].text}
             </p>
-            <button className="bg-blue-500 text-white px-5 py-2 font-bold rounded-full w-fit flex items-center gap-2 mt-2 absolute right-[100px] -bottom-[120px]">
-              Explore More
-              <span className="text-lg">→</span>
-            </button>
           </div>
 
           {/* Background Accent */}
@@ -81,9 +98,13 @@ export default function NewestArticle() {
 
         {/* Section 2 */}
         <div className="bg-black text-white px-6 md:px-16 pt-[350px] pb-24 z-30 relative">
+          <button className="bg-blue-500 text-white px-5 py-2 font-bold rounded-full w-fit flex items-center gap-2 mt-2 absolute right-[100px] top-[50px]">
+            Explore More
+            <span className="text-lg">→</span>
+          </button>
           <div className="flex flex-col md:flex-row items-center justify-between mb-12">
             <h3 className="text-[32px] md:text-[80px] font-extrabold leading-tight">
-              Find out how we <br/> do it in{" "}
+              Find out how we <br /> do it in{" "}
               <span className="text-white font-black">5 minutes</span>
             </h3>
             <div className="mt-4 md:mt-0">
@@ -98,11 +119,12 @@ export default function NewestArticle() {
 
           {/* Articles */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-40">
-            {/* Card 1 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
+
+            {articles.map((article, idx) => (
+              <div key={idx} className="bg-white rounded-lg overflow-hidden shadow-md">
               <Image
-                src="/assets/article/article1.png"
-                alt="E-commerce"
+                src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${article.image.url}`}
+                alt={article.image.name}
                 width={500}
                 height={400}
                 className="w-full h-auto"
@@ -110,60 +132,36 @@ export default function NewestArticle() {
               <div className="bg-orange-500 text-white p-4">
                 {/* <p className="text-xs mb-1">All Article</p> */}
                 <h4 className="font-semibold text-xl mb-2">
-                  5 Manfaat E-Commerce yang Bikin <br />
-                  Brand dan Konsumen Untung,<br />
-                  Penasaran?
+                  {/* 5 Manfaat E-Commerce yang Bikin <br />
+                  Brand dan Konsumen Untung,
+                  <br />
+                  Penasaran? */}
+                  {article.title}
                 </h4>
                 <p className="text-xs text-black mb-4">
-                  E-commerce udah jadi strategi andalan buat para brand. Tapi <br />
+                  {/* E-commerce udah jadi strategi andalan buat para brand. Tapi{" "}
+                  <br />
                   sebenernya apa aja sih manfaat e-commerce? Cek disini <br />
-                  Buddies!
+                  Buddies! */}
+                  {article.content[0].children[0].text}
                 </p>
                 <div className="font-bold text-right">
                   Read More <span className="text-base ml-1">→</span>
                 </div>
               </div>
             </div>
-
-            {/* Card 2 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-md">
-              <Image
-                src="/assets/article/article2.png"
-                alt="Loyalty Program"
-                width={500}
-                height={400}
-                className="w-full h-auto"
-              />
-              <div className="bg-orange-500 text-white p-4">
-                {/* <p className="text-xs mb-1">All Article</p> */}
-                <h4 className="font-semibold text-xl mb-2">
-                  Kenalan dengan Loyalty Program, <br />
-                  Kode Cheat Buat Bikin Bisnis <br />
-                  Sukses Jangka Panjang
-                </h4>
-                <p className="text-xs text-black mb-4">
-                  E-commerce udah jadi strategi andalan buat para brand. Tapi <br />
-                  sebenernya apa aja sih manfaat e-commerce? Cek disini <br />
-                  Buddies!
-                </p>
-                <div className="font-bold text-right">
-                  Read More <span className="text-base ml-1">→</span>
-                </div>
-              </div>
-            </div>
-
-
+            ))}
 
           </div>
-            {/* Background Accent */}
-            <div className="absolute bottom-[-90px] left-[-36px] scale-75 hidden md:block z-35">
-              <Image
-                src="/assets/article/sharp2.svg"
-                alt="accent"
-                width={300}
-                height={300}
-              />
-            </div>
+          {/* Background Accent */}
+          <div className="absolute bottom-[-90px] left-[-36px] scale-75 hidden md:block z-35">
+            <Image
+              src="/assets/article/sharp2.svg"
+              alt="accent"
+              width={300}
+              height={300}
+            />
+          </div>
         </div>
       </section>
     </>
