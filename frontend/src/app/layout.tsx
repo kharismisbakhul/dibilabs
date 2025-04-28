@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   },
   description: "Your digital marketing agency partner to develop your products.",
   keywords: "blog, news, marketing, ads, development, web, apps, seo",
+  icons: {
+    icon: "/favicon.ico",    // This is the key line you need
+  },
 };
 
 export default function RootLayout({
