@@ -24,7 +24,6 @@ export default function AchievementMeta({ data }: Props) {
               </span>
               <div className="text-left ml-4">
                 <p className="text-[24px] leading-none">{achievement.parameter}</p>
-                {/* <p className="text-[24px] leading-none">from Advertising</p> */}
               </div>
             </div>
           </div>
