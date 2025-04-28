@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-type Props = {
-  data: any[]; // or Record<string, any>[]
-};
-
-export default function HeroWebdev({ data }: Props) {
+export default function HeroWebdev() {
   return (
     <>
       <section className="bg-white">

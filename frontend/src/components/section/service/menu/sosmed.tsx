@@ -85,8 +85,8 @@ export default function Sosmed() {
       <HeroSosmed/>
       {achievements && <AchievementSosmed data={achievements}/>}
       {trustedBy && <TrustedBySosmed data={trustedBy}/>}
-      {cores && <CoreSosmed data={cores}/>}
-      {serviceCores && <DetailCoreSosmed data={serviceCores}/>}
+      {serviceCores && <CoreSosmed data={serviceCores}/>}
+      {cores && <DetailCoreSosmed data={cores}/>}
       <Footer />
     </>
   );

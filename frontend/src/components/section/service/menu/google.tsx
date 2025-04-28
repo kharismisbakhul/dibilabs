@@ -85,8 +85,8 @@ export default function Google() {
       <HeroGoogle />
       {achievements && <AchievementGoogle data={achievements}/>}
       {trustedBy && <TrustedByGoogle data={trustedBy}/>}
-      {cores && <CoreGoogle data={cores}/>}
-      {serviceCores && <DetailCoreGoogle data={serviceCores}/>}
+      {serviceCores && <CoreGoogle data={serviceCores}/>}
+      {cores && <DetailCoreGoogle data={cores}/>}
       <Footer />
     </>
   );

@@ -67,8 +67,8 @@ export default function Software() {
       <Navbar />
       <HeroSoftware/>
       {trustedBy && <TrustedBySoftware data={trustedBy}/>}
-      {cores && <CoreSoftware data={cores}/>}
-      {serviceCores && <DetailCoreSoftware data={serviceCores}/>}
+      {serviceCores && <CoreSoftware data={serviceCores}/>}
+      {cores && <DetailCoreSoftware data={cores}/>}
       <Footer />
     </>
   );

@@ -6,14 +6,6 @@ type Props = {
   data: any[]; // or Record<string, any>[]
 };
 
-const brands = [
-  "/assets/service/meta/trustedby1.png",
-  "/assets/service/meta/trustedby2.png",
-  "/assets/service/meta/trustedby3.png",
-  "/assets/service/meta/trustedby4.png",
-  "/assets/service/meta/trustedby5.png",
-];
-
 export default function TrustedByMeta({ data }: Props) {
   return (
     <section className="py-8 bg-white">
@@ -23,12 +15,12 @@ export default function TrustedByMeta({ data }: Props) {
         </h2>
 
         <div className="relative mt-8 overflow-hidden">
-          <div className="flex gap-10 whitespace-nowrap animate-marquee">
-            {brands.concat(brands).map((src, index) => (
+          <div className="flex gap-10 whitespace-nowrap justify-center">
+            {data.map((item, index) => (
               <div key={index} className="w-36 h-20 relative flex-shrink-0">
                 <Image
-                  src={src}
-                  alt={`brand-${index}`}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
+                  alt={item.image.name}
                   fill
                   style={{ objectFit: "contain" }}
                 />

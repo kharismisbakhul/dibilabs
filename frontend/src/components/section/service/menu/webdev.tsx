@@ -67,8 +67,8 @@ export default function Webdev() {
       <Navbar />
       <HeroWebdev />
       {trustedBy && <TrustedByWebdev data={trustedBy}/>}
-      {cores && <CoreWebdev data={cores}/>}
-      {serviceCores && <DetailCoreWebdev data={serviceCores}/>}
+      {serviceCores && <CoreWebdev data={serviceCores}/>}
+      {cores && <DetailCoreWebdev data={cores}/>}
       <Footer />
     </>
   );

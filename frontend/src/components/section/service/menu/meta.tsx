@@ -85,8 +85,8 @@ export default function Meta() {
       <HeroMeta />
       {achievements && <AchievementMeta data={achievements}/>}
       {trustedBy && <TrustedByMeta data={trustedBy}/>}
-      {cores && <CoreMeta data={cores}/>}
-      {serviceCores && <DetailCoreMeta data={serviceCores}/>}
+      {serviceCores && <CoreMeta data={serviceCores}/>}
+      {cores && <DetailCoreMeta data={cores}/>}
       <Footer />
     </>
   );

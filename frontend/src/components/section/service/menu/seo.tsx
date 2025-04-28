@@ -85,8 +85,8 @@ export default function Seo() {
       <HeroSeo />
       {achievements && <AchievementSeo data={achievements}/>}
       {trustedBy && <TrustedBySeo data={trustedBy}/>}
-      {cores && <CoreSeo data={cores}/>}
-      {serviceCores && <DetailCoreSeo data={serviceCores}/>}
+      {serviceCores && <CoreSeo data={serviceCores}/>}
+      {cores && <DetailCoreSeo data={cores}/>}
       <Footer />
     </>
   );
