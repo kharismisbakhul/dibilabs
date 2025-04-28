@@ -1,18 +1,10 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 
 type Props = {
   data: any[]; // or Record<string, any>[]
 };
-
-const brands = [
-  "/assets/service/seo/trustedby1.png",
-  "/assets/service/seo/trustedby2.png",
-  "/assets/service/seo/trustedby3.png",
-  "/assets/service/seo/trustedby4.png",
-  "/assets/service/seo/trustedby5.png",
-];
 
 export default function TrustedBySeo({ data }: Props) {
   return (
@@ -24,11 +16,11 @@ export default function TrustedBySeo({ data }: Props) {
 
         <div className="relative mt-8 overflow-hidden">
           <div className="flex gap-10 whitespace-nowrap justify-center">
-            {brands.map((src, index) => (
+            {data.map((item, index) => (
               <div key={index} className="w-36 h-20 relative flex-shrink-0">
                 <Image
-                  src={src}
-                  alt={`brand-${index}`}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
+                  alt={item.image.name}
                   fill
                   style={{ objectFit: "contain" }}
                 />
