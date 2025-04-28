@@ -6,9 +6,9 @@ export default function Navbar() {
       <div className="bg-orange-500 text-white">
         {/* Navbar */}
         <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-between px-6 py-4">
+          <nav className="flex items-center justify-between px-6 py-7">
             <a href="/homepage">
-              <div className="flex items-center space-x-2 mt-4">
+              <div className="flex items-center space-x-2">
                 <div className="relative w-[120px] h-[40px]">
                   <Image
                     src="/assets/core/logo.png"
