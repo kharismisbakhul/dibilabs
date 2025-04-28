@@ -18,7 +18,7 @@ export default function Article() {
       }
       const json = await res.json();
       setArticles(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error("Failed to fetch articles:", error);
     }

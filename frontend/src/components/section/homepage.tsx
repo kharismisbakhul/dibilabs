@@ -25,7 +25,7 @@ export default function Homepage() {
       }
       const json = await res.json();
       setAchievements(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch achievements:', error);
     }
@@ -39,7 +39,7 @@ export default function Homepage() {
       }
       const json = await res.json();
       setPartners(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch partners:', error);
     }
@@ -53,7 +53,7 @@ export default function Homepage() {
       }
       const json = await res.json();
       setServices(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch services:', error);
     }

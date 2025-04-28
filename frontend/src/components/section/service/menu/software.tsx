@@ -22,7 +22,7 @@ export default function Software() {
       }
       const json = await res.json();
       setServiceCores(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch service cores:', error);
     }
@@ -36,7 +36,7 @@ export default function Software() {
       }
       const json = await res.json();
       setCores(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch cores:', error);
     }
@@ -50,7 +50,7 @@ export default function Software() {
       }
       const json = await res.json();
       setTrustedBy(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch trustedBy:', error);
     }

@@ -21,7 +21,7 @@ export default function About() {
       }
       const json = await res.json();
       setPhoto(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch photo:', error);
     }
@@ -35,7 +35,7 @@ export default function About() {
       }
       const json = await res.json();
       setTeams(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch teams:', error);
     }

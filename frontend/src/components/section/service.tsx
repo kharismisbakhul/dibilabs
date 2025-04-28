@@ -21,7 +21,7 @@ export default function Service() {
       }
       const json = await res.json();
       setLists(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch lists:', error);
     }
@@ -35,7 +35,7 @@ export default function Service() {
       }
       const json = await res.json();
       setCards(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch cards:', error);
     }

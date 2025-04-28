@@ -24,7 +24,7 @@ export default function Meta() {
       }
       const json = await res.json();
       setServiceCores(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch service cores:', error);
     }
@@ -38,7 +38,7 @@ export default function Meta() {
       }
       const json = await res.json();
       setAchievements(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch achievements:', error);
     }
@@ -52,7 +52,7 @@ export default function Meta() {
       }
       const json = await res.json();
       setCores(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch cores:', error);
     }
@@ -66,7 +66,7 @@ export default function Meta() {
       }
       const json = await res.json();
       setTrustedBy(json.data);
-      console.log(json.data);
+      
     } catch (error) {
       console.error('Failed to fetch trustedBy:', error);
     }
