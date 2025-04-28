@@ -15,7 +15,8 @@ export default function About() {
 
   const fetchDataPhoto = async () => {
     try {
-      const res = await fetch('/api/about/photo');
+      // const res = await fetch('/api/about/photo');
+      const res = await fetch('/json/about_photo.json');
       if (!res.ok) {
         throw new Error('Failed to fetch photo');
       }
@@ -29,7 +30,8 @@ export default function About() {
 
   const fetchDataTeams = async () => {
     try {
-      const res = await fetch('/api/about/teams');
+      // const res = await fetch('/api/about/teams');
+      const res = await fetch('/json/about_teams.json');
       if (!res.ok) {
         throw new Error('Failed to fetch teams');
       }

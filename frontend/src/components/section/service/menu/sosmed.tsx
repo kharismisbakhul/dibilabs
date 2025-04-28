@@ -18,7 +18,8 @@ export default function Sosmed() {
 
   const fetchDataServiceCores = async () => {
     try {
-      const res = await fetch('/api/service/cores');
+      // const res = await fetch('/api/service/cores');
+      const res = await fetch('/json/service_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch service cores');
       }
@@ -32,7 +33,8 @@ export default function Sosmed() {
 
   const fetchDataAchievements = async () => {
     try {
-      const res = await fetch('/api/service/sosmed/achievements');
+      // const res = await fetch('/api/service/sosmed/achievements');
+      const res = await fetch('/json/service_sosmed_achievements.json');
       if (!res.ok) {
         throw new Error('Failed to fetch achievements');
       }
@@ -46,7 +48,8 @@ export default function Sosmed() {
 
   const fetchDataCores = async () => {
     try {
-      const res = await fetch('/api/service/sosmed/cores');
+      // const res = await fetch('/api/service/sosmed/cores');
+      const res = await fetch('/json/service_sosmed_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch cores');
       }
@@ -60,7 +63,8 @@ export default function Sosmed() {
 
   const fetchDataTrustedBy = async () => {
     try {
-      const res = await fetch('/api/service/sosmed/trusted_bies');
+      // const res = await fetch('/api/service/sosmed/trusted_bies');
+      const res = await fetch('/json/service_sosmed_trustedBies.json');
       if (!res.ok) {
         throw new Error('Failed to fetch trustedBy');
       }

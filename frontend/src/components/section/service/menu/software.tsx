@@ -16,7 +16,8 @@ export default function Software() {
 
   const fetchDataServiceCores = async () => {
     try {
-      const res = await fetch('/api/service/cores');
+      // const res = await fetch('/api/service/cores');
+      const res = await fetch('/json/service_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch service cores');
       }
@@ -30,7 +31,8 @@ export default function Software() {
 
   const fetchDataCores = async () => {
     try {
-      const res = await fetch('/api/service/software/cores');
+      // const res = await fetch('/api/service/software/cores');
+      const res = await fetch('/json/service_software_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch cores');
       }
@@ -44,7 +46,8 @@ export default function Software() {
 
   const fetchDataTrustedBy = async () => {
     try {
-      const res = await fetch('/api/service/software/trusted_bies');
+      // const res = await fetch('/api/service/software/trusted_bies');
+      const res = await fetch('/json/service_software_trustedBies.json');
       if (!res.ok) {
         throw new Error('Failed to fetch trustedBy');
       }
