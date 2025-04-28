@@ -1,23 +1,10 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 
 type Props = {
   data: any[]; // or Record<string, any>[]
 };
-
-const brands = [
-  "/assets/service/sosmed/trustedby1.png",
-  "/assets/service/sosmed/trustedby2.png",
-  "/assets/service/sosmed/trustedby3.png",
-  "/assets/service/sosmed/trustedby4.png",
-  "/assets/service/sosmed/trustedby5.png",
-  "/assets/service/sosmed/trustedby6.png",
-  "/assets/service/sosmed/trustedby7.png",
-  "/assets/service/sosmed/trustedby8.png",
-  "/assets/service/sosmed/trustedby9.png",
-  "/assets/service/sosmed/trustedby10.png",
-];
 
 export default function TrustedBySosmed({ data }: Props) {
   return (
@@ -28,12 +15,12 @@ export default function TrustedBySosmed({ data }: Props) {
         </h2>
 
         <div className="relative mt-8 overflow-hidden">
-          <div className="flex gap-10 whitespace-nowrap animate-marquee">
-            {brands.concat(brands).map((src, index) => (
+          <div className="flex gap-10 whitespace-nowrap justify-center">
+            {data.map((item, index) => (
               <div key={index} className="w-36 h-20 relative flex-shrink-0">
                 <Image
-                  src={src}
-                  alt={`brand-${index}`}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
+                  alt={item.image.name}
                   fill
                   style={{ objectFit: "contain" }}
                 />
