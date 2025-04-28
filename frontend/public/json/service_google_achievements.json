@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 11,
+      "documentId": "qq2irmatc4ogtt9nqehsnmnn",
+      "achievement": "65%",
+      "parameter": "Reduced Customer Acquisition Cost",
+      "background_color": "bg-[#F37021]",
+      "text_color": "#0055A4",
+      "createdAt": "2025-04-14T14:06:23.054Z",
+      "updatedAt": "2025-04-14T14:06:23.054Z",
+      "publishedAt": "2025-04-26T02:46:46.366Z"
+    },
+    {
+      "id": 12,
+      "documentId": "hfndpleaqw6akw8epscongkz",
+      "achievement": "900+",
+      "parameter": "Leads Generated Monthly",
+      "background_color": "bg-[#1A1A1A]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T14:06:51.743Z",
+      "updatedAt": "2025-04-14T14:06:51.743Z",
+      "publishedAt": "2025-04-26T02:46:46.371Z"
+    },
+    {
+      "id": 13,
+      "documentId": "q4kw3qc3uw0xi6bhkz0qkney",
+      "achievement": "90%",
+      "parameter": "Qualified Leads for Sales",
+      "background_color": "bg-[#0055A4]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T14:07:08.761Z",
+      "updatedAt": "2025-04-14T14:07:08.761Z",
+      "publishedAt": "2025-04-26T02:46:46.375Z"
+    },
+    {
+      "id": 14,
+      "documentId": "hpdwysu03dov3r3v7og91kpw",
+      "achievement": "Rp 5 Bio",
+      "parameter": "Managed Multiple platforms",
+      "background_color": "bg-[#F37021]",
+      "text_color": "#0055A4",
+      "createdAt": "2025-04-14T14:07:47.954Z",
+      "updatedAt": "2025-04-14T14:07:47.954Z",
+      "publishedAt": "2025-04-26T02:46:46.378Z"
+    },
+    {
+      "id": 15,
+      "documentId": "c0cdwwsghieoxagkgkkxspgv",
+      "achievement": "Partnered",
+      "parameter": "with Google Agency",
+      "background_color": "bg-[#1A1A1A]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T14:08:34.876Z",
+      "updatedAt": "2025-04-14T14:08:34.876Z",
+      "publishedAt": "2025-04-26T02:46:46.382Z"
+    }
+  ]
+}

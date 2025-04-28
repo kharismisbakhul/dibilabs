@@ -1,0 +1,243 @@
+{
+  "data": [
+    {
+      "id": 13,
+      "documentId": "znqg88t562vz4iaszlneodeb",
+      "brand": "brand1",
+      "createdAt": "2025-04-14T14:14:44.246Z",
+      "updatedAt": "2025-04-14T14:14:44.246Z",
+      "publishedAt": "2025-04-26T02:50:21.062Z",
+      "image": {
+        "id": 66,
+        "documentId": "gf6g5ggx8myjq21chdp52p56",
+        "name": "trustedby3.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 235,
+        "height": 269,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/sosmed/thumbnail_trustedby3_73a70b676f.png",
+            "hash": "thumbnail_trustedby3_73a70b676f",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby3.png",
+            "path": null,
+            "size": 8.1,
+            "width": 136,
+            "height": 156,
+            "sizeInBytes": 8104
+          }
+        },
+        "hash": "trustedby3",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 6.14,
+        "url": "/assets/service/sosmed/trustedby3.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.509Z",
+        "updatedAt": "2025-04-14T02:22:14.509Z",
+        "publishedAt": "2025-04-14T02:22:14.509Z"
+      }
+    },
+    {
+      "id": 14,
+      "documentId": "g610e5rjvtce66ncsgz7t5d8",
+      "brand": "brand2",
+      "createdAt": "2025-04-14T14:15:04.088Z",
+      "updatedAt": "2025-04-14T14:15:04.088Z",
+      "publishedAt": "2025-04-26T02:50:21.067Z",
+      "image": {
+        "id": 65,
+        "documentId": "ezknel3526wesb1f9y6okil3",
+        "name": "trustedby4.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 267,
+        "height": 75,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/sosmed/thumbnail_trustedby4_32d3061386.png",
+            "hash": "thumbnail_trustedby4_32d3061386",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby4.png",
+            "path": null,
+            "size": 14,
+            "width": 245,
+            "height": 69,
+            "sizeInBytes": 14004
+          }
+        },
+        "hash": "trustedby4",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 2.95,
+        "url": "/assets/service/sosmed/trustedby4.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.498Z",
+        "updatedAt": "2025-04-14T02:22:14.498Z",
+        "publishedAt": "2025-04-14T02:22:14.499Z"
+      }
+    },
+    {
+      "id": 15,
+      "documentId": "k7tlbm90lghtolxdrz7rz1ud",
+      "brand": "brand3",
+      "createdAt": "2025-04-14T14:15:24.378Z",
+      "updatedAt": "2025-04-14T14:15:24.378Z",
+      "publishedAt": "2025-04-26T02:50:21.074Z",
+      "image": {
+        "id": 67,
+        "documentId": "jhw685gwg9t4npcnob1vwqql",
+        "name": "trustedby5.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 259,
+        "height": 207,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/sosmed/thumbnail_trustedby5_9d316c1b28.png",
+            "hash": "thumbnail_trustedby5_9d316c1b28",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby5.png",
+            "path": null,
+            "size": 11.85,
+            "width": 195,
+            "height": 156,
+            "sizeInBytes": 11852
+          }
+        },
+        "hash": "trustedby5",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 5.45,
+        "url": "/assets/service/sosmed/trustedby5.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.514Z",
+        "updatedAt": "2025-04-14T02:22:14.514Z",
+        "publishedAt": "2025-04-14T02:22:14.514Z"
+      }
+    },
+    {
+      "id": 16,
+      "documentId": "mexv5nhqe0ke5barpwp59qr8",
+      "brand": "brand4",
+      "createdAt": "2025-04-14T14:15:48.495Z",
+      "updatedAt": "2025-04-14T14:15:48.495Z",
+      "publishedAt": "2025-04-26T02:50:21.081Z",
+      "image": {
+        "id": 71,
+        "documentId": "p6r4y5ffoutkp7tl02c1ih6u",
+        "name": "trustedby6.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 187,
+        "height": 187,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/sosmed/thumbnail_trustedby6_f442a14b08.png",
+            "hash": "thumbnail_trustedby6_f442a14b08",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby6.png",
+            "path": null,
+            "size": 16.17,
+            "width": 156,
+            "height": 156,
+            "sizeInBytes": 16169
+          }
+        },
+        "hash": "trustedby6",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 5.7,
+        "url": "/assets/service/sosmed/trustedby6.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.720Z",
+        "updatedAt": "2025-04-14T02:22:14.720Z",
+        "publishedAt": "2025-04-14T02:22:14.720Z"
+      }
+    },
+    {
+      "id": 17,
+      "documentId": "pm21ka6q2u3r119kbknsbzgj",
+      "brand": "brand5",
+      "createdAt": "2025-04-14T14:16:02.532Z",
+      "updatedAt": "2025-04-14T14:16:02.532Z",
+      "publishedAt": "2025-04-26T02:50:21.087Z",
+      "image": {
+        "id": 70,
+        "documentId": "uyxytiffla3yes8127ajd4fs",
+        "name": "trustedby7.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 191,
+        "height": 191,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/sosmed/thumbnail_trustedby7_be56aa30d8.png",
+            "hash": "thumbnail_trustedby7_be56aa30d8",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby7.png",
+            "path": null,
+            "size": 10.72,
+            "width": 156,
+            "height": 156,
+            "sizeInBytes": 10721
+          }
+        },
+        "hash": "trustedby7",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 3.73,
+        "url": "/assets/service/sosmed/trustedby7.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.716Z",
+        "updatedAt": "2025-04-14T02:22:14.716Z",
+        "publishedAt": "2025-04-14T02:22:14.716Z"
+      }
+    },
+    {
+      "id": 18,
+      "documentId": "ft1eeyh5dmedhwoxafybmsr5",
+      "brand": "brand6",
+      "createdAt": "2025-04-14T14:16:20.521Z",
+      "updatedAt": "2025-04-14T14:16:20.521Z",
+      "publishedAt": "2025-04-26T02:50:21.093Z",
+      "image": {
+        "id": 73,
+        "documentId": "k3vb99op4lr9w18tekedqu5c",
+        "name": "trustedby8.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 234,
+        "height": 143,
+        "formats": null,
+        "hash": "trustedby8",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 4.72,
+        "url": "/assets/service/sosmed/trustedby8.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.756Z",
+        "updatedAt": "2025-04-14T02:22:14.756Z",
+        "publishedAt": "2025-04-14T02:22:14.756Z"
+      }
+    }
+  ]
+}

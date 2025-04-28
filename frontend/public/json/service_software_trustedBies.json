@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 5,
+      "documentId": "rphkeycsbod9ut8xi5aqjn61",
+      "brand": "brand1",
+      "createdAt": "2025-04-14T14:09:20.434Z",
+      "updatedAt": "2025-04-14T14:09:20.434Z",
+      "publishedAt": "2025-04-26T02:49:54.378Z",
+      "image": {
+        "id": 77,
+        "documentId": "psbsuo6yb982cd9ksx5odva7",
+        "name": "trustedby1.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 416,
+        "height": 170,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/software/thumbnail_trustedby1_593fd59315.png",
+            "hash": "thumbnail_trustedby1_593fd59315",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby1.png",
+            "path": null,
+            "size": 24.98,
+            "width": 245,
+            "height": 100,
+            "sizeInBytes": 24983
+          }
+        },
+        "hash": "trustedby1",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 15.65,
+        "url": "/assets/service/software/trustedby1.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:06.267Z",
+        "updatedAt": "2025-04-14T02:23:06.267Z",
+        "publishedAt": "2025-04-14T02:23:06.267Z"
+      }
+    },
+    {
+      "id": 6,
+      "documentId": "ivc29o9583lh93aaiiijucnb",
+      "brand": "brand2",
+      "createdAt": "2025-04-14T14:09:58.898Z",
+      "updatedAt": "2025-04-14T14:09:58.898Z",
+      "publishedAt": "2025-04-26T02:49:54.384Z",
+      "image": {
+        "id": 76,
+        "documentId": "pavfxxnpe16upzk0xlhsfnh2",
+        "name": "trustedby2.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 141,
+        "height": 172,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/software/thumbnail_trustedby2_62b1b70464.png",
+            "hash": "thumbnail_trustedby2_62b1b70464",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby2.png",
+            "path": null,
+            "size": 12.84,
+            "width": 128,
+            "height": 156,
+            "sizeInBytes": 12844
+          }
+        },
+        "hash": "trustedby2",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 2.77,
+        "url": "/assets/service/software/trustedby2.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:06.186Z",
+        "updatedAt": "2025-04-14T02:23:06.186Z",
+        "publishedAt": "2025-04-14T02:23:06.186Z"
+      }
+    }
+  ]
+}
