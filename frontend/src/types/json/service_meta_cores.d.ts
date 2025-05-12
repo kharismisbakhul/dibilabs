@@ -1,0 +1,13 @@
+export interface ServiceMetaCores {
+  data: ServiceCore[];
+}
+
+export interface ServiceCore {
+  id: number;
+  documentId: string;
+  title: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}
