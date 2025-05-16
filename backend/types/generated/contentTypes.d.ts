@@ -463,6 +463,50 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFormCtaFormCta extends Struct.CollectionTypeSchema {
+  collectionName: 'form_ctas';
+  info: {
+    displayName: 'Form CTA';
+    pluralName: 'form-ctas';
+    singularName: 'form-cta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    industry: Schema.Attribute.Enumeration<
+      ['Technology', 'Health', 'Education']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-cta.form-cta'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.Enumeration<
+      [
+        'Meta Ads',
+        'Google Ads',
+        'Social Media Management',
+        'Search Engine Optimization Service',
+        'Software and Web App Development',
+        'Website Development',
+      ]
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Whatsapp: Schema.Attribute.String;
+  };
+}
+
 export interface ApiGoogleAchievementGoogleAchievement
   extends Struct.CollectionTypeSchema {
   collectionName: 'google_achievements';
@@ -1844,6 +1888,7 @@ declare module '@strapi/strapi' {
       'api::about-photo.about-photo': ApiAboutPhotoAboutPhoto;
       'api::about-team.about-team': ApiAboutTeamAboutTeam;
       'api::article.article': ApiArticleArticle;
+      'api::form-cta.form-cta': ApiFormCtaFormCta;
       'api::google-achievement.google-achievement': ApiGoogleAchievementGoogleAchievement;
       'api::google-core.google-core': ApiGoogleCoreGoogleCore;
       'api::google-trusted-by.google-trusted-by': ApiGoogleTrustedByGoogleTrustedBy;

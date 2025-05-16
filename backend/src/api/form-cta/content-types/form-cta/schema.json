@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "form_ctas",
+  "info": {
+    "singularName": "form-cta",
+    "pluralName": "form-ctas",
+    "displayName": "Form CTA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "Whatsapp": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "enumeration",
+      "enum": [
+        "Technology",
+        "Health",
+        "Education"
+      ]
+    },
+    "services": {
+      "type": "enumeration",
+      "enum": [
+        "Meta Ads",
+        "Google Ads",
+        "Social Media Management",
+        "Search Engine Optimization Service",
+        "Software and Web App Development",
+        "Website Development"
+      ]
+    }
+  }
+}
