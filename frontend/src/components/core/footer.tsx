@@ -19,6 +19,16 @@ export default function Footer() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
+    if (e.target.name === "number") {
+      e.target.value = e.target.value.replace(/\D/g, ""); // Remove non-digit characters
+
+      if (e.target.value.startsWith("0")) {
+        e.target.value = "62" + e.target.value.slice(1); // Replace leading 0 with 62
+      } else if (!e.target.value.startsWith("62")) {
+        e.target.value = "62" + e.target.value; // Ensure it starts with 62
+      }
+    }
+
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
