@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6"; // for X (Twitter)
+import { FaEnvelope } from "react-icons/fa6"; // for X (Twitter)
 
 import { useState } from "react";
 
@@ -128,36 +128,46 @@ export default function Footer() {
               />
               <label className="text-white text-sm">Industry</label>
               <select
-                className="px-4 py-2 rounded text-black"
+                className={`px-4 py-2 rounded ${
+                  form.industry === "" ? "text-gray-400" : "text-black"
+                }`}
                 name="industry"
                 onChange={handleChange}
                 value={form.industry}
               >
-                <option disabled value="" hidden className="text-gray-400">--- Choose Industry ---</option>
-                <option>Technology</option>
-                <option>Health</option>
-                <option>Education</option>
+                <option disabled value="" hidden>--- Choose Industry ---</option>
+                <option className="text-black">Tech</option>
+                <option className="text-black">Health</option>
+                <option className="text-black">Education</option>
+                <option className="text-black">Fashion</option>
+                <option className="text-black">Beauty</option>
+                <option className="text-black">Food and Beverage</option>
+                <option className="text-black">Services</option>
+                <option className="text-black">Government</option>
+                <option className="text-black">Others</option>
               </select>
               <label className="text-white text-sm">Services</label>
               <select
-                className="px-4 py-2 rounded text-black"
+                className={`px-4 py-2 rounded ${
+                  form.industry === "" ? "text-gray-400" : "text-black"
+                }`}
                 name="services"
                 onChange={handleChange}
                 value={form.services}
               >
-                <option disabled value="" hidden className="text-gray-400">--- Choose Services ---</option>
-                <option>Meta Ads</option>
-                <option>Google Ads</option>
-                <option>Social Media Management</option>
-                <option>Search Engine Optimization Service</option>
-                <option>Software and Web App Development</option>
-                <option>Website Development</option>
+                <option disabled value="" hidden>--- Choose Services ---</option>
+                <option className="text-black">Meta Ads</option>
+                <option className="text-black">Google Ads</option>
+                <option className="text-black">Social Media Management</option>
+                <option className="text-black">Search Engine Optimization Service</option>
+                <option className="text-black">Software and Web App Development</option>
+                <option className="text-black">Website Development</option>
               </select>
               {/* Right-aligned button */}
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="bg-black text-white px-7 py-2 mt-2 rounded-xl"
+                  className="bg-white text-black px-7 py-2 mt-2 rounded-xl hover:bg-black hover:text-white"
                 >
                   Send
                 </button>
@@ -168,7 +178,7 @@ export default function Footer() {
           <div className="text-center mt-10">
             <p className="text-xl font-bold">This is the end of the journey.</p>
             <a href="#">
-              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold">
+              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white">
                 Back to Top
               </button>
             </a>
@@ -241,7 +251,7 @@ export default function Footer() {
                 <div className="flex space-x-3 mt-2">
                   {/* LinkedIn */}
                   <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/company/dibilabs-id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2"
@@ -251,7 +261,7 @@ export default function Footer() {
 
                   {/* Instagram */}
                   <a
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/dibilabs.id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2"
@@ -261,12 +271,10 @@ export default function Footer() {
 
                   {/* X (Twitter) */}
                   <a
-                    href="https://x.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:partnership@dibilabs.id?subject=Partnership%20Opportunity&body=Hi%20Dibilabs%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20partnership%20with%20your%20agency.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0ARegards%2C"
                     className="bg-white rounded-full p-2"
                   >
-                    <FaXTwitter className="text-black text-2xl" />
+                    <FaEnvelope className="text-[#ff5733] text-2xl" />
                   </a>
                 </div>
               </div>
@@ -281,7 +289,7 @@ export default function Footer() {
                   placeholder="Email Address"
                   className="px-4 py-2 rounded-l-md text-black w-full"
                 />
-                <button className="bg-black px-4 py-2 rounded-xl">
+                <button className="bg-white text-black px-4 py-2 rounded-xl shadow-lg hover:bg-black hover:text-white">
                   Signup
                 </button>
               </div>
