@@ -1,7 +1,8 @@
+import { HomepageServices } from "@/types/json/homepage_services";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: HomepageServices[]; // or Record<string, any>[]
 };
 
 export default function Services({ data }: Props) {

@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { ServiceCards } from "@/types/json/service_cards";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceCards[]; // or Record<string, any>[]
 };
 
 export default function Data_decision({ data }: Props) {

@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ServiceGoogleCores } from "@/types/json/service_google_cores";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceGoogleCores[]; // or Record<string, any>[]
 };
 
 export default function DetailCoreGoogle({ data }: Props) {

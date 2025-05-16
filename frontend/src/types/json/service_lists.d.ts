@@ -1,13 +1,13 @@
 export interface ServiceLists {
-  data: ServiceList[];
-}
-
-export interface ServiceList {
   id: number;
   documentId: string;
-  name: string;
-  description: string;
+  title: string;
+  text_color: string;
+  background_color: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  button_color: string;
+  button_text_color: string;
+  arrow_color: string;
 }

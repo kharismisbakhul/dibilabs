@@ -1,5 +1,6 @@
 'use client';
 
+import { ServiceSoftwareCores } from "@/types/json/service_software_cores";
 import Footer from "../../../core/footer";
 import Navbar from "../../../core/navbar";
 import CoreSoftware from "../software/coreSoftware";
@@ -8,11 +9,13 @@ import HeroSoftware from "../software/heroSoftware";
 import TrustedBySoftware from "../software/trustedBySoftware";
 
 import { useEffect, useState } from 'react';
+import { ServiceSoftwareTrustedBies } from "@/types/json/service_software_trustedBies";
+import { ServiceCores } from "@/types/json/service_cores";
 
 export default function Software() {
-  const [cores, setCores] = useState<any[] | null>(null);
-  const [trustedBy, setTrustedBy] = useState<any[] | null>(null);
-  const [serviceCores, setServiceCores] = useState<any[] | null>(null);
+  const [cores, setCores] = useState<ServiceSoftwareCores[] | null>(null);
+  const [trustedBy, setTrustedBy] = useState<ServiceSoftwareTrustedBies[] | null>(null);
+  const [serviceCores, setServiceCores] = useState<ServiceCores[] | null>(null);
 
   const fetchDataServiceCores = async () => {
     try {

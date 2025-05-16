@@ -38,6 +38,7 @@ export default function Articles() {
                 alt={item.title}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-50 p-4 flex flex-col justify-end text-white">

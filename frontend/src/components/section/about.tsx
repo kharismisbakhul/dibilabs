@@ -8,10 +8,12 @@ import Team from "./about/team";
 import Vission_mission from "./about/vission_mission";
 
 import { useEffect, useState } from 'react';
+import { AboutTeams } from "@/types/json/about_teams";
+import { AboutPhoto } from "@/types/json/about_photo";
 
 export default function About() {
-  const [photo, setPhoto] = useState<any | null>(null);
-  const [teams, setTeams] = useState<any[] | null>(null);
+  const [photo, setPhoto] = useState<AboutPhoto | null>(null);
+  const [teams, setTeams] = useState<AboutTeams[] | null>(null);
 
   const fetchDataPhoto = async () => {
     try {

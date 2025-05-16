@@ -1,12 +1,10 @@
 export interface ServiceGoogleAchievements {
-  data: Achievement[];
-}
-
-export interface Achievement {
   id: number;
   documentId: string;
-  title: string;
-  description: string;
+  achievement: string;
+  parameter: string;
+  background_color: string;
+  text_color: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;

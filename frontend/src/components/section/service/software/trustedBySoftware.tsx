@@ -1,9 +1,10 @@
 "use client";
 
+import { ServiceSoftwareTrustedBies } from "@/types/json/service_software_trustedBies";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSoftwareTrustedBies[]; // or Record<string, any>[]
 };
 
 export default function TrustedBySoftware({ data }: Props) {

@@ -1,8 +1,4 @@
 export interface Articles {
-  data: Article[];
-}
-
-export interface Article {
   id: number;
   documentId: string;
   title: string;

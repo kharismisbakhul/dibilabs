@@ -1,9 +1,10 @@
 "use client"
 
+import { ServiceMetaTrustedBies } from "@/types/json/service_meta_trustedBies";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceMetaTrustedBies[]; // or Record<string, any>[]
 };
 
 export default function TrustedByMeta({ data }: Props) {

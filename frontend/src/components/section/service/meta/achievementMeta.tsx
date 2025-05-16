@@ -1,5 +1,7 @@
+import { ServiceMetaAchievements } from "@/types/json/service_meta_achievements";
+
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceMetaAchievements[]; // or Record<string, any>[]
 };
 
 export default function AchievementMeta({ data }: Props) {

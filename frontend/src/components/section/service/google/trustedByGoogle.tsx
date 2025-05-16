@@ -1,9 +1,10 @@
 "use client";
 
+import { ServiceGoogleTrustedBies } from "@/types/json/service_google_trustedBies";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceGoogleTrustedBies[]; // or Record<string, any>[]
 };
 
 export default function TrustedByGoogle({ data }: Props) {

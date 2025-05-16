@@ -1,18 +1,14 @@
 export interface ServiceSeoTrustedBies {
-  data: TrustedBy[];
-}
-
-export interface TrustedBy {
   id: number;
   documentId: string;
-  name: string;
-  logo: Photo;
+  brand: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  image: Image;
 }
 
-export interface Photo {
+export interface Image {
   id: number;
   documentId: string;
   name: string;
@@ -20,7 +16,7 @@ export interface Photo {
   caption: string | null;
   width: number;
   height: number;
-  formats: ImageFormats;
+  formats: unknown;
   hash: string;
   ext: string;
   mime: string;
@@ -32,24 +28,4 @@ export interface Photo {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-}
-
-export interface ImageFormats {
-  thumbnail?: ImageFormat;
-  small?: ImageFormat;
-  medium?: ImageFormat;
-  large?: ImageFormat;
-}
-
-export interface ImageFormat {
-  ext: string;
-  url: string;
-  hash: string;
-  mime: string;
-  name: string;
-  path: string | null;
-  size: number;
-  width: number;
-  height: number;
-  sizeInBytes: number;
 }

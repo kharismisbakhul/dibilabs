@@ -1,5 +1,7 @@
+import { ServiceGoogleAchievements } from "@/types/json/service_google_achievements";
+
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceGoogleAchievements[]; // or Record<string, any>[]
 };
 
 export default function AchievementGoogle({ data }: Props) {

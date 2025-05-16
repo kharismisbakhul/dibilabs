@@ -1,12 +1,10 @@
 export interface AboutPhoto {
-  data: {
-    id: number;
-    documentId: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-    photo: Photo;
-  };
+  id: number;
+  documentId: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  photo: Photo;
 }
 
 export interface Photo {

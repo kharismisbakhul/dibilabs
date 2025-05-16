@@ -1,7 +1,8 @@
+import { ServiceSosmedAchievements } from "@/types/json/service_sosmed_achievements";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSosmedAchievements[]; // or Record<string, any>[]
 };
 
 export default function AchievementSosmed({ data }: Props) {

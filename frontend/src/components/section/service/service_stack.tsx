@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import { ServiceLists } from "@/types/json/service_lists";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceLists[]; // or Record<string, any>[]
 };
 
 const backgroundImage = [

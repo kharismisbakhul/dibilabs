@@ -1,9 +1,10 @@
 "use client";
 
+import { ServiceSeoTrustedBies } from "@/types/json/service_seo_trustedBies";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSeoTrustedBies[]; // or Record<string, any>[]
 };
 
 export default function TrustedBySeo({ data }: Props) {

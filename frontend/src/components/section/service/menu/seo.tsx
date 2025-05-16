@@ -1,5 +1,6 @@
 'use client';
 
+import { ServiceSeoAchievements } from "@/types/json/service_seo_achievements";
 import Footer from "../../../core/footer";
 import Navbar from "../../../core/navbar";
 import AchievementSeo from "../seo/achievementSeo";
@@ -9,12 +10,15 @@ import HeroSeo from "../seo/heroSeo";
 import TrustedBySeo from "../seo/trustedBySeo";
 
 import { useEffect, useState } from 'react';
+import { ServiceSeoCores } from "@/types/json/service_seo_cores";
+import { ServiceSeoTrustedBies } from "@/types/json/service_seo_trustedBies";
+import { ServiceCores } from "@/types/json/service_cores";
 
 export default function Seo() {
-  const [achievements, setAchievements] = useState<any[] | null>(null);
-  const [cores, setCores] = useState<any[] | null>(null);
-  const [trustedBy, setTrustedBy] = useState<any[] | null>(null);
-  const [serviceCores, setServiceCores] = useState<any[] | null>(null);
+  const [achievements, setAchievements] = useState<ServiceSeoAchievements[] | null>(null);
+  const [cores, setCores] = useState<ServiceSeoCores[] | null>(null);
+  const [trustedBy, setTrustedBy] = useState<ServiceSeoTrustedBies[] | null>(null);
+  const [serviceCores, setServiceCores] = useState<ServiceCores[] | null>(null);
 
   const fetchDataServiceCores = async () => {
     try {

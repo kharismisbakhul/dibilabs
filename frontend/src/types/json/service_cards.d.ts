@@ -1,14 +1,13 @@
 export interface ServiceCards {
-  data: ServiceCard[];
-}
-
-export interface ServiceCard {
   id: number;
   documentId: string;
   title: string;
-  description: string;
-  icon: string;
+  text_color: string;
+  background_color: string;
+  button_text_color: string;
+  button_color: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  arrow_color: string;
 }

@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ServiceSeoCores } from "@/types/json/service_seo_cores";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSeoCores[]; // or Record<string, any>[]
 };
 
 export default function DetailCoreSeo({ data }: Props) {

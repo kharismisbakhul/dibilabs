@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { motion } from 'framer-motion';
+import { HomepagePartners } from "@/types/json/homepage_partners";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: HomepagePartners[]; // or Record<string, any>[]
 };
 
 export default function Partners({ data }: Props) {
@@ -32,6 +33,7 @@ export default function Partners({ data }: Props) {
               alt="Eyes"
               width={200}
               height={200}
+              className="h-auto w-[200px]"
             />
           </motion.div>
 

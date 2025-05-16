@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ServiceSoftwareCores } from "@/types/json/service_software_cores";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSoftwareCores[]; // or Record<string, any>[]
 };
 
 export default function DetailCoreSoftware({ data }: Props) {

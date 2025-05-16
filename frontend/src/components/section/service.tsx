@@ -8,10 +8,12 @@ import Hero_service from "./service/hero_service";
 import Service_stack from "./service/service_stack";
 
 import { useEffect, useState } from 'react';
+import { ServiceLists } from "@/types/json/service_lists";
+import { ServiceCards } from "@/types/json/service_cards";
 
 export default function Service() {
-  const [lists, setLists] = useState<any[] | null>(null);
-  const [cards, setCards] = useState<any[] | null>(null);
+  const [lists, setLists] = useState<ServiceLists[] | null>(null);
+  const [cards, setCards] = useState<ServiceCards[] | null>(null);
 
   const fetchDataLists = async () => {
     try {

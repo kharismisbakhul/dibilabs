@@ -1,7 +1,8 @@
+import { Articles } from "@/types/json/articles";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: Articles[]; // or Record<string, any>[]
 };
 
 export default function NewestArticle({ data }: Props) {
@@ -10,7 +11,7 @@ export default function NewestArticle({ data }: Props) {
   const date = new Date(dateString);
 
   // Format options
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
   const formattedDate = date.toLocaleDateString('en-US', options);
 
   // const headerArticle = data.shift();

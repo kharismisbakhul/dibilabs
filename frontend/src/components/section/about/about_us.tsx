@@ -1,7 +1,8 @@
+import { AboutPhoto } from "@/types/json/about_photo";
 import Image from "next/image";
 
 type Props = {
-  data: any; // or Record<string, any>
+  data: AboutPhoto; // or Record<string, any>
 };
 
 export default function About_us({ data }: Props) {

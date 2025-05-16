@@ -11,11 +11,14 @@ import Article_desc from "./homepage/article_desc";
 import Articles from "./homepage/articles";
 
 import { useEffect, useState } from 'react';
+import { HomepageAchievements } from "@/types/json/homepage_achievements";
+import { HomepagePartners } from "@/types/json/homepage_partners";
+import { HomepageServices } from "@/types/json/homepage_services";
 
 export default function Homepage() {
-  const [achievements, setAchievements] = useState<any[] | null>(null);
-  const [partners, setPartners] = useState<any[] | null>(null);
-  const [services, setServices] = useState<any[] | null>(null);
+  const [achievements, setAchievements] = useState<HomepageAchievements[] | null>(null);
+  const [partners, setPartners] = useState<HomepagePartners[] | null>(null);
+  const [services, setServices] = useState<HomepageServices[] | null>(null);
 
   const fetchDataAchievements = async () => {
     try {

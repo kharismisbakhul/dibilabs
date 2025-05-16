@@ -1,9 +1,10 @@
 "use client";
 
+import { ServiceSosmedTrustedBies } from "@/types/json/service_sosmed_trustedBies";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSosmedTrustedBies[]; // or Record<string, any>[]
 };
 
 export default function TrustedBySosmed({ data }: Props) {

@@ -1,7 +1,8 @@
+import { HomepageAchievements } from "@/types/json/homepage_achievements";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: HomepageAchievements[]; // or Record<string, any>[]
 };
 
 export default function Achievements({ data }: Props) {

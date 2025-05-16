@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ServiceWebdevCores } from "@/types/json/service_webdev_cores";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceWebdevCores[]; // or Record<string, any>[]
 };
 
 export default function DetailCoreWebdev({ data }: Props) {

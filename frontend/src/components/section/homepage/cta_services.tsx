@@ -21,13 +21,15 @@ export default function Cta_services() {
         <div className="flex flex-col justify-center px-6 md:px-12 py-10 gap-6 text-left">
           {/* Icon + Headline */}
           <div>
-            <Image
-              src="/assets/homepage/raise-bar.svg" // your orange icon
-              alt="Raise Icon"
-              width={100}
-              height={100}
-              className="mb-2"
-            />
+            <div className="relative w-[100px] h-[100px] mb-2">
+              <Image
+                src="/assets/homepage/raise-bar.svg"
+                alt="Raise Icon"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
             <h2 className="text-5xl md:text-5xl font-bold text-orange-500 leading-snug">
               Ready to raise the bar?
               <br />

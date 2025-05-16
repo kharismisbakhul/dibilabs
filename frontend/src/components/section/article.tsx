@@ -6,9 +6,10 @@ import HeroArticle from "./article/heroArticle";
 import NewestArticle from "./article/newestArticle";
 
 import { useEffect, useState } from "react";
+import { Articles } from "@/types/json/articles";
 
 export default function Article() {
-  const [articles, setArticles] = useState<any[] | null>(null);
+  const [articles, setArticles] = useState<Articles[] | null>(null);
 
   const fetchDataArticles = async () => {
     try {

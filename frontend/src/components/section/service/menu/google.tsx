@@ -1,5 +1,6 @@
 'use client';
 
+import { ServiceGoogleAchievements } from "@/types/json/service_google_achievements";
 import Footer from "../../../core/footer";
 import Navbar from "../../../core/navbar";
 import AchievementGoogle from "../google/achievementGoogle";
@@ -9,12 +10,15 @@ import HeroGoogle from "../google/heroGoogle";
 import TrustedByGoogle from "../google/trustedByGoogle";
 
 import { useEffect, useState } from 'react';
+import { ServiceGoogleTrustedBies } from "@/types/json/service_google_trustedBies";
+import { ServiceCores } from "@/types/json/service_cores";
+import { ServiceGoogleCores } from "@/types/json/service_google_cores";
 
 export default function Google() {
-  const [achievements, setAchievements] = useState<any[] | null>(null);
-  const [cores, setCores] = useState<any[] | null>(null);
-  const [trustedBy, setTrustedBy] = useState<any[] | null>(null);
-  const [serviceCores, setServiceCores] = useState<any[] | null>(null);
+  const [achievements, setAchievements] = useState<ServiceGoogleAchievements[] | null>(null);
+  const [cores, setCores] = useState<ServiceGoogleCores[] | null>(null);
+  const [trustedBy, setTrustedBy] = useState<ServiceGoogleTrustedBies[] | null>(null);
+  const [serviceCores, setServiceCores] = useState<ServiceCores[] | null>(null);
 
   const fetchDataServiceCores = async () => {
     try {

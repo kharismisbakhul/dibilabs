@@ -43,6 +43,7 @@ export default function Hero() {
                   alt="Beaker Mascot"
                   fill
                   className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
               </div>
             </div>

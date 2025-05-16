@@ -1,7 +1,8 @@
+import { ServiceCores } from "@/types/json/service_cores";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceCores[]; // or Record<string, any>[]
 };
 
 export default function CoreSeo({ data }: Props) {

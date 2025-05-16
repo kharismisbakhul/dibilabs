@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ServiceMetaCores } from "@/types/json/service_meta_cores";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceMetaCores[]; // or Record<string, any>[]
 };
 
 export default function DetailCoreMeta({ data }: Props) {

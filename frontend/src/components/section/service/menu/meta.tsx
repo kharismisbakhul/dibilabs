@@ -1,5 +1,6 @@
 'use client';
 
+import { ServiceMetaAchievements } from "@/types/json/service_meta_achievements";
 import Footer from "../../../core/footer";
 import Navbar from "../../../core/navbar";
 import AchievementMeta from "../meta/achievementMeta";
@@ -9,12 +10,15 @@ import HeroMeta from "../meta/heroMeta";
 import TrustedByMeta from "../meta/trustedByMeta";
 
 import { useEffect, useState } from 'react';
+import { ServiceMetaCores } from "@/types/json/service_meta_cores";
+import { ServiceMetaTrustedBies } from "@/types/json/service_meta_trustedBies";
+import { ServiceCores } from "@/types/json/service_cores";
 
 export default function Meta() {
-  const [achievements, setAchievements] = useState<any[] | null>(null);
-  const [cores, setCores] = useState<any[] | null>(null);
-  const [trustedBy, setTrustedBy] = useState<any[] | null>(null);
-  const [serviceCores, setServiceCores] = useState<any[] | null>(null);
+  const [achievements, setAchievements] = useState<ServiceMetaAchievements[] | null>(null);
+  const [cores, setCores] = useState<ServiceMetaCores[] | null>(null);
+  const [trustedBy, setTrustedBy] = useState<ServiceMetaTrustedBies[] | null>(null);
+  const [serviceCores, setServiceCores] = useState<ServiceCores[] | null>(null);
 
   const fetchDataServiceCores = async () => {
     try {

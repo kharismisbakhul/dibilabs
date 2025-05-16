@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { AboutTeams } from "@/types/json/about_teams";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: AboutTeams[]; // or Record<string, any>[]
 };
 
 export default function Team({ data }: Props) {

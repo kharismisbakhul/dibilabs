@@ -1,8 +1,4 @@
 export interface AboutTeams {
-  data: TeamMember[];
-}
-
-export interface TeamMember {
   id: number;
   documentId: string;
   name: string;

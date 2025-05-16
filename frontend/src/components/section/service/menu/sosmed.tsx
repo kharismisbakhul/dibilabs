@@ -1,5 +1,6 @@
 'use client';
 
+import { ServiceSosmedAchievements } from "@/types/json/service_sosmed_achievements";
 import Footer from "../../../core/footer";
 import Navbar from "../../../core/navbar";
 import AchievementSosmed from "../sosmed/achievementSosmed";
@@ -9,12 +10,15 @@ import HeroSosmed from "../sosmed/heroSosmed";
 import TrustedBySosmed from "../sosmed/trustedBySosmed";
 
 import { useEffect, useState } from 'react';
+import { ServiceSosmedCores } from "@/types/json/service_sosmed_cores";
+import { ServiceSosmedTrustedBies } from "@/types/json/service_sosmed_trustedBies";
+import { ServiceCores } from "@/types/json/service_cores";
 
 export default function Sosmed() {
-  const [achievements, setAchievements] = useState<any[] | null>(null);
-  const [cores, setCores] = useState<any[] | null>(null);
-  const [trustedBy, setTrustedBy] = useState<any[] | null>(null);
-  const [serviceCores, setServiceCores] = useState<any[] | null>(null);
+  const [achievements, setAchievements] = useState<ServiceSosmedAchievements[] | null>(null);
+  const [cores, setCores] = useState<ServiceSosmedCores[] | null>(null);
+  const [trustedBy, setTrustedBy] = useState<ServiceSosmedTrustedBies[] | null>(null);
+  const [serviceCores, setServiceCores] = useState<ServiceCores[] | null>(null);
 
   const fetchDataServiceCores = async () => {
     try {

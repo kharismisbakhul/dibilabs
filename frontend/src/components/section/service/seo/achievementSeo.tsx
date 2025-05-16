@@ -1,7 +1,8 @@
+import { ServiceSeoAchievements } from "@/types/json/service_seo_achievements";
 import Image from "next/image";
 
 type Props = {
-  data: any[]; // or Record<string, any>[]
+  data: ServiceSeoAchievements[]; // or Record<string, any>[]
 };
 
 export default function AchievementSeo({ data }: Props) {
