@@ -38,7 +38,7 @@ export default function Footer() {
   return (
     <>
       {/* Bottom Section */}
-      <div className="bg-orange-500 text-white px-6 py-10">
+      <div className="bg-orange-500 text-white px-6 py-10" id="footer">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Bubble + Mascot Section */}
