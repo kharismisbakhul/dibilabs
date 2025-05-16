@@ -133,7 +133,7 @@ export default function Footer() {
                 onChange={handleChange}
                 value={form.industry}
               >
-                <option>Industry</option>
+                <option disabled value="" hidden className="text-gray-400">--- Choose Industry ---</option>
                 <option>Technology</option>
                 <option>Health</option>
                 <option>Education</option>
@@ -145,10 +145,13 @@ export default function Footer() {
                 onChange={handleChange}
                 value={form.services}
               >
-                <option>Services</option>
+                <option disabled value="" hidden className="text-gray-400">--- Choose Services ---</option>
                 <option>Meta Ads</option>
+                <option>Google Ads</option>
+                <option>Social Media Management</option>
+                <option>Search Engine Optimization Service</option>
+                <option>Software and Web App Development</option>
                 <option>Website Development</option>
-                <option>SEO</option>
               </select>
               {/* Right-aligned button */}
               <div className="flex justify-end">
