@@ -35,9 +35,14 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="relative group cursor-pointer px-2 py-1 rounded-md">
-                <span className="transition-all duration-300 hover:underline flex items-center gap-1">
-                  Services
-                </span>
+                <a
+                  href="/service"
+                  className="transition-all duration-300 hover:underline flex items-center gap-1"
+                >
+                  <span>
+                    Services
+                  </span>
+                </a>
 
                 {/* Dropdown Menu */}
                 <div className="absolute left-0 mt-5 w-[800px] bg-white border rounded-xl shadow-lg p-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
