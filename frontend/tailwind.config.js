@@ -12,6 +12,11 @@ module.exports = {
     'bg-[#0057A0]',
     'bg-white',
     'text-[#F26522]',
+    'bg-[#f26322]',
+    'text-[#004785]',
+    'bg-[#004785]',
+    'text-[#f26322]',
+    'bg-[#d9d9d9]'
   ],
   theme: {
     extend: {
