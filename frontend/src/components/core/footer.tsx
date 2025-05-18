@@ -179,7 +179,7 @@ export default function Footer() {
               <label className="text-white text-sm">Services</label>
               <select
                 className={`px-4 py-2 rounded ${
-                  form.industry === "" ? "text-gray-400" : "text-black"
+                  form.services === "" ? "text-gray-400" : "text-black"
                 }`}
                 name="services"
                 onChange={handleChange}
