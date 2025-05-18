@@ -27,7 +27,12 @@ export default function Navbar() {
             </a>
             <ul className="hidden md:flex gap-20 font-medium text-lg">
               <li className="cursor-pointer px-2 py-1 rounded-md">
-                <a href="/about" className="transition-all duration-300 hover:underline">About Us</a>
+                <a
+                  href="/about"
+                  className="transition-all duration-300 hover:underline"
+                >
+                  About Us
+                </a>
               </li>
               <li className="relative group cursor-pointer px-2 py-1 rounded-md">
                 <span className="transition-all duration-300 hover:underline flex items-center gap-1">
@@ -35,90 +40,138 @@ export default function Navbar() {
                 </span>
 
                 {/* Dropdown Menu */}
-                <div className="absolute left-0 mt-3 w-[600px] bg-white border rounded-xl shadow-lg p-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="absolute left-0 mt-5 w-[800px] bg-white border rounded-xl shadow-lg p-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className="grid grid-cols-2 gap-6">
                     {/* Item 1 */}
                     <div className="flex gap-3">
-                      <FaMeta className="text-sky-600 text-xl mt-1" />
+                      <FaMeta className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a href="/service/meta" className="font-semibold text-gray-900 hover:underline">Meta Ads</a>
+                        <a
+                          href="/service/meta"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Meta Ads
+                        </a>
                         <p className="text-gray-500 text-sm">
-                          Bootcamp untuk meningkatkan digital skills dengan penyaluran kerja bergaransi.
+                          Big ideas need smart execution. Our data-driven
+                          precision and creative agility team turn your vision
+                          into measurable results that keep growing.
                         </p>
                       </div>
                     </div>
 
                     {/* Item 2 */}
                     <div className="flex gap-3">
-                      <FaGoogle className="text-sky-600 text-xl mt-1" />
+                      <FaGoogle className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a href="/service/google" className="font-semibold text-gray-900 hover:underline">Google Ads</a>
+                        <a
+                          href="/service/google"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Google Ads
+                        </a>
                         <p className="text-gray-500 text-sm">
-                          Belajar beragam digital skills secara gratis dan bersertifikat.
+                          Advertising without data leads to inefficient
+                          spending, and declining performance. As a Google
+                          Partner, we utilize smart bidding, advanced audience
+                          insights, and precise targeting to maximize impact and
+                          optimize every advertising investmen
                         </p>
                       </div>
                     </div>
 
                     {/* Item 3 */}
                     <div className="flex gap-3">
-                      <IoShareSocial className="text-sky-600 text-xl mt-1" />
+                      <IoShareSocial className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a href="/service/sosmed" className="font-semibold text-gray-900 hover:underline">
+                        <a
+                          href="/service/sosmed"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
                           Social Media Management
                         </a>
                         <p className="text-gray-500 text-sm">
-                          Bimbingan lebih personal, kelas interaktif, dan komunitas suportif.
+                          We engineer social media success through engaging
+                          storytelling, data-backed content, and
+                          platform-specific tactics, turning brand awareness
+                          into real engagement and loyal audiences.
                         </p>
                       </div>
                     </div>
 
                     {/* Item 4 */}
                     <div className="flex gap-3">
-                      <FaSearch className="text-sky-600 text-xl mt-1" />
+                      <FaSearch className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a href="/service/seo" className="font-semibold text-gray-900 hover:underline">
+                        <a
+                          href="/service/seo"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
                           Search Engine Optimization Service
                         </a>
                         <p className="text-gray-500 text-sm">
-                          Dapatkan video course dan akses penyaluran magang virtual bersertifikat.
+                          Our strategic approach ensures long-term visibility,
+                          transforming organic traffic into sustainable business
+                          growth with content that ranks, shines, and converts.
                         </p>
                       </div>
                     </div>
 
                     {/* Item 5 */}
                     <div className="flex gap-3">
-                      <IoApps className="text-sky-600 text-xl mt-1" />
+                      <IoApps className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a href="/service/software" className="font-semibold text-gray-900 hover:underline">
+                        <a
+                          href="/service/software"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
                           Software and Web App Development
                         </a>
                         <p className="text-gray-500 text-sm">
-                          Dapatkan video course dan akses penyaluran magang virtual bersertifikat.
+                          By blending user psychology, data-driven insights, and
+                          customized strategies, we craft digital experiences
+                          that feel effortless, perform flawlessly, and adapt to
+                          your unique needs.
                         </p>
                       </div>
                     </div>
 
                     {/* Item 6 */}
                     <div className="flex gap-3">
-                      <CgWebsite className="text-sky-600 text-xl mt-1" />
+                      <CgWebsite className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a href="/service/webdev" className="font-semibold text-gray-900 hover:underline">
+                        <a
+                          href="/service/webdev"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
                           Website Development
                         </a>
                         <p className="text-gray-500 text-sm">
-                          Dapatkan video course dan akses penyaluran magang virtual bersertifikat.
+                          More than just an online presence, your website should
+                          work for you. With data-driven design, seamless
+                          functionality, and continuous optimization, we
+                          transform your platform into a growth engine.
                         </p>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </li>
               <li className="cursor-pointer px-2 py-1 rounded-md">
-                <a href="/article" className="transition-all duration-300 hover:underline">Article</a>
+                <a
+                  href="/article"
+                  className="transition-all duration-300 hover:underline"
+                >
+                  Article
+                </a>
               </li>
               <li className="cursor-pointer px-2 py-1 rounded-md">
-                <a href="/contact" className="transition-all duration-300 hover:underline">Contact Us</a>
+                <a
+                  href="/contact"
+                  className="transition-all duration-300 hover:underline"
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
             <a
