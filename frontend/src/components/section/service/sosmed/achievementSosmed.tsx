@@ -20,17 +20,33 @@ export default function AchievementSosmed({ data }: Props) {
                 <div
                   className={`${achievement.background_color} text-white px-4 flex justify-center items-center rounded-lg`}
                 >
-                  <span className="text-[60px] font-extrabold text-white">
-                    <span
-                      className="px-2"
-                      style={{
-                        WebkitTextStroke: "2px white",
-                        WebkitTextFillColor: `${achievement.text_color}`,
-                      }}
-                    >
-                      {achievement.achievement}
-                    </span>
-                  </span>
+                  {achievement.image != null ? (
+                    <div className="py-3">
+                      <Image
+                        src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${achievement.image.url}`}
+                        alt={achievement.image.name}
+                        width={50}
+                        height={40}
+                        className=""
+                      />
+                    </div>
+                      ) : (
+                      <span className="text-[60px] font-extrabold text-white">
+                        <span
+                          className="px-2"
+                          style={{
+                            WebkitTextStroke: "2px white",
+                            WebkitTextFillColor: `${achievement.text_color}`,
+                          }}
+                        >
+                            {
+                              achievement.achievement
+                            }
+                        </span>
+                      </span>
+                      )
+                      }
+                  
                   <div className="text-left ml-4">
                     <p className="text-[24px] leading-none">
                       {achievement.parameter}
