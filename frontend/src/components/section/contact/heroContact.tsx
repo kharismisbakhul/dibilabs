@@ -28,7 +28,7 @@ export default function HeroContact() {
                 />
               </div>
 
-              <div className="absolute right-[600px] top-[300px]">
+              <div className="absolute right-[600px] top-[300px] animate-pulse-slow">
                 <Image
                   src="/assets/contact/eyes.svg"
                   alt="Bubbles Decoration"
@@ -68,26 +68,6 @@ export default function HeroContact() {
           </div>
         </div>
 
-
-        {/* <div className="w-full absolute -bottom-48 left-0">
-          <Image
-            src="/assets/contact/pattern_top.svg" // replace with your image path
-            alt="Top Divider"
-            width={1600}
-            height={100}
-            className="w-full object-cover"
-          />
-        </div>
-
-        <div className="w-full absolute -bottom-[320px] left-0">
-          <Image
-            src="/assets/contact/pattern_bottom.svg" // replace with your image path
-            alt="Bottom Divider"
-            width={1600}
-            height={100}
-            className="w-full object-cover"
-          />
-        </div> */}
       </div> 
 
       <div className="bg-orange-500 pb-[100px]"></div>
