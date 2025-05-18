@@ -10,25 +10,31 @@ export default function Team({ data }: Props) {
     <section className="text-center bg-white mt-[250px]">
       {/* Title */}
       <div className="flex items-center justify-center gap-10 mb-[50px]">
-        <Image src="/assets/about/heart_left.svg" alt="Heart left" width={100} height={100} />
-        <h2 className="text-5xl font-bold bg-blue-700 text-white px-8 py-3 rounded-md">Our Team</h2>
-        <Image src="/assets/about/heart_right.svg" alt="Heart right" width={100} height={100} />
+        <Image src="/assets/about/heart_left.svg" alt="Heart left" width={200} height={200} />
+        <h2 className="text-7xl font-bold bg-blue-700 text-white px-16 py-3 rounded-md">Our Team</h2>
+        <Image src="/assets/about/heart_right.svg" alt="Heart right" width={200} height={200} />
       </div>
 
       {/* Grid of images */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {data.map((item, i) => (
-          <div key={i} className="w-full aspect-[4/4] relative overflow-hidden">
+          <div
+            key={i}
+            className="group w-full aspect-[4/4] relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300"
+          >
             <Image
               src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.photo.url}`}
               alt={item.photo.name}
               layout="fill"
               objectFit="cover"
-              className=""
+              className="transform group-hover:scale-105 transition duration-300 ease-in-out"
             />
+            {/* Optional dark overlay on hover */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div>
           </div>
         ))}
       </div>
+
     </section>
   );
 }
