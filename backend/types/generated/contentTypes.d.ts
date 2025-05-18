@@ -466,6 +466,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
 export interface ApiFormCtaFormCta extends Struct.CollectionTypeSchema {
   collectionName: 'form_ctas';
   info: {
+    description: '';
     displayName: 'Form CTA';
     pluralName: 'form-ctas';
     singularName: 'form-cta';
@@ -480,7 +481,17 @@ export interface ApiFormCtaFormCta extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     email: Schema.Attribute.Email;
     industry: Schema.Attribute.Enumeration<
-      ['Technology', 'Health', 'Education']
+      [
+        'Tech',
+        'Health',
+        'Education',
+        'Fashion',
+        'Beauty',
+        'Food and Beverage',
+        'Services',
+        'Government',
+        'Others',
+      ]
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -503,7 +514,7 @@ export interface ApiFormCtaFormCta extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Whatsapp: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String;
   };
 }
 
@@ -1150,6 +1161,36 @@ export interface ApiSosmedTrustedBySosmedTrustedBy
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::sosmed-trusted-by.sosmed-trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSubscriptionSubscription
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'subscriptions';
+  info: {
+    description: '';
+    displayName: 'Subscription';
+    pluralName: 'subscriptions';
+    singularName: 'subscription';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subscription.subscription'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1909,6 +1950,7 @@ declare module '@strapi/strapi' {
       'api::sosmed-achievement.sosmed-achievement': ApiSosmedAchievementSosmedAchievement;
       'api::sosmed-core.sosmed-core': ApiSosmedCoreSosmedCore;
       'api::sosmed-trusted-by.sosmed-trusted-by': ApiSosmedTrustedBySosmedTrustedBy;
+      'api::subscription.subscription': ApiSubscriptionSubscription;
       'api::web-core.web-core': ApiWebCoreWebCore;
       'api::web-trusted-by.web-trusted-by': ApiWebTrustedByWebTrustedBy;
       'plugin::content-releases.release': PluginContentReleasesRelease;

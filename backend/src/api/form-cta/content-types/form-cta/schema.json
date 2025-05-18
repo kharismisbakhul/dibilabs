@@ -4,7 +4,8 @@
   "info": {
     "singularName": "form-cta",
     "pluralName": "form-ctas",
-    "displayName": "Form CTA"
+    "displayName": "Form CTA",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,15 +20,21 @@
     "email": {
       "type": "email"
     },
-    "Whatsapp": {
+    "whatsapp": {
       "type": "string"
     },
     "industry": {
       "type": "enumeration",
       "enum": [
-        "Technology",
+        "Tech",
         "Health",
-        "Education"
+        "Education",
+        "Fashion",
+        "Beauty",
+        "Food and Beverage",
+        "Services",
+        "Government",
+        "Others"
       ]
     },
     "services": {
