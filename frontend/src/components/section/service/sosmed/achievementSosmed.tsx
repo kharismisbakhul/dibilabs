@@ -10,7 +10,7 @@ export default function AchievementSosmed({ data }: Props) {
     <>
       <section className="relative bg-white py-12 px-4 md:px-0 flex justify-center">
         <div className="text-center">
-          <h2 className="text-[32px] md:text-[36px] font-light text-black">
+          <h2 className="text-[50px] font-light text-black">
             We’ve <span className="font-bold text-[#F37021]">Achieved</span>
           </h2>
 
@@ -18,7 +18,7 @@ export default function AchievementSosmed({ data }: Props) {
             {data.map((achievement, idx) => (
               <div key={idx} className="flex items-center justify-center">
                 <div
-                  className={`${achievement.background_color} text-white px-4 flex justify-center items-center rounded-lg`}
+                  className={`${achievement.background_color} text-white px-8 flex justify-center items-center rounded-lg`}
                 >
                   {achievement.image != null ? (
                     <div className="py-3">
@@ -48,7 +48,7 @@ export default function AchievementSosmed({ data }: Props) {
                       }
                   
                   <div className="text-left ml-4">
-                    <p className="text-[24px] leading-none">
+                    <p className="text-[40px] leading-none">
                       {achievement.parameter}
                     </p>
                   </div>

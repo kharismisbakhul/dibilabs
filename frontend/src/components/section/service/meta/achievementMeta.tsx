@@ -9,7 +9,7 @@ export default function AchievementMeta({ data }: Props) {
     <>
       <section className="relative bg-white py-12 px-4 md:px-0 flex justify-center">
       <div className="text-center">
-        <h2 className="text-[32px] md:text-[36px] font-light text-black">
+        <h2 className="text-[50px] font-light text-black">
           Numbers <span className="font-bold text-[#F37021]">Don&apos;t Lie</span>
         </h2>
 
@@ -17,7 +17,7 @@ export default function AchievementMeta({ data }: Props) {
 
           {data.map((achievement, idx) => (
             <div key={idx} className="flex items-center justify-center">
-            <div className={`${achievement.background_color} text-white px-4 flex justify-center items-center rounded-lg`}>
+            <div className={`${achievement.background_color} text-white px-8 flex justify-center items-center rounded-lg`}>
               <span className="text-[60px] font-extrabold text-white">
                 <span className="px-2" style={{
                     WebkitTextStroke: '2px white',
@@ -25,7 +25,7 @@ export default function AchievementMeta({ data }: Props) {
                 }}>{achievement.achievement}</span>
               </span>
               <div className="text-left ml-4">
-                <p className="text-[24px] leading-none">{achievement.parameter}</p>
+                <p className="text-[40px] leading-none">{achievement.parameter}</p>
               </div>
             </div>
           </div>
