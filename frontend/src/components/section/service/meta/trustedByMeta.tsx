@@ -16,17 +16,20 @@ export default function TrustedByMeta({ data }: Props) {
         </h2>
 
         <div className="relative mt-8 overflow-hidden">
-          <div className="flex gap-10 whitespace-nowrap justify-center">
-            {data.map((item, index) => (
-              <div key={index} className="w-36 h-20 relative flex-shrink-0">
-                <Image
-                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
-                  alt={item.image.name}
-                  fill
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-            ))}
+          <div className="animate-marquee flex gap-10 whitespace-nowrap justify-center">
+            {/* Repeat the list multiple times */}
+            {Array.from({ length: 4 }).flatMap((_, repeatIndex) =>
+              data.map((item, index) => (
+                <div key={`${repeatIndex}-${index}`} className="w-56 h-40 relative flex-shrink-0">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
+                    alt={item.image.name}
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+              ))
+            )}
           </div>
         </div>
 
