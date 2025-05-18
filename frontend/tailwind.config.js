@@ -1,6 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/app/**/*.{js,ts,jsx,tsx}","./src/components/**/*.{js,ts,jsx,tsx}",],
+  safelist: [
+    'bg-[#F37021]',
+    'bg-[#1A1A1A]',
+    'bg-[#0055A4]',
+    'bg-blue-800',
+    'bg-black',
+    'bg-orange-500',
+    'bg-[#F26522]',
+    'bg-[#0057A0]',
+    'bg-white',
+  ],
   theme: {
     extend: {
       keyframes: {
@@ -14,7 +25,7 @@ module.exports = {
         },
         'zoom-pulse': {
           '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.05)' },
+          '50%': { transform: 'scale(1.20)' },
         },
         'bounce-smooth': {
           '0%, 100%': { transform: 'translateY(0)' },
