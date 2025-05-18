@@ -10,22 +10,22 @@ export default function Navbar() {
     <>
       <div className="bg-orange-500 text-white shadow-md z-10 relative">
         {/* Navbar */}
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-between px-6 py-7">
+        <div className="">
+          <nav className="flex items-center justify-between px-16 py-4">
             <a href="/homepage">
               <div className="flex items-center space-x-2">
-                <div className="relative w-[120px] h-[40px]">
+                <div className="relative w-[200px] h-[60px]">
                   <Image
-                    src="/assets/core/logo.png"
+                    src="/assets/core/logo1.png"
                     alt="Dibilabs Logo"
                     fill
-                    sizes="(max-width: 768px) 120px, 160px"
+                    sizes="(max-width: 768px) 200px, 160px"
                     className="object-contain"
                   />
                 </div>
               </div>
             </a>
-            <ul className="hidden md:flex gap-20 font-medium text-base">
+            <ul className="hidden md:flex gap-20 font-medium text-lg">
               <li className="cursor-pointer px-2 py-1 rounded-md">
                 <a href="/about" className="transition-all duration-300 hover:underline">About Us</a>
               </li>

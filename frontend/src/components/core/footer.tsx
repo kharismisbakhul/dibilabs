@@ -219,12 +219,12 @@ export default function Footer() {
             {/* Column 1 - Branding */}
             <div>
               <a href="/homepage">
-                <div className="relative w-[120px] h-[60px]">
+                <div className="relative w-[150px] h-[60px]">
                   <Image
-                    src="/assets/core/logo.png"
+                    src="/assets/core/logo1.png"
                     alt="Dibilabs Logo"
                     fill
-                    sizes="(max-width: 768px) 120px, 160px"
+                    sizes="(max-width: 768px) 150px, 160px"
                     className="object-contain"
                   />
                 </div>
