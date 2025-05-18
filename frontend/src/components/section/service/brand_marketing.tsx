@@ -32,25 +32,25 @@ export default function Brand_marketing() {
         </div>
 
         <div className="absolute z-30 top-[1050px] left-[100px] text-white">
-          <h2 className="text-7xl font-bold">Digital</h2>
-          <p className="text-7xl mb-4">Advertising</p>
-          <button className="bg-orange-500 text-white py-1 px-4 rounded-full text-lg">
+          <h2 className="text-8xl font-bold">Digital</h2>
+          <p className="text-8xl mb-4">Advertising</p>
+          <button className="bg-orange-500 text-white py-3 px-8 rounded-full text-3xl font-bold">
             Learn more →
           </button>
         </div>
 
-        <div className="absolute z-30 top-[850px] right-[300px] text-white text-center">
-          <h2 className="text-7xl font-semibold">Social Media</h2>
-          <p className="text-7xl mb-4">Handling</p>
-          <button className="bg-white text-blue-800 py-1 px-4 rounded-full text-lg font-semibold">
-            Learn more →
+        <div className="absolute z-30 top-[820px] right-[230px] text-white text-center">
+          <h2 className="text-8xl font-semibold">Social Media</h2>
+          <p className="text-8xl mb-4">Handling</p>
+          <button className="bg-white text-black py-3 px-8 rounded-full text-3xl font-bold">
+            Learn more <span className="text-orange-500">→</span>
           </button>
         </div>
 
         <div className="absolute z-30 top-[1580px] right-[100px] text-white text-right">
-          <h2 className="text-5xl font-semibold">Shoppertainment</h2>
+          <h2 className="text-6xl font-semibold">Shoppertainment</h2>
           <p className="text-9xl mb-4">Hacks</p>
-          <button className="bg-white text-orange-600 py-1 px-4 rounded-full text-lg font-semibold">
+          <button className="bg-[#065097] text-white py-3 px-8 rounded-full text-3xl font-bold">
             Learn more →
           </button>
         </div>
@@ -58,8 +58,8 @@ export default function Brand_marketing() {
         <div className="absolute z-30 top-[2000px] left-[250px] text-white text-center">
           <h2 className="text-9xl font-bold">Influencer</h2>
           <p className="text-9xl mb-4">Marketing</p>
-          <button className="bg-white text-blue-700 py-1 px-4 rounded-full text-lg font-semibold">
-            Learn more →
+          <button className="bg-white text-black py-3 px-8 rounded-full text-3xl font-bold">
+            Learn more <span className="text-orange-500">→</span>
           </button>
         </div>
 
@@ -73,12 +73,12 @@ export default function Brand_marketing() {
         />
 
         {/* Overlay content */}
-        <div className="relative z-30 max-w-6xl mx-auto px-4 py-[250px]">
+        <div className="relative z-30 max-w-6xl ml-[150px] py-[250px]">
           <div className="max-w-2xl">
-            <p className="text-xl font-semibold text-white">
+            <p className="text-2xl font-semibold text-white">
               Digital Infrastructure Solutions
             </p>
-            <h1 className="text-6xl font-bold leading-tight mt-2 text-white">
+            <h1 className="text-7xl font-bold leading-tight mt-2 text-white">
               Streamline and <br />
               Digitize Your <br />
               Business Process
@@ -91,8 +91,8 @@ export default function Brand_marketing() {
           <Image
             src="/assets/service/bubble_white.svg"
             alt="circle 1"
-            width={300}
-            height={300}
+            width={500}
+            height={500}
             className="object-contain"
           />
         </div>

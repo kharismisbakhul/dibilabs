@@ -1,0 +1,230 @@
+{
+  "data": [
+    {
+      "id": 19,
+      "documentId": "whxdyhqh7u5y87o67wkxynn2",
+      "brand": "brand1",
+      "createdAt": "2025-04-14T13:56:26.932Z",
+      "updatedAt": "2025-04-14T13:56:26.932Z",
+      "publishedAt": "2025-04-26T02:47:44.444Z",
+      "image": {
+        "id": 82,
+        "documentId": "ou5aygf42nfbkfkk20x56who",
+        "name": "trustedby5.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 231,
+        "height": 142,
+        "formats": null,
+        "hash": "trustedby5",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 4.68,
+        "url": "/assets/service/google/trustedby5.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:32.792Z",
+        "updatedAt": "2025-04-14T02:23:32.792Z",
+        "publishedAt": "2025-04-14T02:23:32.792Z"
+      }
+    },
+    {
+      "id": 20,
+      "documentId": "ixzhj5ndbtfor1y2u7sg16o7",
+      "brand": "brand2",
+      "createdAt": "2025-04-14T13:56:44.734Z",
+      "updatedAt": "2025-04-14T13:56:44.734Z",
+      "publishedAt": "2025-04-26T02:47:44.451Z",
+      "image": {
+        "id": 79,
+        "documentId": "zpdfz1l4iz8vod7sldxyq9z0",
+        "name": "trustedby2.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 217,
+        "height": 65,
+        "formats": null,
+        "hash": "trustedby2",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 6.01,
+        "url": "/assets/service/google/trustedby2.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:32.532Z",
+        "updatedAt": "2025-04-14T02:23:32.532Z",
+        "publishedAt": "2025-04-14T02:23:32.532Z"
+      }
+    },
+    {
+      "id": 21,
+      "documentId": "bn5jkg5ijnq2lu8gaktqqw1y",
+      "brand": "brand3",
+      "createdAt": "2025-04-14T13:57:00.192Z",
+      "updatedAt": "2025-04-14T13:57:00.192Z",
+      "publishedAt": "2025-04-26T02:47:44.455Z",
+      "image": {
+        "id": 78,
+        "documentId": "l3ukb7b1g0spyoimvg4o4x6a",
+        "name": "trustedby1.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 250,
+        "height": 345,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/google/thumbnail_trustedby1_b2cbe80ebe.png",
+            "hash": "thumbnail_trustedby1_b2cbe80ebe",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby1.png",
+            "path": null,
+            "size": 6.13,
+            "width": 113,
+            "height": 156,
+            "sizeInBytes": 6131
+          }
+        },
+        "hash": "trustedby1",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 3.52,
+        "url": "/assets/service/google/trustedby1.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:32.452Z",
+        "updatedAt": "2025-04-14T02:23:32.452Z",
+        "publishedAt": "2025-04-14T02:23:32.452Z"
+      }
+    },
+    {
+      "id": 22,
+      "documentId": "ligmuct8bcmapdfhalx05kl4",
+      "brand": "brand4",
+      "createdAt": "2025-04-14T13:57:20.220Z",
+      "updatedAt": "2025-04-14T13:57:20.220Z",
+      "publishedAt": "2025-04-26T02:47:44.461Z",
+      "image": {
+        "id": 83,
+        "documentId": "tsb979czjerups3ushbkor63",
+        "name": "trustedby6.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 319,
+        "height": 103,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/google/thumbnail_trustedby6_e2efc9598b.png",
+            "hash": "thumbnail_trustedby6_e2efc9598b",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby6.png",
+            "path": null,
+            "size": 14.95,
+            "width": 245,
+            "height": 79,
+            "sizeInBytes": 14950
+          }
+        },
+        "hash": "trustedby6",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 5.43,
+        "url": "/assets/service/google/trustedby6.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:32.810Z",
+        "updatedAt": "2025-04-14T02:23:32.810Z",
+        "publishedAt": "2025-04-14T02:23:32.810Z"
+      }
+    },
+    {
+      "id": 23,
+      "documentId": "tt13dra1f7zzzjp955tzvhk9",
+      "brand": "brand5",
+      "createdAt": "2025-04-14T13:57:35.897Z",
+      "updatedAt": "2025-04-14T13:57:35.897Z",
+      "publishedAt": "2025-04-26T02:47:44.464Z",
+      "image": {
+        "id": 80,
+        "documentId": "kxktn5fthegnvu4k7ifqzi16",
+        "name": "trustedby3.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 218,
+        "height": 219,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/google/thumbnail_trustedby3_e8316a2f4d.png",
+            "hash": "thumbnail_trustedby3_e8316a2f4d",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby3.png",
+            "path": null,
+            "size": 15.69,
+            "width": 155,
+            "height": 156,
+            "sizeInBytes": 15690
+          }
+        },
+        "hash": "trustedby3",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 6.95,
+        "url": "/assets/service/google/trustedby3.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:32.622Z",
+        "updatedAt": "2025-04-14T02:23:32.622Z",
+        "publishedAt": "2025-04-14T02:23:32.622Z"
+      }
+    },
+    {
+      "id": 24,
+      "documentId": "h9xboc85n6wpwke1exuawj9k",
+      "brand": "brand6",
+      "createdAt": "2025-04-14T13:57:54.536Z",
+      "updatedAt": "2025-04-14T13:57:54.536Z",
+      "publishedAt": "2025-04-26T02:47:44.468Z",
+      "image": {
+        "id": 81,
+        "documentId": "ifbzd7nbe72odv288i4twd95",
+        "name": "trustedby4.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 272,
+        "height": 218,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/assets/service/google/thumbnail_trustedby4_4b964932a8.png",
+            "hash": "thumbnail_trustedby4_4b964932a8",
+            "mime": "image/png",
+            "name": "thumbnail_trustedby4.png",
+            "path": null,
+            "size": 8.22,
+            "width": 195,
+            "height": 156,
+            "sizeInBytes": 8220
+          }
+        },
+        "hash": "trustedby4",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 2.97,
+        "url": "/assets/service/google/trustedby4.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:23:32.698Z",
+        "updatedAt": "2025-04-14T02:23:32.698Z",
+        "publishedAt": "2025-04-14T02:23:32.698Z"
+      }
+    }
+  ]
+}

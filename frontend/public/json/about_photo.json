@@ -1,0 +1,79 @@
+{
+  "data": {
+    "id": 3,
+    "documentId": "x3mt5fkr1dbwnhi3lpk06im7",
+    "createdAt": "2025-04-13T21:49:18.741Z",
+    "updatedAt": "2025-04-15T00:14:58.936Z",
+    "publishedAt": "2025-04-15T00:14:58.945Z",
+    "photo": {
+      "id": 37,
+      "documentId": "l9935aagld3vsztwegrqb47q",
+      "name": "teams.jpg",
+      "alternativeText": null,
+      "caption": null,
+      "width": 1440,
+      "height": 1197,
+      "formats": {
+        "large": {
+          "ext": ".jpg",
+          "url": "/assets/about/large_teams_44464a3947.jpg",
+          "hash": "large_teams_44464a3947",
+          "mime": "image/jpeg",
+          "name": "large_teams.jpg",
+          "path": null,
+          "size": 137.13,
+          "width": 1000,
+          "height": 831,
+          "sizeInBytes": 137125
+        },
+        "small": {
+          "ext": ".jpg",
+          "url": "/assets/about/small_teams_44464a3947.jpg",
+          "hash": "small_teams_44464a3947",
+          "mime": "image/jpeg",
+          "name": "small_teams.jpg",
+          "path": null,
+          "size": 45.93,
+          "width": 500,
+          "height": 416,
+          "sizeInBytes": 45934
+        },
+        "medium": {
+          "ext": ".jpg",
+          "url": "/assets/about/medium_teams_44464a3947.jpg",
+          "hash": "medium_teams_44464a3947",
+          "mime": "image/jpeg",
+          "name": "medium_teams.jpg",
+          "path": null,
+          "size": 88.99,
+          "width": 750,
+          "height": 623,
+          "sizeInBytes": 88990
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "/assets/about/thumbnail_teams_44464a3947.jpg",
+          "hash": "thumbnail_teams_44464a3947",
+          "mime": "image/jpeg",
+          "name": "thumbnail_teams.jpg",
+          "path": null,
+          "size": 8.89,
+          "width": 188,
+          "height": 156,
+          "sizeInBytes": 8893
+        }
+      },
+      "hash": "teams",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 230.03,
+      "url": "/assets/about/teams.jpg",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "createdAt": "2025-04-14T01:20:07.800Z",
+      "updatedAt": "2025-04-14T01:20:07.800Z",
+      "publishedAt": "2025-04-14T01:20:07.800Z"
+    }
+  }
+}

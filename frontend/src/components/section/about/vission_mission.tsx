@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function Vission_mission() {
   return (
     <>
-      <section className="relative bg-black text-white px-4 py-20">
+      <section className="relative bg-[#231F20] text-white py-20">
         {/* Vision & Mission */}
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-start gap-16 mb-[250px]">
           {/* Vision */}
           <div className="text-center flex-1">
-            <div className="relative inline-block">
+            <div className="relative inline-block animate-pulse-slow">
               <Image
                 src="/assets/about/vision.svg" // replace with your image path
                 alt="Vision"
@@ -18,10 +18,10 @@ export default function Vission_mission() {
               />
             </div>
             <div className="mt-6">
-              <h3 className="text-orange-500 font-bold text-4xl bg-white inline-block px-7 py-4 rounded-full">
+              <h3 className="text-orange-500 font-bold text-5xl bg-white inline-block px-7 py-4 rounded-full">
                 Vision
               </h3>
-              <p className="mt-4 mx-auto leading-relaxed text-2xl">
+              <p className="mt-4 mx-auto leading-relaxed text-3xl">
                 Become South East Asia’s #1 Agency <br />
                 assisting corporates and SMEs in <br /> 
                 their 360 digital marketing activity <br />
@@ -32,7 +32,7 @@ export default function Vission_mission() {
 
           {/* Mission */}
           <div className="text-center flex-1">
-            <div className="relative inline-block">
+            <div className="relative inline-block animate-pulse-slow">
               <Image
                 src="/assets/about/mission.svg" // replace with your image path
                 alt="Mission"
@@ -42,10 +42,10 @@ export default function Vission_mission() {
               />
             </div>
             <div className="mt-6">
-              <h3 className="text-orange-500 font-bold text-4xl bg-white inline-block px-7 py-4 rounded-full">
+              <h3 className="text-orange-500 font-bold text-5xl bg-white inline-block px-7 py-4 rounded-full">
                 Mission
               </h3>
-              <p className="mt-4 mx-auto leading-relaxed text-2xl">
+              <p className="mt-4 mx-auto leading-relaxed text-4xl">
                 Assist 1000 Indonesian SMEs in <br />
                 achieving their business goals <br />
                 through digital marketing and <br />
@@ -57,27 +57,34 @@ export default function Vission_mission() {
         </div>
         <br /><br /><br />
 
-        {/* Top white pattern */}
-        <div className="w-full absolute -bottom-10 left-0">
-          <Image
-            src="/assets/about/pattern_top.svg" // replace with your image path
-            alt="Top Divider"
-            width={1600}
-            height={100}
-            className="w-full object-cover"
-          />
+        <div className="relative mt-[-600px] -bottom-[370px] h-[400px] overflow-hidden bg-transparent">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
+            <div className="flex animate-marquee w-max">
+              {Array(2).fill(0).map((_, i) => (
+                <div key={i} className="flex text-white text-4xl font-bold bg-[#231F20] px-4 py-6">
+                  {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (
+                    <span key={index} className="px-1 whitespace-nowrap">{text}</span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Bottom orange pattern */}
-        <div className="w-full absolute -bottom-40 left-0">
-          <Image
-            src="/assets/about/pattern_bottom.svg" // replace with your image path
-            alt="Bottom Divider"
-            width={1600}
-            height={100}
-            className="w-full object-cover"
-          />
+        <div className="relative mt-[-250px] -bottom-[350px] h-[400px] overflow-hidden bg-transparent">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
+            <div className="flex animate-marquee w-max">
+              {Array(2).fill(0).map((_, i) => (
+                <div key={i} className="flex text-white text-4xl font-bold bg-[#F16923] px-4 py-6">
+                  {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (
+                    <span key={index} className="px-1 whitespace-nowrap">{text}</span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
       </section>
     </>
   );

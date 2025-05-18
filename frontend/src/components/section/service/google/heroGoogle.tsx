@@ -13,7 +13,7 @@ export default function HeroGoogle() {
               Driven by Data</span>
             </h2>
             <br />
-            <p className="mt-4 text-xl text-gray-200">
+            <p className="mt-4 text-3xl text-gray-200">
             Advertising without data leads to inefficient <br />
             spending, and declining performance. As a <br />
             Google Partner, we utilize smart bidding, <br />
@@ -27,8 +27,8 @@ export default function HeroGoogle() {
             <Image
               src="/assets/service/google/hero.svg" // Replace with your actual asset path
               alt="Payday Sale"
-              width={400}
-              height={500}
+              width={600}
+              height={700}
               className="right-0 bottom-0 absolute"
             />
           </div>

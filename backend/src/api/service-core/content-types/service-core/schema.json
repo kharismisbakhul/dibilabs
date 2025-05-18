@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_cores",
+  "info": {
+    "singularName": "service-core",
+    "pluralName": "service-cores",
+    "displayName": "Service Core"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "text1": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "string"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "background_color": {
+      "type": "string"
+    }
+  }
+}

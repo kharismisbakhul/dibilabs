@@ -1,39 +1,193 @@
 import Image from "next/image";
 
+import { FaMeta, FaGoogle } from "react-icons/fa6";
+import { IoShareSocial, IoApps } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+
 export default function Navbar() {
   return (
     <>
-      <div className="bg-orange-500 text-white">
+      <div className="bg-orange-500 text-white shadow-md z-10 relative">
         {/* Navbar */}
-        <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-between px-6 py-4">
+        <div className="">
+          <nav className="flex items-center justify-between px-16 py-4">
             <a href="/homepage">
               <div className="flex items-center space-x-2">
-                <Image
-                  src="/assets/core/logo.png"
-                  alt="Dibilabs Logo"
-                  width={120}
-                  height={40}
-                />
+                <div className="relative w-[200px] h-[60px]">
+                  <Image
+                    src="/assets/core/logo1.png"
+                    alt="Dibilabs Logo"
+                    fill
+                    sizes="(max-width: 768px) 200px, 160px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </a>
-            <ul className="hidden md:flex gap-20 font-medium">
-              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
-                <a href="/about">About Us</a>
+            <ul className="hidden md:flex gap-20 font-medium text-lg">
+              <li className="cursor-pointer px-2 py-1 rounded-md">
+                <a
+                  href="/about"
+                  className="transition-all duration-300 hover:underline"
+                >
+                  About Us
+                </a>
               </li>
-              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
-                <a href="/service">Services</a>
+              <li className="relative group cursor-pointer px-2 py-1 rounded-md">
+                <a
+                  href="/service"
+                  className="transition-all duration-300 hover:underline flex items-center gap-1"
+                >
+                  <span>
+                    Services
+                  </span>
+                </a>
+
+                {/* Dropdown Menu */}
+                <div className="absolute left-0 mt-5 w-[800px] bg-white border rounded-xl shadow-lg p-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="grid grid-cols-2 gap-6">
+                    {/* Item 1 */}
+                    <div className="flex gap-3">
+                      <FaMeta className="text-sky-600 text-3xl mt-1" />
+                      <div>
+                        <a
+                          href="/service/meta"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Meta Ads
+                        </a>
+                        <p className="text-gray-500 text-sm">
+                          Big ideas need smart execution. Our data-driven
+                          precision and creative agility team turn your vision
+                          into measurable results that keep growing.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Item 2 */}
+                    <div className="flex gap-3">
+                      <FaGoogle className="text-sky-600 text-3xl mt-1" />
+                      <div>
+                        <a
+                          href="/service/google"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Google Ads
+                        </a>
+                        <p className="text-gray-500 text-sm">
+                          Advertising without data leads to inefficient
+                          spending, and declining performance. As a Google
+                          Partner, we utilize smart bidding, advanced audience
+                          insights, and precise targeting to maximize impact and
+                          optimize every advertising investmen
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Item 3 */}
+                    <div className="flex gap-3">
+                      <IoShareSocial className="text-sky-600 text-3xl mt-1" />
+                      <div>
+                        <a
+                          href="/service/sosmed"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Social Media Management
+                        </a>
+                        <p className="text-gray-500 text-sm">
+                          We engineer social media success through engaging
+                          storytelling, data-backed content, and
+                          platform-specific tactics, turning brand awareness
+                          into real engagement and loyal audiences.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Item 4 */}
+                    <div className="flex gap-3">
+                      <FaSearch className="text-sky-600 text-3xl mt-1" />
+                      <div>
+                        <a
+                          href="/service/seo"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Search Engine Optimization Service
+                        </a>
+                        <p className="text-gray-500 text-sm">
+                          Our strategic approach ensures long-term visibility,
+                          transforming organic traffic into sustainable business
+                          growth with content that ranks, shines, and converts.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Item 5 */}
+                    <div className="flex gap-3">
+                      <IoApps className="text-sky-600 text-3xl mt-1" />
+                      <div>
+                        <a
+                          href="/service/software"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Software and Web App Development
+                        </a>
+                        <p className="text-gray-500 text-sm">
+                          By blending user psychology, data-driven insights, and
+                          customized strategies, we craft digital experiences
+                          that feel effortless, perform flawlessly, and adapt to
+                          your unique needs.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Item 6 */}
+                    <div className="flex gap-3">
+                      <CgWebsite className="text-sky-600 text-3xl mt-1" />
+                      <div>
+                        <a
+                          href="/service/webdev"
+                          className="font-semibold text-gray-900 hover:underline"
+                        >
+                          Website Development
+                        </a>
+                        <p className="text-gray-500 text-sm">
+                          More than just an online presence, your website should
+                          work for you. With data-driven design, seamless
+                          functionality, and continuous optimization, we
+                          transform your platform into a growth engine.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
-                <a href="/article">Article</a>
+              <li className="cursor-pointer px-2 py-1 rounded-md">
+                <a
+                  href="/article"
+                  className="transition-all duration-300 hover:underline"
+                >
+                  Article
+                </a>
               </li>
-              <li className="cursor-pointer transition-all duration-300 hover:shadow-md hover:shadow-black px-2 py-1 rounded-md">
-                <a href="/contact">Contact Us</a>
+              <li className="cursor-pointer px-2 py-1 rounded-md">
+                <a
+                  href="/contact"
+                  className="transition-all duration-300 hover:underline"
+                >
+                  Contact Us
+                </a>
               </li>
             </ul>
-            <button className="bg-black text-white px-4 py-2 rounded-full font-semibold text-sm">
-              Free Consultant
-            </button>
+            <a
+              href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-white text-black px-4 py-2 rounded-full hover:text-white hover:bg-black font-semibold text-base">
+                Free Consultant
+              </button>
+            </a>
           </nav>
         </div>
       </div>

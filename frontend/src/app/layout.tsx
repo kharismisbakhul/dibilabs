@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ResponsiveWrapper from "@/components/core/responsiveWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,9 @@ export const metadata: Metadata = {
   },
   description: "Your digital marketing agency partner to develop your products.",
   keywords: "blog, news, marketing, ads, development, web, apps, seo",
+  icons: {
+    icon: "/favicon.ico",    // This is the key line you need
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +35,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ResponsiveWrapper> {/* ✅ Wrap children here */}
+          {children}
+        </ResponsiveWrapper>
       </body>
     </html>
   );

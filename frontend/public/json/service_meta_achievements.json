@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "id": 9,
+      "documentId": "izbit6dvyq9xwa7trisd9q1d",
+      "achievement": "2000%",
+      "parameter": "Growth in Revenue from Advertising",
+      "background_color": "bg-[#F37021]",
+      "text_color": "#0055A4",
+      "createdAt": "2025-04-14T13:25:19.505Z",
+      "updatedAt": "2025-04-14T13:25:19.505Z",
+      "publishedAt": "2025-04-26T02:48:24.167Z"
+    },
+    {
+      "id": 10,
+      "documentId": "mxh09pnwt3bgjtkun6yju7ts",
+      "achievement": "900+",
+      "parameter": "Leads Generated Monthly",
+      "background_color": "bg-[#1A1A1A]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T13:25:51.264Z",
+      "updatedAt": "2025-04-14T13:25:51.264Z",
+      "publishedAt": "2025-04-26T02:48:24.172Z"
+    },
+    {
+      "id": 11,
+      "documentId": "l751gqbnvkee3pjpitrwjl18",
+      "achievement": "90%",
+      "parameter": "Qualified Leads for Sales",
+      "background_color": "bg-[#0055A4]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T13:26:25.135Z",
+      "updatedAt": "2025-04-14T13:26:25.135Z",
+      "publishedAt": "2025-04-26T02:48:24.176Z"
+    },
+    {
+      "id": 12,
+      "documentId": "ji1dl7i97ki86rqb3xor62im",
+      "achievement": "Rp 5 Bio",
+      "parameter": "Managed Multiple platforms",
+      "background_color": "bg-[#F37021]",
+      "text_color": "#0055A4",
+      "createdAt": "2025-04-14T13:26:56.541Z",
+      "updatedAt": "2025-04-14T13:26:56.541Z",
+      "publishedAt": "2025-04-26T02:48:24.179Z"
+    }
+  ]
+}
