@@ -4,29 +4,29 @@ export default function Hero_about() {
   return (
     <>
       <div className="bg-white text-orange-600">
-        <div className="container mx-auto px-4">
+        <div className="">
           {/* Hero Section */}
-          <section className="px-6 md:px-16 py-12 md:py-20 relative overflow-hidden">
+          <section className="px-6 md:px-16 md:py-20 relative overflow-hidden">
             <div className="grid md:grid-cols-2 gap-10 items-center p-10">
               {/* Text Content - Left */}
               <div className="order-2 md:order-1">
-                <h1 className="text-3xl md:text-5xl font-bold mb-2">About</h1>
-                <h1 className="text-4xl md:text-6xl font-extrabold mb-2">
+                <h1 className="text-[100px] font-bold">About</h1>
+                <h1 className="text-[128px] font-extrabold">
                   Dibilabs.id
                 </h1>
-                <h1 className="text-2xl md:text-4xl font-bold mb-2">
+                <h1 className="text-[70px] font-bold">
                   Marketing Agency
                 </h1>
               </div>
 
               {/* SVG Character - Right */}
               {/* Top Right Bubble Decoration */}
-              <div className="absolute right-0 top-16 z-0">
+              <div className="absolute right-0 top-8 z-0">
                 <Image
                   src="/assets/about/right_bubble.svg"
                   alt="Bubbles Decoration"
-                  width={200}
-                  height={200}
+                  width={300}
+                  height={300}
                   className="opacity-80"
                 />
               </div>
@@ -37,25 +37,31 @@ export default function Hero_about() {
           <section className="text-center py-10 px-4 bg-white">
             {/* Title */}
             <div className="flex items-center justify-center gap-10 mb-6">
-              <Image
-                src="/assets/about/star.svg"
-                alt="Heart left"
-                width={100}
-                height={100}
-              />
-              <h2 className="text-6xl text-black font-bold px-8 py-3">
+              <div className="animate-pulse-slow">
+                <Image
+                  src="/assets/about/star.svg"
+                  alt="Heart left"
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <h2 className="text-7xl text-black font-bold px-8 py-3">
                 How it all{" "}
                 <span className="bg-orange-600 text-white rounded-md p-2 font-extrabold">
                   began
                 </span>
               </h2>
-              <Image
-                src="/assets/about/star.svg"
-                alt="Heart right"
-                width={100}
-                height={100}
-              />
+              <div className="animate-pulse-slow">
+                <Image
+                  src="/assets/about/star.svg"
+                  alt="Heart right"
+                  width={100}
+                  height={100}
+                />
+              </div>
             </div>
+
+            <br />
 
             <div className="flex items-center justify-center text-black text-2xl">
               <h3>

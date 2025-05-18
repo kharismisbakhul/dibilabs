@@ -1,36 +1,35 @@
-"use client"
+"use client";
 
+import { ServiceGoogleTrustedBies } from "@/types/json/service_google_trustedBies";
 import Image from "next/image";
 
-const brands = [
-  "/assets/service/google/trustedby1.png",
-  "/assets/service/google/trustedby2.png",
-  "/assets/service/google/trustedby3.png",
-  "/assets/service/google/trustedby4.png",
-  "/assets/service/google/trustedby5.png",
-  "/assets/service/google/trustedby6.png",
-];
+type Props = {
+  data: ServiceGoogleTrustedBies[]; // or Record<string, any>[]
+};
 
-export default function TrustedByGoogle() {
+export default function TrustedByGoogle({ data }: Props) {
   return (
     <section className="py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">
-        <h2 className="text-center text-3xl font-semibold">
+        <h2 className="text-center text-6xl font-semibold">
           <span className="text-orange-500 font-bold">Trusted</span> By
         </h2>
 
         <div className="relative mt-8 overflow-hidden">
-          <div className="flex gap-10 whitespace-nowrap animate-marquee">
-            {brands.concat(brands).map((src, index) => (
-              <div key={index} className="w-36 h-20 relative flex-shrink-0">
-                <Image
-                  src={src}
-                  alt={`brand-${index}`}
-                  fill
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-            ))}
+          <div className="animate-marquee flex gap-10 whitespace-nowrap justify-center">
+            {/* Repeat the list multiple times */}
+            {Array.from({ length: 4 }).flatMap((_, repeatIndex) =>
+              data.map((item, index) => (
+                <div key={`${repeatIndex}-${index}`} className="w-56 h-40 relative flex-shrink-0">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
+                    alt={item.image.name}
+                    fill
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+              ))
+            )}
           </div>
         </div>
 

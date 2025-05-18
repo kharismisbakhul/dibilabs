@@ -1,35 +1,74 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6"; // for X (Twitter)
+import { FaEnvelope } from "react-icons/fa6"; // for X (Twitter)
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Footer() {
-  const [form, setForm] = useState({ name: '', brand: '', email: '', number: '', industry: '', services: '' });
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const [form, setForm] = useState({
+    name: "",
+    brand: "",
+    email: "",
+    number: "",
+    industry: "",
+    services: "",
+  });
+  const [subcription, setSubcription] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    if (e.target.name === "number") {
+      e.target.value = e.target.value.replace(/\D/g, ""); // Remove non-digit characters
+
+      if (e.target.value.startsWith("0")) {
+        e.target.value = "62" + e.target.value.slice(1); // Replace leading 0 with 62
+      } else if (!e.target.value.startsWith("62")) {
+        e.target.value = "62" + e.target.value; // Ensure it starts with 62
+      }
+    }
+
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleChangeSubcription = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setSubcription(e.target.value);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch('/api/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const res = await fetch("/api/core/cta", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
 
     const data = await res.json();
     alert(data.message);
   };
-  
+
+  const handleSubcription = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/core/subscription", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(subcription),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  };
+
   return (
     <>
       {/* Bottom Section */}
-      <div className="bg-orange-500 text-white px-6 py-10">
+      <div className="bg-orange-500 text-white px-6 py-10" id="footer">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Bubble + Mascot Section */}
@@ -77,7 +116,10 @@ export default function Footer() {
             </div>
 
             {/* Form Section */}
-            <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-2 w-full">
+            <form
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 gap-2 w-full"
+            >
               <label className="text-white text-sm">Your name</label>
               <input
                 type="text"
@@ -115,24 +157,47 @@ export default function Footer() {
                 className="px-4 py-2 rounded text-black"
               />
               <label className="text-white text-sm">Industry</label>
-              <select className="px-4 py-2 rounded text-black" name="industry" onChange={handleChange} value={form.industry}>
-                <option>Industry</option>
-                <option>Technology</option>
-                <option>Health</option>
-                <option>Education</option>
+              <select
+                className={`px-4 py-2 rounded ${
+                  form.industry === "" ? "text-gray-400" : "text-black"
+                }`}
+                name="industry"
+                onChange={handleChange}
+                value={form.industry}
+              >
+                <option disabled value="" hidden>--- Choose Industry ---</option>
+                <option className="text-black">Tech</option>
+                <option className="text-black">Health</option>
+                <option className="text-black">Education</option>
+                <option className="text-black">Fashion</option>
+                <option className="text-black">Beauty</option>
+                <option className="text-black">Food and Beverage</option>
+                <option className="text-black">Services</option>
+                <option className="text-black">Government</option>
+                <option className="text-black">Others</option>
               </select>
               <label className="text-white text-sm">Services</label>
-              <select className="px-4 py-2 rounded text-black" name="services" onChange={handleChange} value={form.services}>
-                <option>Services</option>
-                <option>Meta Ads</option>
-                <option>Website Development</option>
-                <option>SEO</option>
+              <select
+                className={`px-4 py-2 rounded ${
+                  form.services === "" ? "text-gray-400" : "text-black"
+                }`}
+                name="services"
+                onChange={handleChange}
+                value={form.services}
+              >
+                <option disabled value="" hidden>--- Choose Services ---</option>
+                <option className="text-black">Meta Ads</option>
+                <option className="text-black">Google Ads</option>
+                <option className="text-black">Social Media Management</option>
+                <option className="text-black">Search Engine Optimization Service</option>
+                <option className="text-black">Software and Web App Development</option>
+                <option className="text-black">Website Development</option>
               </select>
               {/* Right-aligned button */}
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="bg-black text-white px-7 py-2 mt-2 rounded-xl"
+                  className="bg-white text-black px-7 py-2 mt-2 rounded-xl hover:bg-black hover:text-white"
                 >
                   Send
                 </button>
@@ -143,7 +208,7 @@ export default function Footer() {
           <div className="text-center mt-10">
             <p className="text-xl font-bold">This is the end of the journey.</p>
             <a href="#">
-              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold">
+              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white">
                 Back to Top
               </button>
             </a>
@@ -154,12 +219,15 @@ export default function Footer() {
             {/* Column 1 - Branding */}
             <div>
               <a href="/homepage">
-                <Image
-                  src="/assets/core/logo.png"
-                  alt="Dibilabs Logo"
-                  width={120}
-                  height={40}
-                />
+                <div className="relative w-[150px] h-[60px]">
+                  <Image
+                    src="/assets/core/logo1.png"
+                    alt="Dibilabs Logo"
+                    fill
+                    sizes="(max-width: 768px) 150px, 160px"
+                    className="object-contain"
+                  />
+                </div>
               </a>
               <br />
               <p className="text-sm mb-4">
@@ -189,7 +257,9 @@ export default function Footer() {
                   <a href="/service/seo">Search Engine Optimization Service</a>
                 </li>
                 <li>
-                  <a href="/service/software">Software and Web App Development</a>
+                  <a href="/service/software">
+                    Software and Web App Development
+                  </a>
                 </li>
                 <li>
                   <a href="/service/webdev">Website Development</a>
@@ -211,7 +281,7 @@ export default function Footer() {
                 <div className="flex space-x-3 mt-2">
                   {/* LinkedIn */}
                   <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/company/dibilabs-id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2"
@@ -221,7 +291,7 @@ export default function Footer() {
 
                   {/* Instagram */}
                   <a
-                    href="https://www.instagram.com"
+                    href="https://www.instagram.com/dibilabs.id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2"
@@ -231,12 +301,10 @@ export default function Footer() {
 
                   {/* X (Twitter) */}
                   <a
-                    href="https://x.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:partnership@dibilabs.id?subject=Partnership%20Opportunity&body=Hi%20Dibilabs%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20partnership%20with%20your%20agency.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0ARegards%2C"
                     className="bg-white rounded-full p-2"
                   >
-                    <FaXTwitter className="text-black text-2xl" />
+                    <FaEnvelope className="text-[#ff5733] text-2xl" />
                   </a>
                 </div>
               </div>
@@ -244,17 +312,21 @@ export default function Footer() {
 
             {/* Column 4 - Newsletter */}
             <div>
-              <h3 className="font-semibold mb-2">Join Our Newsletter</h3>
-              <div className="flex bg-white rounded-xl">
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="px-4 py-2 rounded-l-md text-black w-full"
-                />
-                <button className="bg-black px-4 py-2 rounded-xl">
-                  Signup
-                </button>
-              </div>
+              <form onSubmit={handleSubcription}>
+                <h3 className="font-semibold mb-2">Join Our Newsletter</h3>
+                <div className="flex bg-white rounded-xl">
+                  <input
+                    type="email"
+                    value={subcription}
+                    onChange={handleChangeSubcription}
+                    placeholder="Email Address"
+                    className="px-4 py-2 rounded-l-md text-black w-full"
+                  />
+                  <button type="submit" className="bg-white text-black px-4 py-2 rounded-xl shadow-lg hover:bg-black hover:text-white">
+                    Signup
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>

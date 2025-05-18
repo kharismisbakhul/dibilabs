@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 9,
+      "documentId": "l8333mrpthpft6hjgn8ql20c",
+      "achievement": "1000%",
+      "parameter": "Followers Growth",
+      "background_color": "bg-[#F37021]",
+      "text_color": "#0055A4",
+      "createdAt": "2025-04-14T14:19:58.398Z",
+      "updatedAt": "2025-04-14T14:19:58.398Z",
+      "publishedAt": "2025-04-26T02:50:03.876Z",
+      "image": null
+    },
+    {
+      "id": 10,
+      "documentId": "c1t22zx8vux73ihztemenwie",
+      "achievement": "500%",
+      "parameter": "Increase in Profile Visit",
+      "background_color": "bg-[#1A1A1A]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T14:20:24.095Z",
+      "updatedAt": "2025-04-14T14:20:24.095Z",
+      "publishedAt": "2025-04-26T02:50:03.881Z",
+      "image": null
+    },
+    {
+      "id": 11,
+      "documentId": "m6qpcd843jv2go9wn2gycz7s",
+      "achievement": "10%",
+      "parameter": "ER Contents",
+      "background_color": "bg-[#0055A4]",
+      "text_color": "#F37021",
+      "createdAt": "2025-04-14T14:20:46.203Z",
+      "updatedAt": "2025-04-14T14:20:46.203Z",
+      "publishedAt": "2025-04-26T02:50:03.885Z",
+      "image": null
+    },
+    {
+      "id": 12,
+      "documentId": "rrps1qgxdeejqutjfix6sj8b",
+      "achievement": "Verified",
+      "parameter": "Verified Account",
+      "background_color": "bg-[#F37021]",
+      "text_color": "text-white",
+      "createdAt": "2025-04-14T14:21:47.886Z",
+      "updatedAt": "2025-04-14T14:23:39.586Z",
+      "publishedAt": "2025-04-26T02:50:03.889Z",
+      "image": {
+        "id": 75,
+        "documentId": "p3gur5l0tsmqw8257orpa4r7",
+        "name": "verified.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 120,
+        "height": 109,
+        "formats": null,
+        "hash": "verified",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 1.4,
+        "url": "/assets/service/sosmed/verified.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T02:22:14.824Z",
+        "updatedAt": "2025-04-14T02:22:14.824Z",
+        "publishedAt": "2025-04-14T02:22:14.824Z"
+      }
+    }
+  ]
+}
