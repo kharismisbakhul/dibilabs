@@ -15,6 +15,7 @@ export default function Footer() {
     industry: "",
     services: "",
   });
+  const [subcription, setSubcription] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -32,6 +33,12 @@ export default function Footer() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const handleChangeSubcription = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setSubcription(e.target.value);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -39,6 +46,19 @@ export default function Footer() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  };
+
+  const handleSubcription = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/core/subscription", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(subcription),
     });
 
     const data = await res.json();
@@ -292,17 +312,21 @@ export default function Footer() {
 
             {/* Column 4 - Newsletter */}
             <div>
-              <h3 className="font-semibold mb-2">Join Our Newsletter</h3>
-              <div className="flex bg-white rounded-xl">
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="px-4 py-2 rounded-l-md text-black w-full"
-                />
-                <button className="bg-white text-black px-4 py-2 rounded-xl shadow-lg hover:bg-black hover:text-white">
-                  Signup
-                </button>
-              </div>
+              <form onSubmit={handleSubcription}>
+                <h3 className="font-semibold mb-2">Join Our Newsletter</h3>
+                <div className="flex bg-white rounded-xl">
+                  <input
+                    type="email"
+                    value={subcription}
+                    onChange={handleChangeSubcription}
+                    placeholder="Email Address"
+                    className="px-4 py-2 rounded-l-md text-black w-full"
+                  />
+                  <button type="submit" className="bg-white text-black px-4 py-2 rounded-xl shadow-lg hover:bg-black hover:text-white">
+                    Signup
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
