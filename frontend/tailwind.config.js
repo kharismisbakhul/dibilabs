@@ -25,6 +25,10 @@ module.exports = {
         },
         'zoom-pulse': {
           '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.10)' },
+        },
+        'zoom-pulse-big': {
+          '0%, 100%': { transform: 'scale(1)' },
           '50%': { transform: 'scale(1.20)' },
         },
         'bounce-smooth': {
@@ -44,10 +48,11 @@ module.exports = {
         'scroll-ltr': 'scroll-ltr 30s linear infinite',
         'scroll-rtl': 'scroll-rtl 30s linear infinite',
         'pulse-slow': 'zoom-pulse 3s ease-in-out infinite',
+        'pulse-fast': 'zoom-pulse-big 3s ease-in-out infinite',
         'bounce-smooth': 'bounce-smooth 2s ease-in-out infinite',
         'marqueeLeft': 'marqueeLeft 30s linear infinite',
         'marqueeRight': 'marqueeRight 30s linear infinite',
-        'marquee': 'marqueeLeft 40s linear infinite',
+        'marquee': 'marqueeLeft 60s linear infinite',
       },
     },
   },
