@@ -38,10 +38,13 @@ export async function POST(req: NextRequest) {
 
     // const data = await strapiRes.json();
     return NextResponse.json({ message: 'Form submitted successfully!' }, { status: 200 }, );
-  } catch (err: any) {
+  } catch (err) {
     console.error("[api/homepage] fetch failed:", err);
+
+    const message = err instanceof Error ? err.message : "Unknown error";
+
     return NextResponse.json(
-      { message: "Internal Server Error", error: err.message },
+      { message: "Internal Server Error", error: message },
       { status: 500 }
     );
   }

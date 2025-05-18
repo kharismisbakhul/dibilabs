@@ -19,10 +19,13 @@ export async function GET() {
 
     const data = await strapiRes.json();
     return NextResponse.json(data);
-  } catch (err: any) {
+  } catch (err) {
     console.error("[api/homepage] fetch failed:", err);
+
+    const message = err instanceof Error ? err.message : "Unknown error";
+
     return NextResponse.json(
-      { message: "Internal Server Error", error: err.message },
+      { message: "Internal Server Error", error: message },
       { status: 500 }
     );
   }
