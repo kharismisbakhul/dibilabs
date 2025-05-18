@@ -25,7 +25,7 @@ export default function Navbar() {
                 </div>
               </div>
             </a>
-            <ul className="hidden md:flex gap-20 font-medium">
+            <ul className="hidden md:flex gap-20 font-medium text-base">
               <li className="cursor-pointer px-2 py-1 rounded-md">
                 <a href="/about" className="transition-all duration-300 hover:underline">About Us</a>
               </li>
@@ -126,7 +126,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-white text-black px-4 py-2 rounded-full hover:text-white hover:bg-black font-semibold text-sm">
+              <button className="bg-white text-black px-4 py-2 rounded-full hover:text-white hover:bg-black font-semibold text-base">
                 Free Consultant
               </button>
             </a>
