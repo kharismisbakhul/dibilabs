@@ -32,7 +32,7 @@ export default function Articles() {
         {/* Article cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {articles.map((item, idx) => (
-            <div key={idx} className="relative h-64 overflow-hidden shadow-md">
+            <div key={idx} className="relative h-[350px] overflow-hidden shadow-md">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -42,21 +42,21 @@ export default function Articles() {
               />
               {/* Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-50 p-4 flex flex-col justify-end text-white">
-                <h3 className="text-sm font-semibold leading-tight mb-2">
+                <h3 className="text-lg font-semibold leading-tight mb-2">
                   {item.title}
                 </h3>
-                <p className="text-xs">{item.date}</p>
+                <p className="text-base">{item.date}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Browse Articles Button */}
-        <div className="flex justify-end pt-8 pb-10 bg-black">
+        {/* <div className="flex justify-end pt-8 pb-10 bg-black">
           <button className="bg-blue-600 text-white font-medium text-sm px-6 mr-8 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
             Browse Articles <span className="text-xl">→</span>
           </button>
-        </div>
+        </div> */}
       </section>
     </>
   );

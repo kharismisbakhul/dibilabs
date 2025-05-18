@@ -10,14 +10,14 @@ export default function Hero() {
           <section className="px-6 md:px-16 py-12 md:py-20 relative overflow-hidden">
             <div className="grid md:grid-cols-2 gap-10 items-center">
               {/* Text Content - Left */}
-              <div className="order-2 md:order-1">
-                <h1 className="text-4xl md:text-6xl font-extrabold mb-2">
+              <div className="order-1 md:order-1">
+                <h1 className="text-8xl font-extrabold mb-2">
                   Dibilabs.id
                 </h1>
-                <p className="text-lg md:text-xl mb-6 font-medium">
+                <p className="text-3xl mb-6 font-medium">
                   Dibilabs.id Digital Marketing Agency
                 </p>
-                <p className="text-4xl md:text-4xl font-light leading-snug mb-6">
+                <p className="text-5xl font-light leading-snug mb-6">
                   The creative <span className="font-bold">formulators</span>,{" "}
                   <br />
                   driven to <span className="font-bold">
@@ -27,17 +27,19 @@ export default function Hero() {
                   <span className="font-bold">beyond expectations!</span>
                 </p>
                 <div className="flex items-center gap-4 mb-6">
-                  <p className="text-lg font-light m-0">
+                  <p className="text-3xl font-light m-0">
                     Navigate the Digital Ecosystem with Dibilabs.id!
                   </p>
-                  <button className="bg-white text-black px-6 py-3 rounded-full flex items-center gap-2 font-semibold">
-                    Grow Together <ArrowRight className="w-5 h-5" />
-                  </button>
+                  <a href="#footer">
+                    <button className="bg-white text-black px-6 py-3 rounded-full flex items-center gap-2 font-semibold hover:bg-black hover:text-white">
+                      Grow Together <ArrowRight className="w-5 h-5" />
+                    </button>
+                  </a>
                 </div>
               </div>
 
               {/* SVG Character - Right */}
-              <div className="relative w-full max-w-md mx-auto aspect-[4/5] order-1 md:order-2">
+              <div className="relative w-full max-w-md mx-auto aspect-[4/5] order-1 md:order-2 animate-pulse-slow">
                 <Image
                   src="/assets/homepage/beaker.png"
                   alt="Beaker Mascot"
