@@ -36,6 +36,7 @@ module.exports = {
         'bounce-smooth': 'bounce-smooth 2s ease-in-out infinite',
         'marqueeLeft': 'marqueeLeft 30s linear infinite',
         'marqueeRight': 'marqueeRight 30s linear infinite',
+        'marquee': 'marqueeLeft 40s linear infinite',
       },
     },
   },
