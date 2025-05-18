@@ -37,21 +37,25 @@ export default function About_us({ data }: Props) {
         {/* Content Section */}
         <div className="bg-[#231F20] text-white text-center py-12 relative z-20">
           <div className="flex justify-between items-center mx-auto gap-10 mb-4">
-            <Image
-              src="/assets/about/thumb.svg"
-              alt="thumbs up"
-              width={200}
-              height={200}
-            />
+            <div className="animate-bounce-smooth">
+              <Image
+                src="/assets/about/thumb.svg"
+                alt="thumbs up"
+                width={200}
+                height={200}
+              />
+            </div>
             <h2 className="bg-[#F26522] text-white px-20 py-4 rounded-md text-7xl font-bold">
               About Us
             </h2>
-            <Image
-              src="/assets/about/eyes.svg"
-              alt="eyes icon"
-              width={200}
-              height={200}
-            />
+            <div className="mr-[30px] animate-pulse-slow">
+              <Image
+                src="/assets/about/eyes.svg"
+                alt="eyes icon"
+                width={200}
+                height={200}
+              />
+            </div>
           </div>
 
           <h3 className="mx-auto mt-7 text-3xl leading-relaxed">

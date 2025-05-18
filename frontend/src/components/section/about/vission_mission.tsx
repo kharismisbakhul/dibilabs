@@ -8,7 +8,7 @@ export default function Vission_mission() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-start gap-16 mb-[250px]">
           {/* Vision */}
           <div className="text-center flex-1">
-            <div className="relative inline-block">
+            <div className="relative inline-block animate-pulse-slow">
               <Image
                 src="/assets/about/vision.svg" // replace with your image path
                 alt="Vision"
@@ -32,7 +32,7 @@ export default function Vission_mission() {
 
           {/* Mission */}
           <div className="text-center flex-1">
-            <div className="relative inline-block">
+            <div className="relative inline-block animate-pulse-slow">
               <Image
                 src="/assets/about/mission.svg" // replace with your image path
                 alt="Mission"
