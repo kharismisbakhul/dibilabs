@@ -11,7 +11,7 @@ export default function TrustedBySosmed({ data }: Props) {
   return (
     <section className="py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">
-        <h2 className="text-center text-3xl font-semibold">
+        <h2 className="text-center text-6xl font-semibold">
           <span className="text-orange-500 font-bold">Trusted</span> By
         </h2>
 
