@@ -8,7 +8,7 @@ import { CgWebsite } from "react-icons/cg";
 export default function Navbar() {
   return (
     <>
-      <div className="bg-orange-500 text-white shadow-md z-10 relative">
+      <div className="fixed top-0 left-0 w-full bg-orange-500 text-white shadow-md z-50">
         {/* Navbar */}
         <div className="">
           <nav className="flex items-center justify-between px-16 py-4">
@@ -16,7 +16,7 @@ export default function Navbar() {
               <div className="flex items-center space-x-2">
                 <div className="relative w-[200px] h-[60px]">
                   <Image
-                    src="/assets/core/logo1.png"
+                    src="/assets/core/logo2.png"
                     alt="Dibilabs Logo"
                     fill
                     sizes="(max-width: 768px) 200px, 160px"

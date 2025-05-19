@@ -221,7 +221,7 @@ export default function Footer() {
               <a href="/homepage">
                 <div className="relative w-[150px] h-[60px]">
                   <Image
-                    src="/assets/core/logo1.png"
+                    src="/assets/core/logo2.png"
                     alt="Dibilabs Logo"
                     fill
                     sizes="(max-width: 768px) 150px, 160px"
