@@ -30,9 +30,11 @@ export default function Article_desc() {
               marketing news!
             </p>
             <br />
-            <button className="bg-[#065097] text-white font-medium text-xl px-6 mr-8 py-2 rounded-full flex items-center gap-2 hover:bg-blue-700 transition">
-              Browse Articles →
-            </button>
+            <a href="/article">
+              <button className="bg-[#065097] text-white font-medium text-xl px-6 mr-8 py-2 rounded-full flex items-center gap-2 transition">
+                Browse Articles →
+              </button>
+            </a>
           </div>
         </div>
 

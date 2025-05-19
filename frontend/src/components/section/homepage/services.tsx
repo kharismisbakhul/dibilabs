@@ -70,10 +70,11 @@ export default function Services({ data }: Props) {
                       </h3>
                       <p className="text-base text-center mt-2">{item.description}</p>
                     </div>
-
-                    <button className="mt-4 px-4 py-2 bg-[#065097] text-white rounded-full text-lg">
-                      Learn more →
-                    </button>
+                    <a href="/service">
+                      <button className="mt-4 px-4 py-2 bg-[#065097] text-white rounded-full text-lg">
+                        Learn more →
+                      </button>
+                    </a>
                   </div>
                 </div>
               ))}
