@@ -13,8 +13,8 @@ export default function AchievementSeo({ data }: Props) {
           {/* Block Item */}
 
           {data.map((item, index) => (
-            <div key={index} className="flex flex-col items-center w-40">
-              <div className="relative group w-40 h-40 rounded-full overflow-visible">
+            <div key={index} className="flex flex-col items-center w-48">
+              <div className="relative group w-48 h-48 rounded-full overflow-visible">
                 {/* Outer glow/shadow (visible by default) */}
                 <div
                   className={`absolute -inset-2 rounded-full blur-xl opacity-60 ${item.background_color}`}
