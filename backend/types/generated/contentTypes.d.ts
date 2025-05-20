@@ -431,6 +431,7 @@ export interface ApiAboutTeamAboutTeam extends Struct.CollectionTypeSchema {
 export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   collectionName: 'articles';
   info: {
+    description: '';
     displayName: 'Article';
     pluralName: 'articles';
     singularName: 'article';
@@ -440,11 +441,24 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.Relation<'oneToOne', 'admin::user'>;
-    category: Schema.Attribute.Enumeration<['Tech', 'Business']>;
+    category: Schema.Attribute.Enumeration<
+      [
+        'Tech',
+        'Health',
+        'Education',
+        'Fashion',
+        'Beauty',
+        'Food and Beverage',
+        'Services',
+        'Government',
+        'Others',
+      ]
+    >;
     content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Blocks;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     is_published: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

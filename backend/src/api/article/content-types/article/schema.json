@@ -4,7 +4,8 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article"
+    "displayName": "Article",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,20 +22,28 @@
       "type": "blocks"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "category": {
       "type": "enumeration",
       "enum": [
         "Tech",
-        "Business"
+        "Health",
+        "Education",
+        "Fashion",
+        "Beauty",
+        "Food and Beverage",
+        "Services",
+        "Government",
+        "Others"
       ]
     },
     "author": {
@@ -47,6 +56,9 @@
     },
     "is_published": {
       "type": "boolean"
+    },
+    "excerpt": {
+      "type": "blocks"
     }
   }
 }
