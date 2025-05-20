@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero_about() {
   return (
     <>
-      <div className="bg-white text-orange-600 pt-16">
+      <div className="bg-white text-orange-600 pt-24">
         <div className="">
           {/* Hero Section */}
           <section className="px-6 md:px-16 md:py-20 relative overflow-hidden">

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HeroSosmed() {
   return (
     <>
-      <section className="bg-white pt-16">
+      <section className="bg-white pt-24">
         {/* Top Section */}
         <div className="bg-black rounded-[24px] text-white px-6 md:px-16 py-10 flex flex-col md:flex-row items-center justify-between max-w-[1600px] mx-auto mt-5">
           {/* Text */}

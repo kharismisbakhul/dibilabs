@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 export default function Hero() {
   return (
     <>
-      <div className="bg-orange-500 text-white pt-16">
+      <div className="bg-orange-500 text-white pt-24">
         <div className="">
           {/* Hero Section */}
           <section className="px-6 md:px-16 py-12 md:py-20 relative overflow-hidden">
