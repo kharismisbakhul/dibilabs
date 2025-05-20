@@ -35,9 +35,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ResponsiveWrapper> {/* ✅ Wrap children here */}
+        {/* <ResponsiveWrapper> ✅ Wrap children here */}
           {children}
-        </ResponsiveWrapper>
+        {/* </ResponsiveWrapper> */}
       </body>
     </html>
   );
