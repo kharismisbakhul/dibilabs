@@ -28,7 +28,7 @@ export default function HeroContact() {
                 />
               </div>
 
-              <div className="absolute right-[600px] top-[300px] animate-pulse-slow">
+              <div className="absolute right-[600px] top-[300px] animate-float">
                 <Image
                   src="/assets/contact/eyes.svg"
                   alt="Bubbles Decoration"

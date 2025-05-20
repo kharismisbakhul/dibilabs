@@ -37,7 +37,7 @@ export default function Hero_about() {
           <section className="text-center py-10 px-4 bg-white">
             {/* Title */}
             <div className="flex items-center justify-center gap-10 mb-6">
-              <div className="animate-pulse-slow">
+              <div className="animate-wiggle">
                 <Image
                   src="/assets/about/star.svg"
                   alt="Heart left"
@@ -51,7 +51,7 @@ export default function Hero_about() {
                   began
                 </span>
               </h2>
-              <div className="animate-pulse-slow">
+              <div className="animate-wiggle">
                 <Image
                   src="/assets/about/star.svg"
                   alt="Heart right"

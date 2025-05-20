@@ -10,11 +10,11 @@ export default function Team({ data }: Props) {
     <section className="text-center bg-white mt-[250px]">
       {/* Title */}
       <div className="flex items-center justify-center gap-20 mb-[50px]">
-        <div className="animate-pulse-slow">
+        <div className="animate-heartbeat">
           <Image src="/assets/about/heart_left.svg" alt="Heart left" width={200} height={200} />
         </div>
         <h2 className="text-7xl font-bold bg-blue-700 text-white px-16 py-3 rounded-md">Our Team</h2>
-        <div className="animate-pulse-slow">
+        <div className="animate-heartbeat">
           <Image src="/assets/about/heart_right.svg" alt="Heart right" width={200} height={200} />
         </div>
       </div>
