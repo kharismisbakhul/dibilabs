@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 import { FaMeta, FaGoogle } from "react-icons/fa6";
@@ -5,13 +7,17 @@ import { IoShareSocial, IoApps } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 
+import { useState } from "react";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <div className="fixed top-0 left-0 w-full bg-orange-500 text-white shadow-md z-50">
         {/* Navbar */}
         <div className="">
-          <nav className="flex items-center justify-between px-16 py-4">
+          <nav className="flex items-center justify-between px-16 py-4 w-full md:w-auto">
             <a href="/homepage">
               <div className="flex items-center space-x-2">
                 <div className="relative w-[200px] h-[60px]">
@@ -183,11 +189,62 @@ export default function Navbar() {
               href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
               target="_blank"
               rel="noopener noreferrer"
+              className="hidden md:block"
             >
               <button className="bg-white text-black px-4 py-2 rounded-full hover:text-white hover:bg-black font-semibold text-base">
                 Free Consultant
               </button>
             </a>
+
+            {menuOpen && (
+              <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4">
+                <a href="/about" className="block text-white font-medium">
+                  About Us
+                </a>
+                <a href="/service" className="block text-white font-medium">
+                  Services
+                </a>
+                <a href="/article" className="block text-white font-medium">
+                  Article
+                </a>
+                <a href="/contact" className="block text-white font-medium">
+                  Contact Us
+                </a>
+                <a
+                  href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold"
+                >
+                  Free Consultant
+                </a>
+              </div>
+            )}
+
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="relative w-8 h-8 focus:outline-none"
+              >
+                <span
+                  className={`block absolute h-0.5 w-8 bg-white transform transition duration-300 ease-in-out ${
+                    menuOpen ? "rotate-45 top-3.5" : "top-2"
+                  }`}
+                ></span>
+                <span
+                  className={`block absolute h-0.5 w-8 bg-white transition-all duration-300 ease-in-out ${
+                    menuOpen ? "opacity-0" : "top-4"
+                  }`}
+                ></span>
+                <span
+                  className={`block absolute h-0.5 w-8 bg-white transform transition duration-300 ease-in-out ${
+                    menuOpen ? "-rotate-45 bottom-3.5" : "bottom-2"
+                  }`}
+                ></span>
+              </button>
+            </div>
+
+            
           </nav>
         </div>
       </div>
