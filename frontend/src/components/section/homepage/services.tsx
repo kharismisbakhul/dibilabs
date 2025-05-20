@@ -11,27 +11,29 @@ export default function Services({ data }: Props) {
       {/* Services */}
       <section className="relative bg-white">
         {/* Top Bubbles */}
-        <Image
-          src="/assets/homepage/left_bubble_white.svg"
-          alt="Bubble"
-          width={200}
-          height={200}
-          className="absolute top-0 left-0 z-30"
-        />
+        <div className="absolute top-0 left-0 w-16 h-16 md:w-28 md:h-28 z-30">
+          <Image
+            src="/assets/homepage/left_bubble_white.svg"
+            alt="Bubble"
+            fill
+            className="object-contain"
+          />
+        </div>
 
         {/* Orange Section */}
         <div className="bg-orange-500 pt-[7vw] pb-[5vw] py-6 px-6 text-white text-center relative">
-          <h2 className="text-6xl">
+          <h2 className="text-2xl md:text-6xl">
             We offer a wide array of services to assist <br />
             your <span className="font-extrabold">Digital Marketing Journey</span>
           </h2>
+          <div className="absolute bottom-4 right-4 md:bottom-4 md:right-0 w-12 h-12 md:w-28 md:h-28 z-10">
           <Image
             src="/assets/homepage/right_bubble_white.svg"
             alt="Bubble"
-            width={120}
-            height={120}
-            className="absolute bottom-4 right-4 z-10"
+            fill
+            className="object-contain"
           />
+        </div>
         </div>
 
         {/* Black Cards Section */}

@@ -30,7 +30,7 @@ export default function Cta_services() {
                 priority
               />
             </div>
-            <h2 className="text-6xl font-bold text-orange-500 leading-snug">
+            <h2 className="text-5xl md:text-6xl font-bold text-orange-500 leading-snug">
               Ready to raise the bar?
               <br />
               <span className="text-orange-600">Because we are!</span>
@@ -38,7 +38,7 @@ export default function Cta_services() {
           </div>
 
           {/* Paragraph */}
-          <p className="text-2xl leading-relaxed text-black max-w-md">
+          <p className="text-xl md:text-2xl leading-relaxed text-black max-w-md">
             Business <strong>isn’t just about one layer</strong>—<br />
             it’s built on many, each essential for <br />
             achieving big goals.

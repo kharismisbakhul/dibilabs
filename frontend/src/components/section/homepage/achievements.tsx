@@ -10,7 +10,7 @@ export default function Achievements({ data }: Props) {
     <>
       <section className="bg-white py-12 px-4 md:px-16 lg:px-24 relative overflow-hidden">
         {/* Top Right Bubble Decoration */}
-        <div className="absolute right-0 top-0 z-0 w-[180px] h-[180px]">
+        <div className="absolute right-0 top-0 z-0 md:w-[180px] md:h-[180px] w-[100px] h-[100px]">
           <Image
             src="/assets/homepage/right_bubble.svg"
             alt="Bubbles Decoration"
