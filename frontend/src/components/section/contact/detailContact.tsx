@@ -66,7 +66,7 @@ export default function DetailContact() {
         </div>
       </div>
 
-      <div className="absolute right-0 top-[100px] md:bottom-[100px] z-0 md:w-[200px] md:h-[200px] w-[80px] h-[80px]">
+      <div className="absolute right-0 top-[100px] md:top-[500px] z-0 md:w-[200px] md:h-[200px] w-[80px] h-[80px]">
         <Image
           src="/assets/contact/right_bubble.svg"
           alt="Bubbles Decoration"
