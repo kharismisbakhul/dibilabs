@@ -9,13 +9,13 @@ export default function Team({ data }: Props) {
   return (
     <section className="text-center bg-white mt-[250px]">
       {/* Title */}
-      <div className="flex items-center justify-center gap-20 mb-[50px]">
+      <div className="flex items-center justify-center gap-12 mb-[50px]">
         <div className="animate-heartbeat">
-          <Image src="/assets/about/heart_left.svg" alt="Heart left" width={200} height={200} />
+          <Image src="/assets/about/heart_left.svg" alt="Heart left" width={100} height={100} className="w-[100px] md:w-[200px] h-auto" />
         </div>
-        <h2 className="text-7xl font-bold bg-blue-700 text-white px-16 py-3 rounded-md">Our Team</h2>
+        <h2 className="text-4xl md:text-7xl font-bold bg-blue-700 text-white px-12 py-3 rounded-md">Our Team</h2>
         <div className="animate-heartbeat">
-          <Image src="/assets/about/heart_right.svg" alt="Heart right" width={200} height={200} />
+          <Image src="/assets/about/heart_right.svg" alt="Heart right" width={100} height={100} className="w-[100px] md:w-[200px] h-auto" />
         </div>
       </div>
 
