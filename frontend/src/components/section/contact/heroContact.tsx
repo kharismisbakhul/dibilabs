@@ -6,11 +6,11 @@ export default function HeroContact() {
       <div className="bg-white text-orange-600 pt-24">
         <div className="">
           {/* Hero Section */}
-          <section className="px-16 relative overflow-hidden">
+          <section className="px-3 md:px-16 relative overflow-hidden">
             <div className="grid md:grid-cols-2 gap-10 items-center p-10">
               {/* Text Content - Left */}
               <div className="order-2 md:order-1">
-                <h1 className="text-7xl md:text-[200px] font-bold mb-4">
+                <h1 className="text-7xl md:text-[250px] font-bold mb-4">
                   Contact <br />
                   us! <br />
                 </h1>
@@ -28,12 +28,12 @@ export default function HeroContact() {
                 />
               </div>
 
-              <div className="absolute right-0 right-[150px] top-[120px] md:right-[600px] md:top-[300px] w-[120px] md:w-[350px] animate-float">
+              <div className="absolute right-0 right-[200px] top-[120px] md:right-[600px] md:top-[280px] w-[120px] md:w-[300px] animate-float">
                 <Image
                   src="/assets/contact/eyes.svg"
                   alt="Bubbles Decoration"
-                  width={350}
-                  height={350}
+                  width={300}
+                  height={300}
                 />
               </div>
             </div>
