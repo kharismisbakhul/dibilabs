@@ -79,14 +79,14 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
           </h1>
 
           {/* Content */}
-          <div className="prose prose-lg">
+          <article className="prose prose-lg max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeSanitize, rehypeHighlight]}
             >
               {articles.content}
             </ReactMarkdown>
-          </div>
+          </article>
           {/* <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
               Menjual mobil bekas memang tampak seperti proses yang mudah dan
