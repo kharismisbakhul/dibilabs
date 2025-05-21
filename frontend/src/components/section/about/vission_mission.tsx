@@ -61,7 +61,7 @@ export default function Vission_mission() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
             <div className="flex animate-marquee w-max">
               {Array(2).fill(0).map((_, i) => (
-                <div key={i} className="flex text-white text-4xl font-bold bg-[#231F20] px-4 py-6">
+                <div key={i} className="flex text-white text-2xl md:text-4xl font-bold bg-[#231F20] px-4 py-6">
                   {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (
                     <span key={index} className="px-1 whitespace-nowrap">{text}</span>
                   ))}
@@ -75,7 +75,7 @@ export default function Vission_mission() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
             <div className="flex animate-marquee w-max">
               {Array(2).fill(0).map((_, i) => (
-                <div key={i} className="flex text-white text-4xl font-bold bg-[#F16923] px-4 py-6">
+                <div key={i} className="flex text-white text-2xl md:text-4xl font-bold bg-[#F16923] px-4 py-6">
                   {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (
                     <span key={index} className="px-1 whitespace-nowrap">{text}</span>
                   ))}
