@@ -8,6 +8,7 @@ import { FaSearch } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function Navbar() {
         {/* Navbar */}
         <div className="">
           <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto">
-            <a href="/homepage">
+            <Link href="/homepage">
               <div className="flex items-center space-x-2">
                 <div className="relative w-[200px] h-[60px]">
                   <Image
@@ -29,7 +30,7 @@ export default function Navbar() {
                   />
                 </div>
               </div>
-            </a>
+            </Link>
             <ul className="hidden md:flex gap-20 font-medium text-lg">
               <li className="cursor-pointer px-2 py-1 rounded-md">
                 <a

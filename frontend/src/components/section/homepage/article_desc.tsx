@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Article_desc() {
   return (
@@ -30,11 +31,11 @@ export default function Article_desc() {
               marketing news!
             </p>
             <br />
-            <a href="/article">
+            <Link href="/article">
               <button className="bg-[#065097] text-white font-medium text-lg md:text-xl px-6 mr-8 py-2 rounded-full flex items-center gap-2 transition">
                 Browse Articles →
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 

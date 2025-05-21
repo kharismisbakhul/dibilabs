@@ -1,6 +1,7 @@
 // pages/article/[slug].tsx
 "use client";
 
+import Link from "next/link";
 // import { useRouter } from 'next/router';
 // import { Articles } from "@/types/json/articles";
 // import { FaFacebookF, FaShareAlt } from "react-icons/fa";
@@ -234,7 +235,7 @@ export default function ArticleDetail() {
                   key={index}
                   className="border-b p-4 hover:shadow-xl transform hover:scale-105"
                 >
-                  <a href={`/article/${item.slug}`}>
+                  <Link href={`/article/${item.slug}`}>
                     <span
                       className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${
                         item.type === "Tips & Trick"
@@ -253,7 +254,7 @@ export default function ArticleDetail() {
                         👤 {item.author} | 📅 {item.date}
                       </span>
                     </p>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -313,7 +314,7 @@ export default function ArticleDetail() {
                   key={index}
                   className="border-b p-4 hover:shadow-xl transform hover:scale-105"
                 >
-                  <a href={`/article/${item.slug}`}>
+                  <Link href={`/article/${item.slug}`}>
                     <span
                       className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${
                         item.type === "Tips & Trick"
@@ -332,7 +333,7 @@ export default function ArticleDetail() {
                         👤 {item.author} | 📅 {item.date}
                       </span>
                     </p>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
