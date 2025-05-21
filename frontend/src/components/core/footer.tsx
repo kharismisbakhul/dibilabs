@@ -5,6 +5,7 @@ import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa6"; // for X (Twitter)
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Footer() {
   const [form, setForm] = useState({
@@ -207,18 +208,18 @@ export default function Footer() {
 
           <div className="text-center mt-10">
             <p className="text-xl font-bold">This is the end of the journey.</p>
-            <a href="#">
+            <Link href="#">
               <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white">
                 Back to Top
               </button>
-            </a>
+            </Link>
           </div>
 
           {/* Footer */}
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
             {/* Column 1 - Branding */}
             <div>
-              <a href="/homepage">
+              <Link href="/homepage">
                 <div className="relative w-[150px] h-[60px]">
                   <Image
                     src="/assets/core/logo2.png"
@@ -228,7 +229,7 @@ export default function Footer() {
                     className="object-contain"
                   />
                 </div>
-              </a>
+              </Link>
               <br />
               <p className="text-sm mb-4">
                 Dibilabs.id is a Digital <br />
@@ -245,24 +246,24 @@ export default function Footer() {
               <h3 className="font-semibold">Services</h3>
               <ul className="text-sm space-y-1 mt-2">
                 <li>
-                  <a href="/service/meta">Meta Ads</a>
+                  <Link href="/service/meta">Meta Ads</Link>
                 </li>
                 <li>
-                  <a href="/service/google">Google Ads</a>
+                  <Link href="/service/google">Google Ads</Link>
                 </li>
                 <li>
-                  <a href="/service/sosmed">Social Media Management</a>
+                  <Link href="/service/sosmed">Social Media Management</Link>
                 </li>
                 <li>
-                  <a href="/service/seo">Search Engine Optimization Service</a>
+                  <Link href="/service/seo">Search Engine Optimization Service</Link>
                 </li>
                 <li>
-                  <a href="/service/software">
+                  <Link href="/service/software">
                     Software and Web App Development
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/service/webdev">Website Development</a>
+                  <Link href="/service/webdev">Website Development</Link>
                 </li>
               </ul>
             </div>
@@ -280,32 +281,32 @@ export default function Footer() {
                 <h3 className="font-semibold">Follow us</h3>
                 <div className="flex space-x-3 mt-2">
                   {/* LinkedIn */}
-                  <a
+                  <Link
                     href="https://www.linkedin.com/company/dibilabs-id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2"
                   >
                     <FaLinkedinIn className="text-[#0077B5] text-2xl" />
-                  </a>
+                  </Link>
 
                   {/* Instagram */}
-                  <a
+                  <Link
                     href="https://www.instagram.com/dibilabs.id"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2"
                   >
                     <FaInstagram className="text-[#E4405F] text-2xl" />
-                  </a>
+                  </Link>
 
                   {/* X (Twitter) */}
-                  <a
+                  <Link
                     href="mailto:partnership@dibilabs.id?subject=Partnership%20Opportunity&body=Hi%20Dibilabs%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20partnership%20with%20your%20agency.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0ARegards%2C"
                     className="bg-white rounded-full p-2"
                   >
                     <FaEnvelope className="text-[#ff5733] text-2xl" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

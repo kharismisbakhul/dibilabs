@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ServiceLists } from "@/types/json/service_lists";
+import Link from "next/link";
 
 type Props = {
   data: ServiceLists[]; // or Record<string, any>[]
@@ -30,7 +31,7 @@ export default function Service_stack({ data }: Props) {
               {item.title}
             </h2>
             <div className="mt-4 z-10 relative inline-flex items-center">
-              <a
+              <Link
                 href="#"
                 className={`px-10 py-2 rounded-full font-semibold text-xl md:text-2xl ${item.button_color}`}
               >
@@ -40,7 +41,7 @@ export default function Service_stack({ data }: Props) {
                 <span className={`ml-2 font-bold ${item.arrow_color}`}>
                   →
                 </span>
-              </a>
+              </Link>
             </div>
             {idx >= 1 && idx <= 2 && (
               <Image

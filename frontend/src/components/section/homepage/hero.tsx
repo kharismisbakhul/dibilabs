@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -31,11 +32,11 @@ export default function Hero() {
                   <p className="text-xl lg:text-3xl font-light m-0 flex-1 whitespace-nowrap">
                     Navigate the Digital Ecosystem with Dibilabs.id!
                   </p>
-                  <a href="#footer" className="shrink-0 sm:self-auto self-center">
+                  <Link href="#footer" className="shrink-0 sm:self-auto self-center">
                     <button className="bg-white text-black px-6 py-3 rounded-full flex items-center gap-2 font-semibold hover:bg-black hover:text-white whitespace-nowrap">
                       Grow Together <ArrowRight className="w-5 h-5" />
                     </button>
-                  </a>
+                  </Link>
                 </div>
 
               </div>

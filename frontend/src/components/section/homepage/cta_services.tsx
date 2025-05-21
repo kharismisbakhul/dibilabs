@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Cta_services() {
   return (
@@ -51,11 +52,11 @@ export default function Cta_services() {
 
           {/* Button - aligned right */}
           <div className="w-full flex justify-end">
-            <a href="/service">
+            <Link href="/service">
               <button className="bg-black text-white text-xl font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition">
                 Our Services →
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 // import { Articles } from "@/types/json/articles";
 import Image from "next/image";
+import Link from "next/link";
 
 // type Props = {
 //   data: Articles[]; // or Record<string, any>[]
@@ -60,7 +61,7 @@ export default function ListArticle() {
 
             {dummyArticles.map((item, index) => (
               <div key={index} className="bg-white rounded-lg shadow overflow-hidden hover:shadow-xl transform hover:scale-105">
-                <a href={`/article/${item.slug}`}>
+                <Link href={`/article/${item.slug}`}>
                   <div className="relative w-full h-48">
                     <Image
                       src={item.image}
@@ -85,7 +86,7 @@ export default function ListArticle() {
                       <span>📅 {item.date}</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
             
@@ -141,7 +142,7 @@ export default function ListArticle() {
               },
             ].map((item, index) => (
               <div key={index} className="border-b p-4 hover:shadow-xl transform hover:scale-105">
-                <a href={`/article/${item.slug}`}>
+                <Link href={`/article/${item.slug}`}>
                   <span className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${item.type === 'Tips & Trick' ? 'bg-yellow-400 text-white' : 'bg-orange-500 text-white'}`}>
                     {item.type}
                   </span>
@@ -152,7 +153,7 @@ export default function ListArticle() {
                       {item.desc}
                   </p>
                   <p className="text-xs text-gray-400 mt-2"><span>👤 {item.author} | 📅 {item.date}</span></p>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

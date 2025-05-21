@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Articles() {
   const articles = [
@@ -33,7 +34,7 @@ export default function Articles() {
         <div className="grid grid-cols-4 md:grid-cols-4">
           {articles.map((item, idx) => (
             <div key={idx} className="relative h-[250px] md:h-[350px] overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105">
-              <a href="#">
+              <Link href="/article">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -48,7 +49,7 @@ export default function Articles() {
                   </h3>
                   <p className="text-xs md:text-base">{item.date}</p>
                 </div>
-              </a>
+              </Link>
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ServiceCards } from "@/types/json/service_cards";
+import Link from "next/link";
 
 type Props = {
   data: ServiceCards[]; // or Record<string, any>[]
@@ -47,12 +48,12 @@ export default function Data_decision({ data }: Props) {
                 </h3>
               </div>
               <div className="mt-auto">
-                <a
+                <Link
                   href="#"
                   className={`inline-flex items-center gap-1 text-base md:text-xl font-semibold px-4 md:px-8 py-2 rounded-full ${item.button_color}`}
                 >
                   <span className={`${item.button_text_color}`}>Learn more</span> <span className={`${item.arrow_color}`}>→</span>
-                </a>
+                </Link>
               </div>
               
             </div>

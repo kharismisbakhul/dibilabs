@@ -1,5 +1,6 @@
 import { HomepageServices } from "@/types/json/homepage_services";
 import Image from "next/image";
+import Link from "next/link";
 
 type Props = {
   data: HomepageServices[]; // or Record<string, any>[]
@@ -72,11 +73,11 @@ export default function Services({ data }: Props) {
                       </h3>
                       <p className="text-sm md:text-base text-center mt-2">{item.description}</p>
                     </div>
-                    <a href="/service">
+                    <Link href="/service">
                       <button className="mt-4 px-4 py-2 bg-[#065097] text-white rounded-full text-base md:text-lg">
                         Learn more →
                       </button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

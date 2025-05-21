@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ArticleCardProps {
   image: string;
@@ -12,7 +13,7 @@ interface ArticleCardProps {
 export default function ArticleCard({ image, title, slug, desc, date }: ArticleCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-xl transform hover:scale-105">
-      <a href={`/article/${slug}`}>
+      <Link href={`/article/${slug}`}>
         <div className="relative h-48 w-full">
           <Image src={image} alt={title} fill className="object-cover" />
           <span className="absolute bottom-2 right-2 bg-orange-500 text-white text-sm px-3 py-1 rounded">
@@ -26,7 +27,7 @@ export default function ArticleCard({ image, title, slug, desc, date }: ArticleC
             <span>📅</span> {date}
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
