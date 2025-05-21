@@ -1,7 +1,6 @@
 'use client';
 
 import { FaFacebookF, FaShareAlt } from 'react-icons/fa';
-import { useRouter } from 'next/navigation';
 
 export default function ShareSection() {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
