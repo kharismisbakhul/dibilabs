@@ -694,7 +694,7 @@ export default function BiteSizePage({ data }: Props) {
   const currentArticles = dummyArticles.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <div className="mx-24 py-10">
+    <div className="mx-8 md:mx-24 py-10">
       <h2 className="text-2xl font-bold text-orange-500 mb-2">Bite Size Strategies</h2>
       <hr className="border-orange-500 mb-6" />
       <div className="grid md:grid-cols-3 gap-6">

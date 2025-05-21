@@ -49,7 +49,7 @@ const dummyArticles = [
 
 export default function ListArticle({ data }: Props) {
   return (
-    <div className="container mx-auto px-4 py-8 pt-36">
+    <div className="container mx-auto px-8 md:px-4 py-8 pt-36">
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <h2 className="text-3xl font-bold mb-4">
