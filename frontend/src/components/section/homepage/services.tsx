@@ -39,7 +39,7 @@ export default function Services({ data }: Props) {
         {/* Black Cards Section */}
         <div className="bg-orange-500">
           <div className="bg-black rounded-t-[60px] py-14 px-4 md:px-10 text-white text-center relative z-10 pb-[100px]">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
               {data.map((item, idx) => (
                 <div
                   key={idx}
