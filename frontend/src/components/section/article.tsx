@@ -2,15 +2,15 @@
 
 import Footer from "../core/footer";
 import Navbar from "../core/navbar";
-import HeroArticle from "./article/heroArticle";
-import NewestArticle from "./article/newestArticle";
+// import HeroArticle from "./article/heroArticle";
+// import NewestArticle from "./article/newestArticle";
 
 import { useEffect, useState } from "react";
 import { Articles } from "@/types/json/articles";
 import ListArticle from "./article/listArticle";
 import BiteSizePage from "./article/biteSize";
 import CaseStudiesPage from "./article/caseStudies";
-import ArticleDetail from "./article/detail";
+// import ArticleDetail from "./article/detail";
 
 export default function Article() {
   const [articles, setArticles] = useState<Articles[] | null>(null);
@@ -39,9 +39,9 @@ export default function Article() {
       <Navbar />
       {/* <HeroArticle /> */}
       {/* {articles && <NewestArticle data={articles}/>} */}
-      {articles && <ListArticle data={articles}/>}
-      {articles && <BiteSizePage data={articles}/>}
-      {articles && <CaseStudiesPage data={articles}/>}
+      {articles && <ListArticle/>}
+      {articles && <BiteSizePage/>}
+      {articles && <CaseStudiesPage/>}
       {/* {articles && <ArticleDetail data={articles}/>} */}
       <Footer />
     </>

@@ -9,7 +9,7 @@ export default function Pagination({ current, total, onPageChange }: PaginationP
     const delta = 2;
     const range = [];
     const rangeWithDots = [];
-    let l: number;
+    let l: number | undefined;
 
     for (let i = 1; i <= total; i++) {
       if (i === 1 || i === total || (i >= current - delta && i <= current + delta)) {
@@ -17,7 +17,7 @@ export default function Pagination({ current, total, onPageChange }: PaginationP
       }
     }
 
-    for (let i of range) {
+    for (const i of range) {
       if (l) {
         if (i - l === 2) {
           rangeWithDots.push(l + 1);

@@ -2,34 +2,26 @@
 "use client";
 
 // import { useRouter } from 'next/router';
-import { Articles } from "@/types/json/articles";
-import { FaFacebookF, FaShareAlt } from "react-icons/fa";
+// import { Articles } from "@/types/json/articles";
+// import { FaFacebookF, FaShareAlt } from "react-icons/fa";
 import ShareSection from "./shareSection";
 import Image from "next/image";
 
-type Props = {
-  data: Articles[]; // or Record<string, any>[]
-};
+// type Props = {
+//   data: Articles[]; // or Record<string, any>[]
+// };
 
-interface ArticleCardProps {
-  image: string;
-  title: string;
-  slug: string;
-  desc: string;
-  date: string;
-  category: string;
-  author: string;
-}
+// interface ArticleCardProps {
+//   image: string;
+//   title: string;
+//   slug: string;
+//   desc: string;
+//   date: string;
+//   category: string;
+//   author: string;
+// }
 
-export default function ArticleDetail({
-  image,
-  title,
-  slug,
-  desc,
-  date,
-  category,
-  author,
-}: ArticleCardProps) {
+export default function ArticleDetail() {
   //   const router = useRouter();
   //   const { slug } = router.query;
 

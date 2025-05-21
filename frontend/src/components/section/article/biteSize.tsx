@@ -1,11 +1,11 @@
 import ArticleCard from "./articleCard";
 import Pagination from "./pagination";
-import { Articles } from "@/types/json/articles";
+// import { Articles } from "@/types/json/articles";
 import { useState } from "react";
 
-type Props = {
-  data: Articles[]; // or Record<string, any>[]
-};
+// type Props = {
+//   data: Articles[]; // or Record<string, any>[]
+// };
 
 const dummyArticles = [
   {
@@ -687,7 +687,7 @@ const dummyArticles = [
 
 const ITEMS_PER_PAGE = 3;
 
-export default function BiteSizePage({ data }: Props) {
+export default function BiteSizePage() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(dummyArticles.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
