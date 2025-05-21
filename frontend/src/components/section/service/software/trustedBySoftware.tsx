@@ -11,7 +11,7 @@ export default function TrustedBySoftware({ data }: Props) {
   return (
     <section className="py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">
-        <h2 className="text-center text-6xl font-semibold">
+        <h2 className="text-center text-4xl md:text-6xl font-semibold">
           <span className="text-orange-500 font-bold">Trusted</span> By
         </h2>
 
@@ -20,7 +20,7 @@ export default function TrustedBySoftware({ data }: Props) {
             {/* Repeat the list multiple times */}
             {Array.from({ length: 4 }).flatMap((_, repeatIndex) =>
               data.map((item, index) => (
-                <div key={`${repeatIndex}-${index}`} className="w-56 h-40 relative flex-shrink-0">
+                <div key={`${repeatIndex}-${index}`} className="w-48 h-32 md:w-56 md:h-40 relative flex-shrink-0">
                   <Image
                     src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                     alt={item.image.name}

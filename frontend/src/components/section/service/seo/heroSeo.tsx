@@ -5,11 +5,11 @@ export default function HeroSeo() {
     <>
       <section className="bg-white pt-24">
         {/* Top Section */}
-        <div className="bg-black rounded-[24px] text-white px-6 md:px-16 py-24 flex flex-col md:flex-row items-center justify-between max-w-[1600px] mx-auto mt-5 relative">
+        <div className="bg-black rounded-[24px] text-white px-10 md:px-16 py-16 md:py-24 flex flex-col md:flex-row items-left justify-between max-w-[1600px] mx-auto mt-5 relative overflow-hidden">
           {/* Text */}
           <div className="md:w-1/2 mb-6 md:mb-0">
             <h2 className="text-5xl font-semibold leading-tight">
-              <span className="text-[#F97316] font-bold text-7xl">
+              <span className="text-[#F97316] font-bold text-4xl md:text-7xl">
                 Rank, Convert,
                 <br />
                 and Perform <br />
@@ -17,7 +17,7 @@ export default function HeroSeo() {
               </span>
             </h2>
             <br />
-            <p className="mt-4 text-3xl text-gray-200">
+            <p className="mt-4 text-lg md:text-3xl text-gray-200">
               Our strategic approach ensures long-term <br />
               visibility, transforming organic traffic into <br />
               sustainable business growth with content <br />
@@ -31,7 +31,7 @@ export default function HeroSeo() {
               alt="Payday Sale"
               width={600}
               height={700}
-              className="right-0 bottom-0 absolute"
+              className="right-0 bottom-0 absolute w-[250px] md:w-[600px] h-auto"
             />
           </div>
         </div>
