@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="fixed top-0 left-0 w-full bg-orange-500 text-white shadow-md z-50">
         {/* Navbar */}
         <div className="">
-          <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto">
+          <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto font-extrabold">
             <Link href="/homepage">
               <div className="flex items-center space-x-2">
                 <div className="relative w-[200px] h-[60px]">
@@ -55,7 +55,7 @@ export default function Navbar() {
                   <div className="grid grid-cols-2 gap-6">
                     {/* Item 1 */}
                     <div className="flex gap-3">
-                      <FaMeta className="text-sky-600 text-3xl mt-1" />
+                      <FaMeta className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/meta"
@@ -73,7 +73,7 @@ export default function Navbar() {
 
                     {/* Item 2 */}
                     <div className="flex gap-3">
-                      <FaGoogle className="text-sky-600 text-3xl mt-1" />
+                      <FaGoogle className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/google"
@@ -93,7 +93,7 @@ export default function Navbar() {
 
                     {/* Item 3 */}
                     <div className="flex gap-3">
-                      <IoShareSocial className="text-sky-600 text-3xl mt-1" />
+                      <IoShareSocial className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/sosmed"
@@ -112,7 +112,7 @@ export default function Navbar() {
 
                     {/* Item 4 */}
                     <div className="flex gap-3">
-                      <FaSearch className="text-sky-600 text-3xl mt-1" />
+                      <FaSearch className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/seo"
@@ -130,7 +130,7 @@ export default function Navbar() {
 
                     {/* Item 5 */}
                     <div className="flex gap-3">
-                      <IoApps className="text-sky-600 text-3xl mt-1" />
+                      <IoApps className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/software"
@@ -149,7 +149,7 @@ export default function Navbar() {
 
                     {/* Item 6 */}
                     <div className="flex gap-3">
-                      <CgWebsite className="text-sky-600 text-3xl mt-1" />
+                      <CgWebsite className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/webdev"
@@ -185,16 +185,16 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <a
+            <Link
               href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:block"
+              className="hidden md:block animate-pulse-fast"
             >
               <button className="bg-white text-black px-4 py-2 rounded-full hover:text-white hover:bg-black font-semibold text-base">
                 Free Consultant
               </button>
-            </a>
+            </Link>
 
             {menuOpen && (
               <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4">
