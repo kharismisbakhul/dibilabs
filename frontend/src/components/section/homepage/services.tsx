@@ -67,13 +67,13 @@ export default function Services({ data }: Props) {
                   {/* Content block with flexible space */}
                   <div className="flex flex-col justify-between flex-1 w-full items-center">
                     <div className="flex flex-col items-center">
-                      <h3 className="mt-4 text-2xl font-bold text-center text-orange-500">
+                      <h3 className="mt-4 text-xl md:text-2xl font-bold text-center text-orange-500">
                         {item.title}
                       </h3>
-                      <p className="text-base text-center mt-2">{item.description}</p>
+                      <p className="text-sm md:text-base text-center mt-2">{item.description}</p>
                     </div>
                     <a href="/service">
-                      <button className="mt-4 px-4 py-2 bg-[#065097] text-white rounded-full text-lg">
+                      <button className="mt-4 px-4 py-2 bg-[#065097] text-white rounded-full text-base md:text-lg">
                         Learn more →
                       </button>
                     </a>

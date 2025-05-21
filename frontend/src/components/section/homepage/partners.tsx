@@ -16,7 +16,7 @@ export default function Partners({ data }: Props) {
         <div className="bg-[#1A1617] rounded-t-full pt-[5vw] pb-[4vw] px-4 md:px-10 text-white text-center relative z-10">
           {/* Animated Eyes */}
           <motion.div
-            className="absolute top-[-100px] md:top-[-180px] left-[41%] md:left-[42%] lg:left-[44%] transform -translate-x-1/2 flex z-20 w-28 h-28 md:w-[200px] md:h-[200px]"
+            className="absolute top-[-100px] md:top-[-180px] left-[41%] md:left-[44%] lg:left-[44%] transform -translate-x-1/2 flex z-20 w-28 h-28 md:w-[200px] md:h-[200px]"
             animate={{ scale: [1, 1.05, 1], y: [0, -3, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >

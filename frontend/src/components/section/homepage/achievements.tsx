@@ -20,10 +20,10 @@ export default function Achievements({ data }: Props) {
         </div>
 
         <div className="text-center z-10 relative text-orange-600">
-          <h2 className="text-6xl ">
+          <h2 className="text-3xl md:text-6xl ">
             Our Partners <span className="font-bold">Achievements</span>,
           </h2>
-          <p className="text-6xl mt-2">
+          <p className="text-3xl md:text-6xl mt-2">
             a Testament to <span className="font-bold">Our Excellence</span>.
           </p>
         </div>
@@ -32,8 +32,8 @@ export default function Achievements({ data }: Props) {
           {/* Block Item */}
 
           {data.map((item, index) => (
-            <div key={index} className="flex flex-col items-center w-4480">
-              <div className="relative group w-48 h-48 rounded-full overflow-visible">
+            <div key={index} className="flex flex-col items-center w-36 md:w-48">
+              <div className="relative group w-36 h-36 md:w-48 md:h-48 rounded-full overflow-visible">
                 {/* Outer glow/shadow (visible by default) */}
                 <div
                   className={`absolute -inset-2 rounded-full blur-xl opacity-60 ${item.background_color}`}
@@ -48,13 +48,13 @@ export default function Achievements({ data }: Props) {
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col justify-center items-center text-center w-full h-full group-hover:text-white transition-colors duration-500">
-                    <span className="text-2xl font-bold">{item.value}</span>
-                    <span className="text-sm">{item.description}</span>
+                    <span className="text-base md:text-2xl font-bold">{item.value}</span>
+                    <span className="text-xs md:text-sm">{item.description}</span>
                   </div>
                 </div>
               </div>
               <br />
-              <div className="relative w-[200px] h-[200px] mt-10 animate-bounce-smooth">
+              <div className="relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] mt-10 animate-bounce-smooth">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                   alt={item.image.name}
