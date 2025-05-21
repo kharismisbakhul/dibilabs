@@ -1,12 +1,14 @@
 import Footer from "../core/footer";
 import Navbar from "../core/navbar";
-import HeroContact from "./contact/heroContact";
+import DetailContact from "./contact/detailContact";
+// import HeroContact from "./contact/heroContact";
 
 export default function Contact() {
   return (
     <>
       <Navbar />
-      <HeroContact/>
+      {/* <HeroContact/> */}
+      <DetailContact/>
       <Footer />
     </>
   );
