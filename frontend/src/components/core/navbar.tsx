@@ -33,22 +33,22 @@ export default function Navbar() {
             </Link>
             <ul className="hidden md:flex gap-20 font-medium text-lg">
               <li className="cursor-pointer px-2 py-1 rounded-md">
-                <a
+                <Link
                   href="/about"
                   className="transition-all duration-300 hover:underline"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="relative group cursor-pointer px-2 py-1 rounded-md">
-                <a
+                <Link
                   href="/service"
                   className="transition-all duration-300 hover:underline flex items-center gap-1"
                 >
                   <span>
                     Services
                   </span>
-                </a>
+                </Link>
 
                 {/* Dropdown Menu */}
                 <div className="absolute left-0 mt-5 w-[800px] bg-white border rounded-xl shadow-lg p-6 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -57,12 +57,12 @@ export default function Navbar() {
                     <div className="flex gap-3">
                       <FaMeta className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a
+                        <Link
                           href="/service/meta"
                           className="font-semibold text-gray-900 hover:underline"
                         >
                           Meta Ads
-                        </a>
+                        </Link>
                         <p className="text-gray-500 text-sm">
                           Big ideas need smart execution. Our data-driven
                           precision and creative agility team turn your vision
@@ -75,12 +75,12 @@ export default function Navbar() {
                     <div className="flex gap-3">
                       <FaGoogle className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a
+                        <Link
                           href="/service/google"
                           className="font-semibold text-gray-900 hover:underline"
                         >
                           Google Ads
-                        </a>
+                        </Link>
                         <p className="text-gray-500 text-sm">
                           Advertising without data leads to inefficient
                           spending, and declining performance. As a Google
@@ -95,12 +95,12 @@ export default function Navbar() {
                     <div className="flex gap-3">
                       <IoShareSocial className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a
+                        <Link
                           href="/service/sosmed"
                           className="font-semibold text-gray-900 hover:underline"
                         >
                           Social Media Management
-                        </a>
+                        </Link>
                         <p className="text-gray-500 text-sm">
                           We engineer social media success through engaging
                           storytelling, data-backed content, and
@@ -114,12 +114,12 @@ export default function Navbar() {
                     <div className="flex gap-3">
                       <FaSearch className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a
+                        <Link
                           href="/service/seo"
                           className="font-semibold text-gray-900 hover:underline"
                         >
                           Search Engine Optimization Service
-                        </a>
+                        </Link>
                         <p className="text-gray-500 text-sm">
                           Our strategic approach ensures long-term visibility,
                           transforming organic traffic into sustainable business
@@ -132,12 +132,12 @@ export default function Navbar() {
                     <div className="flex gap-3">
                       <IoApps className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a
+                        <Link
                           href="/service/software"
                           className="font-semibold text-gray-900 hover:underline"
                         >
                           Software and Web App Development
-                        </a>
+                        </Link>
                         <p className="text-gray-500 text-sm">
                           By blending user psychology, data-driven insights, and
                           customized strategies, we craft digital experiences
@@ -151,12 +151,12 @@ export default function Navbar() {
                     <div className="flex gap-3">
                       <CgWebsite className="text-sky-600 text-3xl mt-1" />
                       <div>
-                        <a
+                        <Link
                           href="/service/webdev"
                           className="font-semibold text-gray-900 hover:underline"
                         >
                           Website Development
-                        </a>
+                        </Link>
                         <p className="text-gray-500 text-sm">
                           More than just an online presence, your website should
                           work for you. With data-driven design, seamless
@@ -169,20 +169,20 @@ export default function Navbar() {
                 </div>
               </li>
               <li className="cursor-pointer px-2 py-1 rounded-md">
-                <a
+                <Link
                   href="/article"
                   className="transition-all duration-300 hover:underline"
                 >
                   Article
-                </a>
+                </Link>
               </li>
               <li className="cursor-pointer px-2 py-1 rounded-md">
-                <a
+                <Link
                   href="/contact"
                   className="transition-all duration-300 hover:underline"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
             <a
@@ -198,46 +198,46 @@ export default function Navbar() {
 
             {menuOpen && (
               <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4">
-                <a href="/about" className="block text-white font-medium">
+                <Link href="/about" className="block text-white font-medium">
                   About Us
-                </a>
-                <a href="/service" className="block text-white font-medium">
+                </Link>
+                <Link href="/service" className="block text-white font-medium">
                   Services
-                </a>
+                </Link>
                 <ul className="text-base text-white font-medium ml-5">
-                  <a href="/service/meta" className="block mb-2">
+                  <Link href="/service/meta" className="block mb-2">
                     Meta Ads
-                  </a>
-                  <a href="/service/google" className="block mb-2">
+                  </Link>
+                  <Link href="/service/google" className="block mb-2">
                     Google Ads
-                  </a>
-                  <a href="/service/sosmed" className="block mb-2">
+                  </Link>
+                  <Link href="/service/sosmed" className="block mb-2">
                     Social Media Management
-                  </a>
-                  <a href="/service/seo" className="block mb-2">
+                  </Link>
+                  <Link href="/service/seo" className="block mb-2">
                     Search Engine Optimization Service
-                  </a>
-                  <a href="/service/software" className="block mb-2">
+                  </Link>
+                  <Link href="/service/software" className="block mb-2">
                     Software and Web App Development
-                  </a>
-                  <a href="/service/webdev" className="block mb-2">
+                  </Link>
+                  <Link href="/service/webdev" className="block mb-2">
                     Website Development
-                  </a>
+                  </Link>
                 </ul>
-                <a href="/article" className="block text-white font-medium">
+                <Link href="/article" className="block text-white font-medium">
                   Article
-                </a>
-                <a href="/contact" className="block text-white font-medium">
+                </Link>
+                <Link href="/contact" className="block text-white font-medium">
                   Contact Us
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold"
                 >
                   Free Consultant
-                </a>
+                </Link>
               </div>
             )}
 
