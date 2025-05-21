@@ -56,7 +56,7 @@ export default function HeroContact() {
 
         <div className="relative mt-[-250px] -bottom-[200px] h-[400px] overflow-hidden bg-transparent">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
-            <div className="flex animate-marquee w-max">
+            <div className="flex animate-marqueeR w-max">
               {Array(2).fill(0).map((_, i) => (
                 <div key={i} className="flex text-white text-2xl md:text-4xl font-bold bg-[#065097] px-4 py-6">
                   {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (

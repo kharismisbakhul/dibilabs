@@ -122,6 +122,7 @@ module.exports = {
         'marqueeLeft': 'marqueeLeft 30s linear infinite',
         'marqueeRight': 'marqueeRight 30s linear infinite',
         'marquee': 'marqueeLeft 60s linear infinite',
+        'marqueeR': 'marqueeRight 60s linear infinite',
 
         'tilt-shake': 'tilt-shake 0.5s ease-in-out infinite',
         typewriter: 'typewriter 2s steps(40) 1 forwards',
