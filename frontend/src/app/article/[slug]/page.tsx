@@ -52,9 +52,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
+export default function ArticlePage() {
   const article = dummyArticles.find(
-    a => a.slug === params.slug
+    a => a.slug === "risiko-menjual-mobil-bekas-tanpa-cek-legalitas-pembeli"
   );
   if (!article) return notFound();
 
@@ -66,3 +66,17 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     </>
   );
 }
+// export default function ArticlePage({ params }: { params: { slug: string } }) {
+//   const article = dummyArticles.find(
+//     a => a.slug === params.slug
+//   );
+//   if (!article) return notFound();
+
+//   return (
+//     <>
+//         <Navbar />
+//         <ArticleDetail/>
+//         <Footer/>
+//     </>
+//   );
+// }
