@@ -10,18 +10,18 @@ export default function Hero_service() {
             <div className="grid md:grid-cols-2 gap-10 items-center p-10">
               {/* Text Content - Left */}
               <div className="order-2 md:order-1">
-                <h1 className="text-8xl font-bold mb-4">Services</h1>
-                <h1 className="text-8xl font-bold mb-4">
+                <h1 className="text-5xl md:text-8xl font-bold mb-4">Services</h1>
+                <h1 className="text-5xl md:text-8xl font-bold mb-4">
                   That Impacts
                 </h1>
-                <h1 className="text-8xl font-bold mb-4">
+                <h1 className="text-5xl md:text-8xl font-bold mb-4">
                   Your Business
                 </h1>
               </div>
 
               {/* SVG Character - Right */}
               {/* Top Right Bubble Decoration */}
-              <div className="absolute right-0 top-3 z-0">
+              <div className="absolute right-0 top-3 z-0 w-[150px] md:w-[300px]">
                 <Image
                   src="/assets/service/right_bubble.svg"
                   alt="Bubbles Decoration"

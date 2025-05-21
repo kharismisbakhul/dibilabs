@@ -9,11 +9,11 @@ type Props = {
 const backgroundImage = [
   {
     image: "/assets/service/cookies.svg",
-    imageStyle: "absolute right-6 -bottom-[250px] w-[450px] z-40",
+    imageStyle: "absolute right-0 md:right-6 -bottom-[150px] md:-bottom-[250px] w-[250px] md:w-[450px] z-40",
   },
   {
     image: "/assets/service/stars.svg",
-    imageStyle: "absolute right-[500px] -bottom-[50px] w-[250px] z-40",
+    imageStyle: "absolute right-[150px] md:right-[500px] -bottom-[20px] md:-bottom-[50px] w-[100px] md:w-[250px] z-40",
   }
 ];
 
@@ -26,13 +26,13 @@ export default function Service_stack({ data }: Props) {
             key={idx}
             className={`relative w-full py-20 px-6 md:px-20 ${item.background_color} ${item.text_color}`}
           >
-            <h2 className="text-7xl font-bold z-10 relative">
+            <h2 className="text-3xl md:text-7xl font-bold z-10 relative">
               {item.title}
             </h2>
             <div className="mt-4 z-10 relative inline-flex items-center">
               <a
                 href="#"
-                className={`px-10 py-2 rounded-full font-semibold text-2xl ${item.button_color}`}
+                className={`px-10 py-2 rounded-full font-semibold text-xl md:text-2xl ${item.button_color}`}
               >
                 <span className={`ml-2 font-bold ${item.button_text_color}`}>
                 Learn more
@@ -59,7 +59,7 @@ export default function Service_stack({ data }: Props) {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
             <div className="flex animate-marquee w-max">
               {Array(2).fill(0).map((_, i) => (
-                <div key={i} className="flex text-white text-4xl font-bold bg-[#231F20] px-4 py-6">
+                <div key={i} className="flex text-white text-2xl md:text-4xl font-bold bg-[#231F20] px-4 py-6">
                   {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (
                     <span key={index} className="px-1 whitespace-nowrap">{text}</span>
                   ))}
@@ -73,7 +73,7 @@ export default function Service_stack({ data }: Props) {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] w-full">
             <div className="flex animate-marquee w-max">
               {Array(2).fill(0).map((_, i) => (
-                <div key={i} className="flex text-white text-4xl font-bold bg-[#F16923] px-4 py-6">
+                <div key={i} className="flex text-white text-2xl md:text-4xl font-bold bg-[#F16923] px-4 py-6">
                   {Array(30).fill(" ✦ DIBILABS ").map((text, index) => (
                     <span key={index} className="px-1 whitespace-nowrap">{text}</span>
                   ))}
