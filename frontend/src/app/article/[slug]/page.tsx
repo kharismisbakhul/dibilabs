@@ -1,47 +1,8 @@
 // app/article/[slug]/page.tsx
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import ArticleDetail from '@/components/section/article/detail';
 import Footer from '@/components/core/footer';
 import Navbar from '@/components/core/navbar';
-
-// const dummyArticles = [
-//   {
-//     id: 1,
-//     attributes: {
-//       title: 'Risiko Menjual Mobil Bekas Tanpa Cek Legalitas Pembeli',
-//       slug: 'risiko-menjual-mobil-bekas-tanpa-cek-legalitas-pembeli',
-//       excerpt: 'Menjual mobil bekas memang tampak seperti proses yang mudah dan cepat...',
-//       content: `<p>Menjual mobil bekas memang tampak seperti proses yang mudah dan cepat...</p><p>Namun banyak pemilik mobil yang mengabaikan satu aspek penting...</p>`,
-//       publishedAt: '2025-05-19T00:00:00Z',
-//       thumbnail: {
-//         data: {
-//           attributes: {
-//             url: 'https://images.unsplash.com/photo-1676361181112-96271f7f28d6?auto=format&fit=crop&w=800&q=80',
-//           },
-//         },
-//       },
-//     },
-//   },
-//   {
-//     id: 2,
-//     attributes: {
-//       title: 'Strategi Jual Mobil Bekas untuk Pemilik Mobil Fleet',
-//       slug: 'strategi-jual-mobil-bekas-fleet',
-//       excerpt: 'Berbagai strategi efektif untuk menjual mobil bekas fleet atau perusahaan...',
-//       content: `<p>Berbagai strategi efektif untuk menjual mobil bekas fleet atau perusahaan...</p>`,
-//       publishedAt: '2025-05-18T00:00:00Z',
-//       thumbnail: {
-//         data: {
-//           attributes: {
-//             url: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80',
-//           },
-//         },
-//       },
-//     },
-//   },
-// ];
-
 
 const dummyArticles = [
   {
@@ -100,7 +61,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   return (
     <>
         <Navbar />
-        <ArticleDetail data={article}/>
+        <ArticleDetail/>
         <Footer/>
     </>
   );
