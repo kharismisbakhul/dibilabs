@@ -1,9 +1,9 @@
-import { Articles } from "@/types/json/articles";
+// import { Articles } from "@/types/json/articles";
 import Image from "next/image";
 
-type Props = {
-  data: Articles[]; // or Record<string, any>[]
-};
+// type Props = {
+//   data: Articles[]; // or Record<string, any>[]
+// };
 
 const dummyArticles = [
   {
@@ -47,7 +47,7 @@ const dummyArticles = [
   },
 ];
 
-export default function ListArticle({ data }: Props) {
+export default function ListArticle() {
   return (
     <div className="container mx-auto px-8 md:px-4 py-8 pt-36">
       <div className="grid md:grid-cols-3 gap-6">
