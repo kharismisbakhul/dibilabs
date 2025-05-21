@@ -8,7 +8,6 @@ import { FaSearch } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
 
 import { useState } from "react";
-import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,7 +16,7 @@ export default function Navbar() {
       <div className="fixed top-0 left-0 w-full bg-orange-500 text-white shadow-md z-50">
         {/* Navbar */}
         <div className="">
-          <nav className="flex items-center justify-between px-16 py-4 w-full md:w-auto">
+          <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto">
             <a href="/homepage">
               <div className="flex items-center space-x-2">
                 <div className="relative w-[200px] h-[60px]">
@@ -204,6 +203,26 @@ export default function Navbar() {
                 <a href="/service" className="block text-white font-medium">
                   Services
                 </a>
+                <ul className="text-base text-white font-medium ml-5">
+                  <a href="/service/meta" className="block mb-2">
+                    Meta Ads
+                  </a>
+                  <a href="/service/google" className="block mb-2">
+                    Google Ads
+                  </a>
+                  <a href="/service/sosmed" className="block mb-2">
+                    Social Media Management
+                  </a>
+                  <a href="/service/seo" className="block mb-2">
+                    Search Engine Optimization Service
+                  </a>
+                  <a href="/service/software" className="block mb-2">
+                    Software and Web App Development
+                  </a>
+                  <a href="/service/webdev" className="block mb-2">
+                    Website Development
+                  </a>
+                </ul>
                 <a href="/article" className="block text-white font-medium">
                   Article
                 </a>
@@ -221,7 +240,7 @@ export default function Navbar() {
               </div>
             )}
 
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center shrink-0">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="relative w-8 h-8 focus:outline-none"
