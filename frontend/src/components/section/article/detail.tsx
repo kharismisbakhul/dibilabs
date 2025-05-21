@@ -30,9 +30,9 @@ export default function ArticleDetail() {
     <div className="max-w-7xl mx-auto px-4 py-8 pt-36">
       {/* Breadcrumb */}
       <nav className="text-sm mb-4 text-gray-500">
-        <a href="/article">
+        <Link href="/article">
           <span>List Article</span>
-        </a>{" "}
+        </Link>{" "}
         &gt;{" "}
         <span className="text-bold">
           Risiko Menjual Mobil Bekas Tanpa Cek Legalitas Pembeli
