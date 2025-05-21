@@ -16,12 +16,13 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
-    "content": {
-      "type": "blocks"
+    "short_desc": {
+      "type": "text"
     },
-    "image": {
+    "thumbnail": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -35,30 +36,29 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "Tech",
-        "Health",
-        "Education",
-        "Fashion",
-        "Beauty",
-        "Food and Beverage",
-        "Services",
-        "Government",
-        "Others"
+        "Bite Size Strategies",
+        "Case Studies"
       ]
     },
     "author": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
     },
     "published": {
-      "type": "datetime"
+      "type": "datetime",
+      "default": "2025-05-21T00:00:00.000Z"
     },
     "is_published": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
-    "excerpt": {
-      "type": "blocks"
+    "view": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }

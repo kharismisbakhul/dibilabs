@@ -7,25 +7,30 @@ import Link from "next/link";
 // import { FaFacebookF, FaShareAlt } from "react-icons/fa";
 import ShareSection from "./shareSection";
 import Image from "next/image";
+import { Articles } from "@/types/json/articles";
+import { format } from 'date-fns';
 
-// type Props = {
-//   data: Articles[]; // or Record<string, any>[]
-// };
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeSanitize from "rehype-sanitize";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github.css"; // or another style
 
-// interface ArticleCardProps {
-//   image: string;
-//   title: string;
-//   slug: string;
-//   desc: string;
-//   date: string;
-//   category: string;
-//   author: string;
-// }
+const formatDate = (dateString: string) => {
+  return format(new Date(dateString), 'dd MMMM yyyy');
+};
 
-export default function ArticleDetail() {
-  //   const router = useRouter();
-  //   const { slug } = router.query;
+interface ArticleReadProps {
+  articles: Articles;
+  data: Articles[];
+}
 
+export default function ArticleRead( { articles, data }: ArticleReadProps) {
+  const allArticles = data;
+  const sortedByDateDesc = allArticles.sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+  const sameCategoriesArtikel = sortedByDateDesc.filter(article => article.category === articles.category);
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 pt-36">
       {/* Breadcrumb */}
@@ -35,7 +40,7 @@ export default function ArticleDetail() {
         </Link>{" "}
         &gt;{" "}
         <span className="text-bold">
-          Risiko Menjual Mobil Bekas Tanpa Cek Legalitas Pembeli
+          {articles.title}
         </span>
         {/* <span className="text-black font-medium">{slug}</span> */}
       </nav>
@@ -46,12 +51,12 @@ export default function ArticleDetail() {
         <div className="md:col-span-8">
           {/* Meta */}
           <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
-            <span>👤 adminjg</span>
-            <span>📅 19 May 2025</span>
-            <span>👁️10</span>
+            <span>👤 {articles.author.username}</span>
+            <span>📅 {formatDate(articles.publishedAt)}</span>
+            <span>👁️ {articles.view}</span>
           </div>
             <span className="bg-orange-400 text-white text-xs px-8 py-1 rounded">
-              Berita
+              {articles.category}
             </span>
             <br />
             <br />
@@ -59,8 +64,8 @@ export default function ArticleDetail() {
           {/* Header Image */}
           <div className="relative w-full h-80 mb-4 rounded-lg overflow-hidden">
             <Image
-              src="/assets/homepage/article1.png"
-              alt="Article Header"
+              src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${articles.thumbnail.url}`}
+              alt={articles.thumbnail.name}
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
@@ -70,11 +75,19 @@ export default function ArticleDetail() {
 
           {/* Title */}
           <h1 className="text-2xl md:text-3xl font-bold mb-4">
-            Risiko Menjual Mobil Bekas Tanpa Cek Legalitas Pembeli
+            {articles.title}
           </h1>
 
           {/* Content */}
-          <div className="space-y-4 text-gray-700 leading-relaxed">
+          <div className="prose prose-lg">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeSanitize, rehypeHighlight]}
+            >
+              {articles.content}
+            </ReactMarkdown>
+          </div>
+          {/* <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>
               Menjual mobil bekas memang tampak seperti proses yang mudah dan
               cepat, terutama dengan semakin banyaknya platform jual beli mobil
@@ -176,7 +189,7 @@ export default function ArticleDetail() {
                 ilegal tanpa sepengetahuan Anda.
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Sidebar */}
@@ -187,71 +200,24 @@ export default function ArticleDetail() {
               Artikel <span className="text-orange-500">Terbaru</span>
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  title: "Platform Terbaik Jual Mobil bekas Online",
-                  slug: "platform-terbaik-jual-mobil-bekas-online",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "21 February 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title:
-                    "Pahami Ini Dulu! Dokumen Jual Mobil yang Wajib Disiapkan Biar Nggak Pusing di Belakang!",
-                  slug: "pahami-ini-dulu-dokumen-jual-mobil-yang-wajib-disiapkan-biar-nggak-pusing-di-belakang",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "18 May 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title: "Berapa Penurunan Harga Mobil Setiap Tahunnya",
-                  slug: "berapa-penurunan-harga-mobil-setiap-tahunnya",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "11 February 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title:
-                    "Cara Jual Mobil Bekas Online dengan Aman dan Proses Cepat",
-                  slug: "cara-jual-mobil-bekas-online-dengan-aman-dan-proses-cepat",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "10 March 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title: "Keuntungan dan Tips Menjual Mobil Bekas Dengan Benar",
-                  slug: "keuntungan-dan-tips-menjual-mobil-bekas-dengan-benar",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "18 May 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-              ].map((item, index) => (
+              {sortedByDateDesc.map((item, index) => (
                 <div
                   key={index}
                   className="border-b p-4 hover:shadow-xl transform hover:scale-105"
                 >
                   <Link href={`/article/${item.slug}`}>
                     <span
-                      className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${
-                        item.type === "Tips & Trick"
-                          ? "bg-yellow-400 text-white"
-                          : "bg-orange-500 text-white"
-                      }`}
+                      className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 bg-orange-500 text-white`}
                     >
-                      {item.type}
+                      {item.category}
                     </span>
                     <h3 className="text-sm font-semibold leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
+                    <p className="text-xs text-gray-600 mt-1">{item.short_desc}</p>
                     <p className="text-xs text-gray-400 mt-2">
                       <span>
-                        👤 {item.author} | 📅 {item.date}
+                        👤 {item.author.username} | 📅 {formatDate(articles.publishedAt)}
                       </span>
                     </p>
                   </Link>
@@ -266,71 +232,24 @@ export default function ArticleDetail() {
               Artikel <span className="text-orange-500">Terkait</span>
             </h2>
             <div className="space-y-4">
-              {[
-                {
-                  title: "Platform Terbaik Jual Mobil bekas Online",
-                  slug: "platform-terbaik-jual-mobil-bekas-online",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "21 February 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title:
-                    "Pahami Ini Dulu! Dokumen Jual Mobil yang Wajib Disiapkan Biar Nggak Pusing di Belakang!",
-                  slug: "pahami-ini-dulu-dokumen-jual-mobil-yang-wajib-disiapkan-biar-nggak-pusing-di-belakang",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "18 May 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title: "Berapa Penurunan Harga Mobil Setiap Tahunnya",
-                  slug: "berapa-penurunan-harga-mobil-setiap-tahunnya",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "11 February 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title:
-                    "Cara Jual Mobil Bekas Online dengan Aman dan Proses Cepat",
-                  slug: "cara-jual-mobil-bekas-online-dengan-aman-dan-proses-cepat",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "10 March 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-                {
-                  title: "Keuntungan dan Tips Menjual Mobil Bekas Dengan Benar",
-                  slug: "keuntungan-dan-tips-menjual-mobil-bekas-dengan-benar",
-                  desc: "Membahas beberapa penyebab utama harga mobil bekas sulit naik, serta tips mengatasinya agar Anda...",
-                  date: "18 May 2025",
-                  type: "Berita",
-                  author: "adminqiv",
-                },
-              ].map((item, index) => (
+              {sameCategoriesArtikel.map((item, index) => (
                 <div
                   key={index}
                   className="border-b p-4 hover:shadow-xl transform hover:scale-105"
                 >
                   <Link href={`/article/${item.slug}`}>
                     <span
-                      className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 ${
-                        item.type === "Tips & Trick"
-                          ? "bg-yellow-400 text-white"
-                          : "bg-orange-500 text-white"
-                      }`}
+                      className={`inline-block text-xs font-semibold px-2 py-1 rounded mb-2 bg-orange-500 text-white`}
                     >
-                      {item.type}
+                      {item.category}
                     </span>
                     <h3 className="text-sm font-semibold leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
+                    <p className="text-xs text-gray-600 mt-1">{item.short_desc}</p>
                     <p className="text-xs text-gray-400 mt-2">
                       <span>
-                        👤 {item.author} | 📅 {item.date}
+                        👤 {item.author.username} | 📅 {formatDate(articles.publishedAt)}
                       </span>
                     </p>
                   </Link>
