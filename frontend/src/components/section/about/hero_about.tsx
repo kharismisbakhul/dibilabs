@@ -35,9 +35,9 @@ export default function Hero_about() {
           </section>
 
           {/* Description */}
-          <section className="text-center py-10 px-4 bg-white">
+          <section className="text-center py-10 px-2 bg-white">
             {/* Title */}
-            <div className="flex items-center justify-center gap-10 mb-6">
+            <div className="flex items-center justify-center gap-0 mb-6">
               <div className="w-[60px] md:w-[100px] animate-wiggle">
               <div className="relative w-full aspect-square">
                 <Image
