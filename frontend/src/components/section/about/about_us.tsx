@@ -21,7 +21,7 @@ export default function About_us({ data }: Props) {
           />
 
           {/* Bottom wave */}
-          <div className="absolute -bottom-0 left-0 w-full overflow-visible leading-[0] z-20 rotate-180">
+          <div className="absolute -bottom-1 left-0 w-full overflow-visible leading-[0] z-20 rotate-180">
             <div className="flex justify-between w-full">
               {Array.from({ length: 10 }).map((_, i) => (
                 <div
