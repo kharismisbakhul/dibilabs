@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
 // import { useRouter } from 'next/router';
 // import { Articles } from "@/types/json/articles";
 // import { FaFacebookF, FaShareAlt } from "react-icons/fa";
@@ -31,6 +32,28 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
   const sameCategoriesArtikel = sortedByDateDesc.filter(article => article.category === articles.category);
+
+  const str: string = articles.view;
+  const num: number = Number(str);
+  const views = num + 1;
+  const viewsString: string = String(views)
+
+  articles.view = viewsString;
+
+  // useEffect(() => {
+  //   const updateViewCount = async () => {
+  //     try {
+  //       await fetch(`/api/article-view?slug=${articles.slug}`, {
+  //         method: 'POST',
+  //       });
+  //     } catch (error) {
+  //       console.error("Failed to update view count", error);
+  //     }
+  //   };
+
+  //   updateViewCount();
+  // }, [articles.slug]);
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 pt-36">
       {/* Breadcrumb */}

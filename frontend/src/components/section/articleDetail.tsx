@@ -8,7 +8,7 @@ import { Articles } from "@/types/json/articles";
 import ArticleRead from "./article/detail";
 
 interface ArticleDetailProps {
-  slug: string;
+  slug: string | undefined;
 }
 
 export default function ArticleDetail({ slug }: ArticleDetailProps) {

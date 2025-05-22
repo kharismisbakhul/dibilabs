@@ -1,15 +1,24 @@
 import ArticleDetail from "@/components/section/articleDetail";
+import { Metadata } from "next";
+import { getArticleBySlug } from "@/lib/article";
 
-interface ArticleParams {
-  slug: string;
+type Props = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const param = await params;
+  const article = await getArticleBySlug(param.slug);
+
+  return {
+    title: `${article?.title}`,
+    description: article?.short_desc,
+  };
 }
 
-interface ArticlePageProps {
-  params: Promise<ArticleParams>;
-}
+export default async function ArticlePage({ params }: Props) {
+  const param = await params;
+  const article = await getArticleBySlug(param.slug);
 
-export default async function ArticlePage({ params }: ArticlePageProps) {
-  const { slug } = await params;
-
-  return <ArticleDetail slug={slug} />;
+  return <ArticleDetail slug={article?.slug} />;
 }
