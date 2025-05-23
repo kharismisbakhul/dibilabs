@@ -2,12 +2,14 @@ import ArticleDetail from "@/components/section/articleDetail";
 import { Metadata } from "next";
 import { getArticleBySlug } from "@/lib/article";
 
-type Props = {
-  params: { slug: string };
-};
+interface Props {
+  params: Promise<{ slug: string }>;
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  const resolvedParams = await params;
+  const article = await getArticleBySlug(resolvedParams.slug);
 
   return {
     title: `${article?.title}`,
@@ -16,7 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const article = await getArticleBySlug(params.slug);
+  const resolvedParams = await params;
+  const article = await getArticleBySlug(resolvedParams.slug);
 
   return <ArticleDetail slug={article?.slug} />;
 }
