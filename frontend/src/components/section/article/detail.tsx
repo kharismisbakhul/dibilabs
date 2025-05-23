@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 // import { useRouter } from 'next/router';
 // import { Articles } from "@/types/json/articles";
 // import { FaFacebookF, FaShareAlt } from "react-icons/fa";
