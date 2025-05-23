@@ -7,8 +7,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const param = await params;
-  const article = await getArticleBySlug(param.slug);
+  const article = await getArticleBySlug(params.slug);
 
   return {
     title: `${article?.title}`,
@@ -17,8 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const param = await params;
-  const article = await getArticleBySlug(param.slug);
+  const article = await getArticleBySlug(params.slug);
 
   return <ArticleDetail slug={article?.slug} />;
 }
