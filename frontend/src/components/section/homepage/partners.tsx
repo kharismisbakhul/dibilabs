@@ -11,91 +11,90 @@ export default function Partners({ data }: Props) {
     <>
       {/* Partners */}
       <section className="relative bg-white">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <div className="pt-24 md:pt-48" />
         {/* Background half circle */}
         <div className="bg-[#1A1617] rounded-t-full pt-[5vw] pb-[4vw] px-4 md:px-10 text-white text-center relative z-10">
           {/* Animated Eyes */}
           <motion.div
-            className="absolute top-[-160px] left-[44%] transform -translate-x-[50%] flex z-20"
+            className="absolute top-[-100px] md:top-[-180px] left-[41%] md:left-[44%] lg:left-[44%] transform -translate-x-1/2 flex z-20 w-28 h-28 md:w-[200px] md:h-[200px]"
             animate={{ scale: [1, 1.05, 1], y: [0, -3, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <Image
-              src="/assets/homepage/eyes.svg"
-              alt="Eyes"
-              width={200}
-              height={200}
-              className="h-auto w-[200px]"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/homepage/eyes.svg"
+                alt="Eyes"
+                fill
+                className="object-contain"
+              />
+            </div>
           </motion.div>
 
           {/* Hands with precision */}
           <motion.div
-            className="absolute -top-0 left-[250px] z-10"
+            className="absolute -top-3 md:-top-10 left-[15%] md:left-[250px] z-10 w-24 h-24 md:w-[200px] md:h-[200px]"
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
           >
-            <Image
-              src="/assets/homepage/left_hand.svg"
-              alt="Left Hand"
-              width={200}
-              height={200}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/homepage/left_hand.svg"
+                alt="Left Hand"
+                fill
+                className="object-contain"
+              />
+            </div>
           </motion.div>
 
           <motion.div
-            className="absolute -top-0 right-[250px] z-10"
+            className="absolute -top-3 md:-top-10 right-[15%] md:right-[250px] z-10 w-24 h-24 md:w-[200px] md:h-[200px]"
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
           >
-            <Image
-              src="/assets/homepage/right_hand.svg"
-              alt="Right Hand"
-              width={200}
-              height={200}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src="/assets/homepage/right_hand.svg"
+                alt="Right Hand"
+                fill
+                className="object-contain"
+              />
+            </div>
           </motion.div>
 
-          <h2 className="text-8xl font-bold text-orange-500">
+          <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-orange-500">
             Partners
           </h2>
           <div className="relative inline-block">
-            <p className="text-6xl font-semibold text-[#FFD9B0]">
+            <p className="text-2xl md:text-4xl lg:text-6xl font-semibold text-[#FFD9B0]">
               Success Stories
             </p>
 
             {/* Left Star */}
-            <div className="absolute -left-20 -bottom-10 w-15 h-15">
-              <Image
-                src="/assets/homepage/star.svg"
-                alt="Star"
-                className="w-full h-full"
-                width={50}
-                height={50}
-              />
+            <div className="absolute -left-10 -bottom-0 w-5 h-5 md:-left-20 md:-bottom-15 md:w-16 md:h-16">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/assets/homepage/star.svg"
+                  alt="Star"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
 
             {/* Right Star */}
-            <div className="absolute -right-20 -top-20 w-15 h-15">
-              <Image
-                src="/assets/homepage/star.svg"
-                alt="Star"
-                className="w-full h-full"
-                width={50}
-                height={50}
-              />
+            <div className="absolute -right-4 -top-10 w-5 h-5 md:-right-12 md:-top-14 md:w-16 md:h-16">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/assets/homepage/star.svg"
+                  alt="Star"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
 
-          <p className="text-2xl mt-6 max-w-2xl mx-auto">
+          <p className="text-base md:text-2xl mt-6 max-w-2xl mx-auto">
             Speak No More and Browse through the Wide <br />
             Array of Digital Success We assisted
           </p>
@@ -152,13 +151,14 @@ export default function Partners({ data }: Props) {
         </div>
 
         {/* Decorative bubbles */}
-        <Image
-          src="/assets/homepage/left_bubble.svg"
-          alt="Bubbles Decoration"
-          width={200}
-          height={200}
-          className="absolute top-4 left-4 z-0"
-        />
+        <div className="absolute top-4 left-4 w-32 h-32 md:w-48 md:h-48 z-0">
+          <Image
+            src="/assets/homepage/left_bubble.svg"
+            alt="Bubbles Decoration"
+            fill
+            className="object-contain"
+          />
+        </div>
       </section>
     </>
   );

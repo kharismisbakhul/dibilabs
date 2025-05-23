@@ -1,166 +1,20 @@
 {
   "data": [
     {
-      "id": 11,
-      "documentId": "jn7x672quchspzga5bcnpn9j",
-      "title": "Efektif Buat Dicoba! Ini 5 Jenis Brand Activation untuk Bisnis",
-      "slug": "efektif-buat-dicoba-ini-5-jenis-brand-activation-untuk-bisnis",
-      "content": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "Brand activation jadi strategi marketing yang populer. Tapi tau gak sih kalau brand activation ada banyak jenisnya Cek 5 jenisnya...",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "category": "Tech",
-      "published": "2025-04-13T17:00:00.000Z",
-      "is_published": null,
-      "createdAt": "2025-04-14T14:26:15.704Z",
-      "updatedAt": "2025-04-14T14:26:34.496Z",
-      "publishedAt": "2025-04-26T02:46:33.399Z",
-      "image": {
-        "id": 60,
-        "documentId": "kmj59ohgpjoiqmb87updonyo",
-        "name": "article1.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 626,
-        "height": 321,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "/assets/article/small_article1_131f199911.png",
-            "hash": "small_article1_131f199911",
-            "mime": "image/png",
-            "name": "small_article1.png",
-            "path": null,
-            "size": 215.04,
-            "width": 500,
-            "height": 256,
-            "sizeInBytes": 215043
-          },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "/assets/article/thumbnail_article1_131f199911.png",
-            "hash": "thumbnail_article1_131f199911",
-            "mime": "image/png",
-            "name": "thumbnail_article1.png",
-            "path": null,
-            "size": 62.36,
-            "width": 245,
-            "height": 126,
-            "sizeInBytes": 62358
-          }
-        },
-        "hash": "article1",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 71.11,
-        "url": "/assets/article/article1.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-04-14T01:30:57.168Z",
-        "updatedAt": "2025-04-14T01:30:57.168Z",
-        "publishedAt": "2025-04-14T01:30:57.168Z"
-      }
-    },
-    {
-      "id": 12,
-      "documentId": "qbup42thhg0hke5q7cs4z2f6",
-      "title": "5 Manfaat E-Commerce yang Bikin Brand dan Konsumen Untung, Penasaran?",
-      "slug": "5-manfaat-e-commerce-yang-bikin-brand-dan-konsumen-untung-penasaran",
-      "content": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "E-commerce udah jadi strategi andalan buat para brand. Tapi sebenernya apa aja sih manfaat e-commerce? Cek disini Buddies!",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "category": "Tech",
-      "published": "2025-04-13T17:00:00.000Z",
-      "is_published": null,
-      "createdAt": "2025-04-14T14:28:36.975Z",
-      "updatedAt": "2025-04-14T14:28:36.975Z",
-      "publishedAt": "2025-04-26T02:46:33.402Z",
-      "image": {
-        "id": 60,
-        "documentId": "kmj59ohgpjoiqmb87updonyo",
-        "name": "article1.png",
-        "alternativeText": null,
-        "caption": null,
-        "width": 626,
-        "height": 321,
-        "formats": {
-          "small": {
-            "ext": ".png",
-            "url": "/assets/article/small_article1_131f199911.png",
-            "hash": "small_article1_131f199911",
-            "mime": "image/png",
-            "name": "small_article1.png",
-            "path": null,
-            "size": 215.04,
-            "width": 500,
-            "height": 256,
-            "sizeInBytes": 215043
-          },
-          "thumbnail": {
-            "ext": ".png",
-            "url": "/assets/article/thumbnail_article1_131f199911.png",
-            "hash": "thumbnail_article1_131f199911",
-            "mime": "image/png",
-            "name": "thumbnail_article1.png",
-            "path": null,
-            "size": 62.36,
-            "width": 245,
-            "height": 126,
-            "sizeInBytes": 62358
-          }
-        },
-        "hash": "article1",
-        "ext": ".png",
-        "mime": "image/png",
-        "size": 71.11,
-        "url": "/assets/article/article1.png",
-        "previewUrl": null,
-        "provider": "local",
-        "provider_metadata": null,
-        "createdAt": "2025-04-14T01:30:57.168Z",
-        "updatedAt": "2025-04-14T01:30:57.168Z",
-        "publishedAt": "2025-04-14T01:30:57.168Z"
-      }
-    },
-    {
-      "id": 13,
-      "documentId": "u3v6qzebodw4076bf8skmz16",
-      "title": "Kenalan dengan Loyalty Program, Kode Cheat Buat Bikin Bisnis Sukses Jangka Panjang",
-      "slug": "kenalan-dengan-loyalty-program-kode-cheat-buat-bikin-bisnis-sukses-jangka-panjang",
-      "content": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "E-commerce udah jadi strategi andalan buat para brand. Tapi sebenernya apa aja sih manfaat e-commerce? Cek disini Buddies!",
-              "type": "text"
-            }
-          ]
-        }
-      ],
-      "category": "Tech",
-      "published": "2025-04-13T17:00:00.000Z",
-      "is_published": null,
-      "createdAt": "2025-04-14T14:29:53.657Z",
-      "updatedAt": "2025-04-14T14:29:53.657Z",
-      "publishedAt": "2025-04-26T02:46:33.404Z",
-      "image": {
+      "id": 9,
+      "documentId": "us4eszd9ztfdyryxyrw7xu4f",
+      "title": "3 Strategi Konten Cepat untuk Meningkatkan Interaksi di Instagram",
+      "slug": "3-strategi-konten-cepat-untuk-meningkatkan-interaksi-di-instagram",
+      "short_desc": "Strategi ringan namun efektif untuk menaikkan engagement Instagram dalam waktu singkat.",
+      "createdAt": "2025-05-21T15:11:49.431Z",
+      "updatedAt": "2025-05-21T15:56:14.868Z",
+      "publishedAt": "2025-05-22T15:56:53.625Z",
+      "content": "Instagram menjadi platform utama untuk interaksi audiens saat ini. Berikut adalah tiga strategi cepat yang bisa langsung Anda terapkan:\n\n1. **Gunakan Polling dan Q&A di Stories**: Ini meningkatkan partisipasi audiens dan membuat mereka merasa didengar.\n2. **Buat Carousel Edukatif**: Postingan berformat carousel dengan tips singkat menarik perhatian dan meningkatkan waktu tayang.\n3. **Repost Testimoni atau UGC (User Generated Content)**: Ini membangun kepercayaan sosial dengan cepat.\n\nKonsistensi adalah kunci, namun dengan strategi di atas, hasil bisa dirasakan dalam hitungan hari.",
+      "category": "Bite Size Strategies",
+      "published": "2025-05-21T00:00:00.000Z",
+      "is_published": true,
+      "view": "0",
+      "thumbnail": {
         "id": 59,
         "documentId": "gosqr8ec8n8el7x87dfi1eay",
         "name": "article2.png",
@@ -171,7 +25,7 @@
         "formats": {
           "small": {
             "ext": ".png",
-            "url": "/assets/article/small_article2_5dad07e20d.png",
+            "url": "/uploads/small_article2_5dad07e20d.png",
             "hash": "small_article2_5dad07e20d",
             "mime": "image/png",
             "name": "small_article2.png",
@@ -183,7 +37,7 @@
           },
           "thumbnail": {
             "ext": ".png",
-            "url": "/assets/article/thumbnail_article2_5dad07e20d.png",
+            "url": "/uploads/thumbnail_article2_5dad07e20d.png",
             "hash": "thumbnail_article2_5dad07e20d",
             "mime": "image/png",
             "name": "thumbnail_article2.png",
@@ -194,18 +48,233 @@
             "sizeInBytes": 50992
           }
         },
-        "hash": "article2",
+        "hash": "article2_5dad07e20d",
         "ext": ".png",
         "mime": "image/png",
         "size": 67.28,
-        "url": "/assets/article/article2.png",
+        "url": "/assets/article/article1.png",
         "previewUrl": null,
         "provider": "local",
         "provider_metadata": null,
         "createdAt": "2025-04-14T01:30:56.719Z",
         "updatedAt": "2025-04-14T01:30:56.719Z",
         "publishedAt": "2025-04-14T01:30:56.720Z"
+      },
+      "author": {
+        "id": 2,
+        "documentId": "oppisqsxghsohkt6scuhg8c4",
+        "username": "author1",
+        "email": "author@abc.com",
+        "provider": "local",
+        "confirmed": true,
+        "blocked": false,
+        "createdAt": "2025-05-21T15:49:04.584Z",
+        "updatedAt": "2025-05-21T15:55:45.544Z",
+        "publishedAt": "2025-05-21T15:55:45.441Z"
+      }
+    },
+    {
+      "id": 10,
+      "documentId": "nz4m9ryvf3hua67qbuimpb0x",
+      "title": "Cara Menulis Headline Iklan yang Clickable dalam 5 Menit",
+      "slug": "cara-menulis-headline-iklan-yang-clickable-dalam-5-menit",
+      "short_desc": "Tips cepat membuat headline iklan yang memikat hanya dalam lima menit.",
+      "createdAt": "2025-05-21T15:13:05.327Z",
+      "updatedAt": "2025-05-21T15:56:24.332Z",
+      "publishedAt": "2025-05-23T15:56:53.625Z",
+      "content": "Headline adalah pintu pertama yang menentukan apakah orang akan klik iklan Anda. Berikut rumus praktis:\n\n- Gunakan Angka: Contoh: 7 Cara Meningkatkan Penjualan dalam Seminggu.\n- Fokus pada Manfaat: Apa untungnya bagi pembaca?\n- Timbulkan Urgensi: Gunakan kata seperti sekarang, terbatas, atau hanya hari ini.\n\nLatih headline Anda setiap hari, dan hasil CTR iklan akan meningkat drastis.",
+      "category": "Bite Size Strategies",
+      "published": "2025-05-21T00:00:00.000Z",
+      "is_published": true,
+      "view": "0",
+      "thumbnail": {
+        "id": 44,
+        "documentId": "ka32bfbvml4bnqjq1iwjt55b",
+        "name": "article3.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 360,
+        "height": 359,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_article3_35bb9f45eb.png",
+            "hash": "thumbnail_article3_35bb9f45eb",
+            "mime": "image/png",
+            "name": "thumbnail_article3.png",
+            "path": null,
+            "size": 59.56,
+            "width": 156,
+            "height": 156,
+            "sizeInBytes": 59558
+          }
+        },
+        "hash": "article3_35bb9f45eb",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 54.3,
+        "url": "/assets/article/article2.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T01:30:09.985Z",
+        "updatedAt": "2025-04-14T01:30:09.985Z",
+        "publishedAt": "2025-04-14T01:30:09.985Z"
+      },
+      "author": {
+        "id": 2,
+        "documentId": "oppisqsxghsohkt6scuhg8c4",
+        "username": "author1",
+        "email": "author@abc.com",
+        "provider": "local",
+        "confirmed": true,
+        "blocked": false,
+        "createdAt": "2025-05-21T15:49:04.584Z",
+        "updatedAt": "2025-05-21T15:55:45.544Z",
+        "publishedAt": "2025-05-21T15:55:45.441Z"
+      }
+    },
+    {
+      "id": 11,
+      "documentId": "vzhh9nzmh0rv3be7c4jd8904",
+      "title": "Studi Kasus: Bagaimana Brand Lokal Meningkatkan Penjualan 200% Lewat TikTok",
+      "slug": "studi-kasus-bagaimana-brand-lokal-meningkatkan-penjualan-200-lewat-tik-tok",
+      "short_desc": "Strategi nyata yang membawa lonjakan penjualan signifikan lewat kampanye TikTok.",
+      "createdAt": "2025-05-21T15:13:45.366Z",
+      "updatedAt": "2025-05-21T15:56:32.207Z",
+      "publishedAt": "2025-05-25T15:56:53.626Z",
+      "content": "Sebuah brand fashion lokal mengalami kenaikan penjualan 200% dalam 3 bulan dengan pendekatan berikut:\n\n- Menggandeng micro influencer niche lokal.\n- Menggunakan format konten tren seperti “OOTD” dan “behind the scene”.\n- Mengiklankan video yang sudah organik performanya bagus.\n\nTikTok bukan hanya platform hiburan—dengan strategi yang tepat, ia bisa jadi kanal penjualan utama.",
+      "category": "Case Studies",
+      "published": "2025-05-21T00:00:00.000Z",
+      "is_published": true,
+      "view": "0",
+      "thumbnail": {
+        "id": 40,
+        "documentId": "iyq40hin0euszdsblotv5ily",
+        "name": "article1.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 360,
+        "height": 360,
+        "formats": {
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_article1_6a74254a36.png",
+            "hash": "thumbnail_article1_6a74254a36",
+            "mime": "image/png",
+            "name": "thumbnail_article1.png",
+            "path": null,
+            "size": 53.67,
+            "width": 156,
+            "height": 156,
+            "sizeInBytes": 53671
+          }
+        },
+        "hash": "article1_6a74254a36",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 65.54,
+        "url": "/assets/article/article1.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T01:30:09.760Z",
+        "updatedAt": "2025-04-14T01:30:09.760Z",
+        "publishedAt": "2025-04-14T01:30:09.760Z"
+      },
+      "author": {
+        "id": 2,
+        "documentId": "oppisqsxghsohkt6scuhg8c4",
+        "username": "author1",
+        "email": "author@abc.com",
+        "provider": "local",
+        "confirmed": true,
+        "blocked": false,
+        "createdAt": "2025-05-21T15:49:04.584Z",
+        "updatedAt": "2025-05-21T15:55:45.544Z",
+        "publishedAt": "2025-05-21T15:55:45.441Z"
+      }
+    },
+    {
+      "id": 12,
+      "documentId": "s83tn5fw5oysvhyt2voo31pu",
+      "title": "Bagaimana Kampanye Email Sederhana Meningkatkan Retensi Pelanggan hingga 30%",
+      "slug": "bagaimana-kampanye-email-sederhana-meningkatkan-retensi-pelanggan-hingga-30",
+      "short_desc": "Pelajaran dari kampanye email sederhana yang ternyata berdampak besar pada loyalitas pelanggan.",
+      "createdAt": "2025-05-21T15:14:28.953Z",
+      "updatedAt": "2025-05-21T15:56:46.532Z",
+      "publishedAt": "2025-05-21T15:56:53.626Z",
+      "content": "Sebuah startup SaaS meluncurkan email mingguan sederhana berisi:\n\n- Tips penggunaan fitur.\n- Cerita sukses pelanggan.\n- Link untuk memberikan feedback.\n\nHasilnya? Open rate naik 45%, dan angka churn menurun hingga 30% dalam 2 bulan.\n\nKuncinya adalah konsistensi dan konten yang benar-benar relevan.",
+      "category": "Case Studies",
+      "published": "2025-05-21T00:00:00.000Z",
+      "is_published": true,
+      "view": "0",
+      "thumbnail": {
+        "id": 60,
+        "documentId": "kmj59ohgpjoiqmb87updonyo",
+        "name": "article1.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 626,
+        "height": 321,
+        "formats": {
+          "small": {
+            "ext": ".png",
+            "url": "/uploads/small_article1_131f199911.png",
+            "hash": "small_article1_131f199911",
+            "mime": "image/png",
+            "name": "small_article1.png",
+            "path": null,
+            "size": 215.04,
+            "width": 500,
+            "height": 256,
+            "sizeInBytes": 215043
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_article1_131f199911.png",
+            "hash": "thumbnail_article1_131f199911",
+            "mime": "image/png",
+            "name": "thumbnail_article1.png",
+            "path": null,
+            "size": 62.36,
+            "width": 245,
+            "height": 126,
+            "sizeInBytes": 62358
+          }
+        },
+        "hash": "article1_131f199911",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 71.11,
+        "url": "/assets/article/article2.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-04-14T01:30:57.168Z",
+        "updatedAt": "2025-04-14T01:30:57.168Z",
+        "publishedAt": "2025-04-14T01:30:57.168Z"
+      },
+      "author": {
+        "id": 2,
+        "documentId": "oppisqsxghsohkt6scuhg8c4",
+        "username": "author1",
+        "email": "author@abc.com",
+        "provider": "local",
+        "confirmed": true,
+        "blocked": false,
+        "createdAt": "2025-05-21T15:49:04.584Z",
+        "updatedAt": "2025-05-21T15:55:45.544Z",
+        "publishedAt": "2025-05-21T15:55:45.441Z"
       }
     }
-  ]
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 4
+    }
+  }
 }

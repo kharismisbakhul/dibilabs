@@ -3,27 +3,33 @@ export interface Articles {
   documentId: string;
   title: string;
   slug: string;
-  content: ContentBlock[];
-  category: string;
-  published: string;
-  is_published: boolean | null;
+  short_desc: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  image: Photo;
+  content: string;
+  category: string;
+  published: string;
+  is_published: boolean;
+  view: string;
+  thumbnail: ArticleThumbnail;
+  author: Author;
 }
 
-export interface ContentBlock {
-  type: string;
-  children: ContentChild[];
+interface Author {
+  id: number;
+  documentId: string;
+  username: string;
+  email: string;
+  provider: string;
+  confirmed: boolean;
+  blocked: boolean;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
 }
 
-export interface ContentChild {
-  text: string;
-  type: string;
-}
-
-export interface Photo {
+export interface ArticleThumbnail {
   id: number;
   documentId: string;
   name: string;
@@ -31,7 +37,10 @@ export interface Photo {
   caption: string | null;
   width: number;
   height: number;
-  formats: ImageFormats;
+  formats: {
+    small?: ArticleFormat;
+    thumbnail?: ArticleFormat;
+  };
   hash: string;
   ext: string;
   mime: string;
@@ -45,12 +54,7 @@ export interface Photo {
   publishedAt: string;
 }
 
-export interface ImageFormats {
-  small?: ImageFormat;
-  thumbnail?: ImageFormat;
-}
-
-export interface ImageFormat {
+export interface ArticleFormat {
   ext: string;
   url: string;
   hash: string;

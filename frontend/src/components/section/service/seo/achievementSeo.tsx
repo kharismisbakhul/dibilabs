@@ -13,8 +13,8 @@ export default function AchievementSeo({ data }: Props) {
           {/* Block Item */}
 
           {data.map((item, index) => (
-            <div key={index} className="flex flex-col items-center w-40">
-              <div className="relative group w-40 h-40 rounded-full overflow-visible">
+            <div key={index} className="flex flex-col items-center w-36 md:w-48">
+              <div className="relative group w-36 h-36 md:w-48 md:h-48 rounded-full overflow-visible">
                 {/* Outer glow/shadow (visible by default) */}
                 <div
                   className={`absolute -inset-2 rounded-full blur-xl opacity-60 ${item.background_color}`}
@@ -29,13 +29,13 @@ export default function AchievementSeo({ data }: Props) {
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col justify-center items-center text-center w-full h-full group-hover:text-white transition-colors duration-500">
-                    <span className="text-2xl font-bold">{item.value}</span>
-                    <span className="text-sm">{item.description}</span>
+                    <span className="text-base md:text-2xl font-bold">{item.value}</span>
+                    <span className="text-xs md:text-sm">{item.description}</span>
                   </div>
                 </div>
               </div>
               <br />
-              <div className="relative w-[200px] h-[200px] mt-10 animate-bounce-smooth">
+              <div className="relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] mt-10 animate-bounce-smooth">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                   alt={item.image.name}

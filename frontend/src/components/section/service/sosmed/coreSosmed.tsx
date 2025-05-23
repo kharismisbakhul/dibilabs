@@ -10,24 +10,25 @@ export default function CoreSosmed({ data }: Props) {
     <>
       <section className="bg-white py-16 px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+        <div className="flex flex-row md:flex-row justify-between items-start md:items-center mb-10">
           <div>
-            <h2 className="text-[150px] font-bold text-orange-500 leading-none">
+            <h2 className="text-7xl md:text-[150px] font-bold text-orange-500 leading-none">
               Dibilabs
             </h2>
-            <h3 className="text-[230px] font-extrabold text-blue-800 leading-none">
+            <h3 className="text-9xl md:text-[230px] font-extrabold text-blue-800 leading-none">
               Core
             </h3>
           </div>
           <div className="relative mt-10 md:mt-0">
-            <Image
-              src="/assets/service/sosmed/bite-cookies.svg" // Replace with your correct asset path
-              alt="Cookie Illustration"
-              width={500}
-              height={500}
-              className="block right-0 z-40"
-            />
-            <div className="absolute right-[-30px] bottom-[-10px]">
+            <div className="absolute right-0 -top-10 md:top-[-200px] md:right-0 z-40 w-[180px] md:w-[500px]">
+              <Image
+                src="/assets/service/sosmed/bite-cookies.svg" // Replace with your correct asset path
+                alt="Cookie Illustration"
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="absolute right-[-30px] bottom-[-150px] md:bottom-[-150px] w-[80px] md:w-[150px]">
               <Image
                 src="/assets/service/sosmed/yum.svg" // Replace with your correct asset path
                 alt="YUM!"
@@ -50,11 +51,13 @@ export default function CoreSosmed({ data }: Props) {
                 alt={item.background.name}
                 width={200}
                 height={200}
-                className="absolute left-0 bottom-0"
+                className="absolute left-0 bottom-0 w-[160px] md:w-[200px]"
               />
-              <div className="relative p-[100px]">
-                <p className="text-[60px] font-bold leading-tight">{item.text1}</p>
-                <p className="text-[32px]">{item.text2}</p>
+              <div className="relative p-[50px] md:p-[100px]">
+                <p className="text-[40px] md:text-[60px] font-bold leading-tight">
+                  {item.text1}
+                </p>
+                <p className="text-[20px] md:text-[32px]">{item.text2}</p>
               </div>
             </div>
           ))}
