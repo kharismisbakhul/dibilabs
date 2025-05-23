@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Cta_services() {
   return (
@@ -30,7 +31,7 @@ export default function Cta_services() {
                 priority
               />
             </div>
-            <h2 className="text-6xl font-bold text-orange-500 leading-snug">
+            <h2 className="text-5xl md:text-6xl font-bold text-orange-500 leading-snug">
               Ready to raise the bar?
               <br />
               <span className="text-orange-600">Because we are!</span>
@@ -38,7 +39,7 @@ export default function Cta_services() {
           </div>
 
           {/* Paragraph */}
-          <p className="text-2xl leading-relaxed text-black max-w-md">
+          <p className="text-xl md:text-2xl leading-relaxed text-black max-w-md">
             Business <strong>isn’t just about one layer</strong>—<br />
             it’s built on many, each essential for <br />
             achieving big goals.
@@ -51,9 +52,11 @@ export default function Cta_services() {
 
           {/* Button - aligned right */}
           <div className="w-full flex justify-end">
-            <button className="bg-black text-white text-xl font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition">
-              Our Services →
-            </button>
+            <Link href="/service">
+              <button className="bg-black text-white text-xl font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition">
+                Our Services →
+              </button>
+            </Link>
           </div>
         </div>
       </div>
