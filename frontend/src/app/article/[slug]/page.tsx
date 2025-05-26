@@ -1,13 +1,13 @@
-// /app/blog/[slug]/page.tsx
+// app/article/[slug]/page.tsx
 import ArticleDetail from "@/components/section/articleDetail";
-import { getArticleBySlug } from "@/lib/article";
 import { Metadata } from "next";
+import { getArticleBySlug } from "@/lib/article";
 
-interface Props {
+export async function generateMetadata({
+  params,
+}: {
   params: { slug: string };
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+}): Promise<Metadata> {
   const article = await getArticleBySlug(params.slug);
 
   return {
@@ -16,7 +16,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ArticlePage({ params }: Props) {
+export default async function ArticlePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const article = await getArticleBySlug(params.slug);
 
   if (!article) {
