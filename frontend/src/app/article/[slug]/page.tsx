@@ -3,29 +3,21 @@ import ArticleDetail from "@/components/section/articleDetail";
 import { Metadata } from "next";
 import { getArticleBySlug } from "@/lib/article";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolved = await params;
+  const article = await getArticleBySlug(resolved.slug);
   return {
-    title: article?.title || "Article Not Found",
-    description: article?.short_desc || "No description available",
+    title: article?.title || "Article",
+    description: article?.short_desc || "Read this article.",
   };
 }
 
-export default async function ArticlePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const article = await getArticleBySlug(params.slug);
-
-  if (!article) {
-    return <div>Article not found</div>;
-  }
-
-  return <ArticleDetail slug={article.slug} />;
+export default async function ArticlePage({ params }: Props) {
+  const resolved = await params;
+  const article = await getArticleBySlug(resolved.slug);
+  return <ArticleDetail slug={article?.slug} />;
 }
