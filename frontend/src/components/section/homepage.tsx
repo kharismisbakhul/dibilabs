@@ -8,17 +8,19 @@ import Partners from "./homepage/partners";
 import Cta_services from "./homepage/cta_services";
 import Services from "./homepage/services";
 import Article_desc from "./homepage/article_desc";
-import Articles from "./homepage/articles";
+import ArticlesH from "./homepage/articles";
 
 import { useEffect, useState } from 'react';
 import { HomepageAchievements } from "@/types/json/homepage_achievements";
 import { HomepagePartners } from "@/types/json/homepage_partners";
 import { HomepageServices } from "@/types/json/homepage_services";
+import { Articles } from "@/types/json/articles";
 
 export default function Homepage() {
   const [achievements, setAchievements] = useState<HomepageAchievements[] | null>(null);
   const [partners, setPartners] = useState<HomepagePartners[] | null>(null);
   const [services, setServices] = useState<HomepageServices[] | null>(null);
+  const [articles, setArticles] = useState<Articles[] | null>(null);
 
   const fetchDataAchievements = async () => {
     try {
@@ -62,10 +64,25 @@ export default function Homepage() {
     }
   };
 
+  const fetchDataArticles = async () => {
+    try {
+      const res = await fetch("/api/articles");
+      if (!res.ok) {
+        throw new Error("Failed to fetch articles");
+      }
+      const json = await res.json();
+      setArticles(json.data);
+      
+    } catch (error) {
+      console.error("Failed to fetch articles:", error);
+    }
+  };
+
   useEffect(() => {
     fetchDataAchievements();
     fetchDataPartners();
     fetchDataServices();
+    fetchDataArticles();
   }, []);
 
   return (
@@ -78,7 +95,7 @@ export default function Homepage() {
       <Cta_services />
       {services && <Services data={services} />}
       <Article_desc />
-      <Articles />
+      {articles && <ArticlesH data={articles}/>}
       <Footer />
     </>
     </>
