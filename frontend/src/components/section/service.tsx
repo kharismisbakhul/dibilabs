@@ -17,8 +17,7 @@ export default function Service() {
 
   const fetchDataLists = async () => {
     try {
-      // const res = await fetch('/api/service/lists');
-      const res = await fetch('/json/service_lists.json');
+      const res = await fetch('/api/service/lists');
       if (!res.ok) {
         throw new Error('Failed to fetch lists');
       }
@@ -32,8 +31,7 @@ export default function Service() {
 
   const fetchDataCards = async () => {
     try {
-      // const res = await fetch('/api/service/cards');
-      const res = await fetch('/json/service_cards.json');
+      const res = await fetch('/api/service/cards');
       if (!res.ok) {
         throw new Error('Failed to fetch cards');
       }

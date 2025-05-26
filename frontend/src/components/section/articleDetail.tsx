@@ -18,8 +18,7 @@ export default function ArticleDetail({ slug }: ArticleDetailProps) {
   useEffect(() => {
     const fetchDataArticles = async () => {
       try {
-        // const res = await fetch("/api/articles");
-        const res = await fetch("/json/articles.json");
+        const res = await fetch("/api/articles");
         if (!res.ok) {
           throw new Error("Failed to fetch articles");
         }
@@ -34,15 +33,6 @@ export default function ArticleDetail({ slug }: ArticleDetailProps) {
 
     fetchDataArticles();
   }, [slug]);
-
-  // ✅ Log or check value when `article` changes
-  //   useEffect(() => {
-  //     if (articles) {
-  //       console.log("Article found:", articles);
-  //     } else {
-  //       console.log("No matching article found.");
-  //     }
-  //   }, [articles]);
 
   return (
     <>

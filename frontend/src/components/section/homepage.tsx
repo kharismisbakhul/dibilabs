@@ -22,8 +22,7 @@ export default function Homepage() {
 
   const fetchDataAchievements = async () => {
     try {
-      // const res = await fetch('/api/homepage/achievements');
-      const res = await fetch('/json/homepage_achievements.json');
+      const res = await fetch('/api/homepage/achievements');
       if (!res.ok) {
         throw new Error('Failed to fetch achievements');
       }
@@ -37,8 +36,7 @@ export default function Homepage() {
 
   const fetchDataPartners = async () => {
     try {
-      // const res = await fetch('/api/homepage/partners');
-      const res = await fetch('/json/homepage_partners.json');
+      const res = await fetch('/api/homepage/partners');
       if (!res.ok) {
         throw new Error('Failed to fetch partners');
       }
@@ -52,8 +50,7 @@ export default function Homepage() {
 
   const fetchDataServices = async () => {
     try {
-      // const res = await fetch('/api/homepage/services');
-      const res = await fetch('/json/homepage_services.json');
+      const res = await fetch('/api/homepage/services');
       if (!res.ok) {
         throw new Error('Failed to fetch services');
       }

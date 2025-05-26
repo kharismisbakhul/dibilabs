@@ -22,8 +22,8 @@ export default function Meta() {
 
   const fetchDataServiceCores = async () => {
     try {
-      // const res = await fetch('/api/service/cores');
-      const res = await fetch('/json/service_cores.json');
+      const res = await fetch('/api/service/cores');
+      // const res = await fetch('/json/service_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch service cores');
       }
@@ -37,8 +37,8 @@ export default function Meta() {
 
   const fetchDataAchievements = async () => {
     try {
-      // const res = await fetch('/api/service/meta/achievements');
-      const res = await fetch('/json/service_meta_achievements.json');
+      const res = await fetch('/api/service/meta/achievements');
+      // const res = await fetch('/json/service_meta_achievements.json');
       if (!res.ok) {
         throw new Error('Failed to fetch achievements');
       }
@@ -52,8 +52,8 @@ export default function Meta() {
 
   const fetchDataCores = async () => {
     try {
-      // const res = await fetch('/api/service/meta/cores');
-      const res = await fetch('/json/service_meta_cores.json');
+      const res = await fetch('/api/service/meta/cores');
+      // const res = await fetch('/json/service_meta_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch cores');
       }
@@ -67,8 +67,8 @@ export default function Meta() {
 
   const fetchDataTrustedBy = async () => {
     try {
-      // const res = await fetch('/api/service/meta/trusted_bies');
-      const res = await fetch('/json/service_meta_trustedBies.json');
+      const res = await fetch('/api/service/meta/trusted_bies');
+      // const res = await fetch('/json/service_meta_trustedBies.json');
       if (!res.ok) {
         throw new Error('Failed to fetch trustedBy');
       }

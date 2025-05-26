@@ -22,8 +22,8 @@ export default function Google() {
 
   const fetchDataServiceCores = async () => {
     try {
-      // const res = await fetch('/api/service/cores');
-      const res = await fetch('/json/service_cores.json');
+      const res = await fetch('/api/service/cores');
+      // const res = await fetch('/json/service_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch service cores');
       }
@@ -37,8 +37,8 @@ export default function Google() {
 
   const fetchDataAchievements = async () => {
     try {
-      // const res = await fetch('/api/service/google/achievements');
-      const res = await fetch('/json/service_google_achievements.json');
+      const res = await fetch('/api/service/google/achievements');
+      // const res = await fetch('/json/service_google_achievements.json');
       if (!res.ok) {
         throw new Error('Failed to fetch achievements');
       }
@@ -52,8 +52,8 @@ export default function Google() {
 
   const fetchDataCores = async () => {
     try {
-      // const res = await fetch('/api/service/google/cores');
-      const res = await fetch('/json/service_google_cores.json');
+      const res = await fetch('/api/service/google/cores');
+      // const res = await fetch('/json/service_google_cores.json');
       if (!res.ok) {
         throw new Error('Failed to fetch cores');
       }
@@ -67,8 +67,8 @@ export default function Google() {
 
   const fetchDataTrustedBy = async () => {
     try {
-      // const res = await fetch('/api/service/google/trusted_bies');
-      const res = await fetch('/json/service_google_trustedBies.json');
+      const res = await fetch('/api/service/google/trusted_bies');
+      // const res = await fetch('/json/service_google_trustedBies.json');
       if (!res.ok) {
         throw new Error('Failed to fetch trustedBy');
       }

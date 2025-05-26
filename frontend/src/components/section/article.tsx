@@ -14,8 +14,7 @@ export default function Article() {
 
   const fetchDataArticles = async () => {
     try {
-      // const res = await fetch("/api/articles");
-      const res = await fetch("/json/articles.json");
+      const res = await fetch("/api/articles");
       if (!res.ok) {
         throw new Error("Failed to fetch articles");
       }
