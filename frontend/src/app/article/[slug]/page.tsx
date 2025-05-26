@@ -1,24 +1,27 @@
+// /app/blog/[slug]/page.tsx
 import ArticleDetail from "@/components/section/articleDetail";
-import { Metadata } from "next";
 import { getArticleBySlug } from "@/lib/article";
+import { Metadata } from "next";
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resolvedParams = await params;
-  const article = await getArticleBySlug(resolvedParams.slug);
+  const article = await getArticleBySlug(params.slug);
 
   return {
-    title: `${article?.title}`,
-    description: article?.short_desc,
+    title: article?.title || "Article Not Found",
+    description: article?.short_desc || "No description available",
   };
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const resolvedParams = await params;
-  const article = await getArticleBySlug(resolvedParams.slug);
+  const article = await getArticleBySlug(params.slug);
 
-  return <ArticleDetail slug={article?.slug} />;
+  if (!article) {
+    return <div>Article not found</div>;
+  }
+
+  return <ArticleDetail slug={article.slug} />;
 }
