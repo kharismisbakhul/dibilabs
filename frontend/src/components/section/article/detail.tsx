@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 // import { useRouter } from 'next/router';
 // import { Articles } from "@/types/json/articles";
 // import { FaFacebookF, FaShareAlt } from "react-icons/fa";
@@ -33,26 +33,28 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
   );
   const sameCategoriesArtikel = sortedByDateDesc.filter(article => article.category === articles.category);
 
-  const str: string = articles.view;
-  const num: number = Number(str);
-  const views = num + 1;
-  const viewsString: string = String(views)
+  useEffect(() => {
+    const updateViewCount = async () => {
+      try {
+        const res = await fetch("/api/articles/views", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ slug: articles.slug }),
+        });
 
-  articles.view = viewsString;
+        if (!res.ok) {
+          throw new Error('Failed to fetch');
+        }
+        const json = await res.json();
+        articles.view = json.counted;
+        
+      } catch (error) {
+        console.error("Failed to update view count", error);
+      }
+    };
 
-  // useEffect(() => {
-  //   const updateViewCount = async () => {
-  //     try {
-  //       await fetch(`/api/article-view?slug=${articles.slug}`, {
-  //         method: 'POST',
-  //       });
-  //     } catch (error) {
-  //       console.error("Failed to update view count", error);
-  //     }
-  //   };
-
-  //   updateViewCount();
-  // }, [articles.slug]);
+    updateViewCount();
+  }, [articles.slug]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 pt-36">
