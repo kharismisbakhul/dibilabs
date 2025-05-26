@@ -7,6 +7,8 @@ import { FaEnvelope } from "react-icons/fa6"; // for X (Twitter)
 import { useState } from "react";
 import Link from "next/link";
 
+import toast, { Toaster } from 'react-hot-toast';
+
 export default function Footer() {
   const [form, setForm] = useState({
     name: "",
@@ -21,15 +23,15 @@ export default function Footer() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    if (e.target.name === "number") {
-      e.target.value = e.target.value.replace(/\D/g, ""); // Remove non-digit characters
+    // if (e.target.name === "number") {
+    //   e.target.value = e.target.value.replace(/\D/g, ""); // Remove non-digit characters
 
-      if (e.target.value.startsWith("0")) {
-        e.target.value = "62" + e.target.value.slice(1); // Replace leading 0 with 62
-      } else if (!e.target.value.startsWith("62")) {
-        e.target.value = "62" + e.target.value; // Ensure it starts with 62
-      }
-    }
+    //   if (e.target.value.startsWith("0")) {
+    //     e.target.value = "62" + e.target.value.slice(1); // Replace leading 0 with 62
+    //   } else if (!e.target.value.startsWith("62")) {
+    //     e.target.value = "62" + e.target.value; // Ensure it starts with 62
+    //   }
+    // }
 
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -50,7 +52,12 @@ export default function Footer() {
     });
 
     const data = await res.json();
-    alert(data.message);
+    console.log(data)
+    if (data.status === 200) {
+      toast.success(data.message);
+    } else {
+      toast.error(data.message || "Something went wrong");
+    }
   };
 
   const handleSubcription = async (e: React.FormEvent) => {
@@ -63,11 +70,17 @@ export default function Footer() {
     });
 
     const data = await res.json();
-    alert(data.message);
+    console.log(data)
+    if (data.status === 200) {
+      toast.success(data.message);
+    } else {
+      toast.error(data.message || "Something went wrong");
+    }
   };
 
   return (
     <>
+      <Toaster position="top-center" />
       {/* Bottom Section */}
       <div className="bg-orange-500 text-white px-6 py-10" id="footer">
         <div className="container mx-auto px-4">

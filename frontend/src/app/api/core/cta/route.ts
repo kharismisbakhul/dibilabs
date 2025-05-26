@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     }
 
     // const data = await strapiRes.json();
-    return NextResponse.json({ message: 'Form submitted successfully!' }, { status: 200 }, );
+    return NextResponse.json({ message: 'Thank you for Submitting to our Form, we are going to contact you soon!', status: 200 });
   } catch (err) {
     console.error("[api/homepage] fetch failed:", err);
 
