@@ -17,7 +17,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const resolved = await params;
-  const article = await getArticleBySlug(resolved.slug);
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
+
+  // ✅ Full SSR-style gate: return nothing if not ready
+  if (!article) {
+    // optional: return a 404 page, redirect, or fallback
+    return <div className="text-center p-10">Article not found.</div>;
+  }
+
   return <ArticleDetail slug={article?.slug} />;
 }
