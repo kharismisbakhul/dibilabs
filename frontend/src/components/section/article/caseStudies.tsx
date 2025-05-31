@@ -1,3 +1,5 @@
+'use client'
+
 import ArticleCard from "./articleCard";
 import Pagination from "./pagination";
 import { Articles } from "@/types/json/articles";

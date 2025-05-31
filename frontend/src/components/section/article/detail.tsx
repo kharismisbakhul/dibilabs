@@ -1,8 +1,4 @@
-// pages/article/[slug].tsx
-"use client";
-
 import Link from "next/link";
-import { useEffect } from "react";
 // import { useRouter } from 'next/router';
 // import { Articles } from "@/types/json/articles";
 // import { FaFacebookF, FaShareAlt } from "react-icons/fa";
@@ -34,29 +30,6 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
   const sortedByDateDesc = sorted.slice(0, 5);
   const sameCategories = sortedByDateDesc.filter(article => article.category === articles.category);
   const sameCategoriesArtikel = sameCategories.slice(0, 5);
-
-  useEffect(() => {
-    const updateViewCount = async () => {
-      try {
-        const res = await fetch("/api/articles/views", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug: articles.slug }),
-        });
-
-        if (!res.ok) {
-          throw new Error('Failed to fetch');
-        }
-        const json = await res.json();
-        articles.view = json.counted;
-        
-      } catch (error) {
-        console.error("Failed to update view count", error);
-      }
-    };
-
-    updateViewCount();
-  }, [articles.slug]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 pt-36">
