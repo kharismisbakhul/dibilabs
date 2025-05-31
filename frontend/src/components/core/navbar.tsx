@@ -18,7 +18,7 @@ export default function Navbar() {
         {/* Navbar */}
         <div className="">
           <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto font-extrabold">
-            <Link href="/homepage">
+            <Link href="/homepage" scroll={false}>
               <div className="flex items-center space-x-2">
                 <div className="relative w-[200px] h-[60px]">
                   <Image
@@ -36,6 +36,7 @@ export default function Navbar() {
                 <Link
                   href="/about"
                   className="transition-all duration-300 hover:underline"
+                  scroll={false}
                 >
                   About Us
                 </Link>
@@ -44,6 +45,7 @@ export default function Navbar() {
                 <Link
                   href="/service"
                   className="transition-all duration-300 hover:underline flex items-center gap-1"
+                  scroll={false}
                 >
                   <span>
                     Services
@@ -60,6 +62,7 @@ export default function Navbar() {
                         <Link
                           href="/service/meta"
                           className="font-semibold text-gray-900 hover:underline"
+                          scroll={false}
                         >
                           Meta Ads
                         </Link>
@@ -78,6 +81,7 @@ export default function Navbar() {
                         <Link
                           href="/service/google"
                           className="font-semibold text-gray-900 hover:underline"
+                          scroll={false}
                         >
                           Google Ads
                         </Link>
@@ -98,6 +102,7 @@ export default function Navbar() {
                         <Link
                           href="/service/sosmed"
                           className="font-semibold text-gray-900 hover:underline"
+                          scroll={false}
                         >
                           Social Media Management
                         </Link>
@@ -117,6 +122,7 @@ export default function Navbar() {
                         <Link
                           href="/service/seo"
                           className="font-semibold text-gray-900 hover:underline"
+                          scroll={false}
                         >
                           Search Engine Optimization Service
                         </Link>
@@ -135,6 +141,7 @@ export default function Navbar() {
                         <Link
                           href="/service/software"
                           className="font-semibold text-gray-900 hover:underline"
+                          scroll={false}
                         >
                           Software and Web App Development
                         </Link>
@@ -154,6 +161,7 @@ export default function Navbar() {
                         <Link
                           href="/service/webdev"
                           className="font-semibold text-gray-900 hover:underline"
+                          scroll={false}
                         >
                           Website Development
                         </Link>
@@ -172,6 +180,7 @@ export default function Navbar() {
                 <Link
                   href="/article"
                   className="transition-all duration-300 hover:underline"
+                  scroll={false}
                 >
                   Article
                 </Link>
@@ -180,6 +189,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   className="transition-all duration-300 hover:underline"
+                  scroll={false}
                 >
                   Contact Us
                 </Link>
@@ -190,6 +200,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block animate-pulse-fast"
+              scroll={false}
             >
               <button className="bg-white text-black px-4 py-2 rounded-full hover:text-white hover:bg-black font-semibold text-base">
                 Free Consultant
@@ -198,36 +209,36 @@ export default function Navbar() {
 
             {menuOpen && (
               <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4">
-                <Link href="/about" className="block text-white font-medium">
+                <Link href="/about" scroll={false} className="block text-white font-medium">
                   About Us
                 </Link>
-                <Link href="/service" className="block text-white font-medium">
+                <Link href="/service" scroll={false} className="block text-white font-medium">
                   Services
                 </Link>
                 <ul className="text-base text-white font-medium ml-5">
-                  <Link href="/service/meta" className="block mb-2">
+                  <Link href="/service/meta" scroll={false} className="block mb-2">
                     Meta Ads
                   </Link>
-                  <Link href="/service/google" className="block mb-2">
+                  <Link href="/service/google" scroll={false} className="block mb-2">
                     Google Ads
                   </Link>
-                  <Link href="/service/sosmed" className="block mb-2">
+                  <Link href="/service/sosmed" scroll={false} className="block mb-2">
                     Social Media Management
                   </Link>
-                  <Link href="/service/seo" className="block mb-2">
+                  <Link href="/service/seo" scroll={false} className="block mb-2">
                     Search Engine Optimization Service
                   </Link>
-                  <Link href="/service/software" className="block mb-2">
+                  <Link href="/service/software" scroll={false} className="block mb-2">
                     Software and Web App Development
                   </Link>
-                  <Link href="/service/webdev" className="block mb-2">
+                  <Link href="/service/webdev" scroll={false} className="block mb-2">
                     Website Development
                   </Link>
                 </ul>
-                <Link href="/article" className="block text-white font-medium">
+                <Link href="/article" scroll={false} className="block text-white font-medium">
                   Article
                 </Link>
-                <Link href="/contact" className="block text-white font-medium">
+                <Link href="/contact" scroll={false} className="block text-white font-medium">
                   Contact Us
                 </Link>
                 <Link
@@ -235,6 +246,7 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold"
+                  scroll={false}
                 >
                   Free Consultant
                 </Link>

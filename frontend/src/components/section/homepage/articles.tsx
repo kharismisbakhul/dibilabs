@@ -25,8 +25,9 @@ export default function ArticlesH({ data }: Props) {
         {/* Article cards */}
         <div className={`grid grid-cols-${lengthArticle} md:grid-cols-${lengthArticle}`}>
           {latestFour.map((item, idx) => (
-            <div key={idx} className="relative h-[250px] md:h-[350px] overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105">
+            <div key={idx} className="h-[250px] md:h-[350px] overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105">
               <Link href={`/article/${item.slug}`}>
+              <div className="relative w-full h-full">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.thumbnail.url}`}
                   alt={item.thumbnail.name}
@@ -43,6 +44,7 @@ export default function ArticlesH({ data }: Props) {
                     <span>📅 {formatDate(item.publishedAt)}</span>
                   </p>
                 </div>
+              </div>
               </Link>
             </div>
           ))}

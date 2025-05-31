@@ -21,13 +21,12 @@ export default function Hero_service() {
 
               {/* SVG Character - Right */}
               {/* Top Right Bubble Decoration */}
-              <div className="absolute right-0 top-3 z-0 w-[150px] md:w-[300px]">
+              <div className="absolute right-0 top-3 z-0 w-[200px] md:w-[400px] h-auto aspect-square">
                 <Image
                   src="/assets/service/right_bubble.svg"
                   alt="Bubbles Decoration"
-                  width={300}
-                  height={300}
-                  className="opacity-80"
+                  fill
+                  className="opacity-80 object-contain"
                 />
               </div>
             </div>
