@@ -2,8 +2,9 @@ import { Articles } from "@/types/json/articles";
 
 export async function getArticleBySlug(slug: string): Promise<Articles | null> {
   try {
-    // const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || ""}/json/articles.json`);
-    const res = await fetch("http://127.0.0.1:3000/json/articles.json");
+    const baseUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+    const STRAPI_URL = `${baseUrl}/api/articles?populate=*`;
+    const res = await fetch(STRAPI_URL);
     
     if (!res.ok) {
       throw new Error("Failed to fetch articles");

@@ -42,12 +42,13 @@ export default function Hero() {
               </div>
 
               {/* SVG Character - Right */}
-              <div className="hidden md:block max-w-md mx-auto aspect-[4/5] order-1 animate-pulse-slow w-[300px] md:w-[500px]">
+              <div className="relative hidden md:block max-w-md mx-auto aspect-[4/5] order-1 animate-pulse-slow w-[300px] md:w-[500px]">
                 <Image
                   src="/assets/homepage/beaker.png"
                   alt="Beaker Mascot"
                   fill
                   className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 500px"
                 />
               </div>
             </div>

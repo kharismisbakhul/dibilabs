@@ -8,13 +8,13 @@ export default function Vission_mission() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center item-center gap-16 mb-32 px-4 text-center">
           {/* Vision */}
           <div className="text-center flex-1 flex flex-col items-center">
-            <div className="relative inline-block animate-float">
+            <div className="relative inline-block animate-float aspect-[1/1] w-[200px] md:w-[300px]">
               <Image
-                src="/assets/about/vision.svg" // replace with your image path
+                src="/assets/about/vision.svg"
                 alt="Vision"
-                width={300}
-                height={300}
-                className="w-[200px] md:w-[300px] h-auto mx-auto"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 200px, 300px"
               />
             </div>
             <div className="mt-6">
@@ -32,13 +32,13 @@ export default function Vission_mission() {
 
           {/* Mission */}
           <div className="text-center flex-1 flex flex-col items-center">
-            <div className="relative inline-block animate-float">
+            <div className="relative inline-block animate-float aspect-[1/1] w-[200px] md:w-[300px]">
               <Image
                 src="/assets/about/mission.svg"
                 alt="Mission"
-                width={300}
-                height={300}
-                className="w-[200px] md:w-[300px] h-auto mx-auto"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 200px, 300px"
               />
             </div>
             <div className="mt-6">

@@ -8,9 +8,9 @@ export default function DetailContact() {
     <div className="relative bg-white py-12 px-4 sm:px-6 lg:px-8 pt-32">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-xl md:text-3xl font-bold text-orange-500 mb-2 mt-5">Have a questions? Call Us!</h2>
-        <p className="text-base md:text-xl text-orange-500 mb-10">
+        <h3 className="text-base md:text-lg text-orange-500 mb-10">
           We are ready to answer all of your questions. You can call us from our contact below.
-        </p>
+        </h3>
         <div className="bg-orange-500 rounded-xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 h-[300px] md:h-[400px]">
             <iframe

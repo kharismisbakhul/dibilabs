@@ -12,9 +12,10 @@ const formatDate = (dateString: string) => {
 };
 
 export default function ListArticle({ data }: Props) {
-  const sortedByDateDesc = data.sort(
+  const sorted = data.sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
+  const sortedByDateDesc = sorted.slice(0, 8);
   return (
     <div className="container mx-auto px-8 md:px-4 py-8 pt-36">
       <div className="grid md:grid-cols-3 gap-6">

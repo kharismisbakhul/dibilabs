@@ -29,9 +29,9 @@ export default function Team({ data }: Props) {
             <Image
               src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.photo.url}`}
               alt={item.photo.name}
-              layout="fill"
-              objectFit="cover"
-              className="transform group-hover:scale-105 transition duration-300 ease-in-out"
+              fill
+              className="object-cover transform group-hover:scale-105 transition duration-300 ease-in-out"
+              sizes="(max-width: 768px) 100vw, 33vw"
             />
             {/* Optional dark overlay on hover */}
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div>
