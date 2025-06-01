@@ -52,7 +52,7 @@ export default function Cta_services() {
 
           {/* Button - aligned right */}
           <div className="w-full flex justify-end">
-            <Link href="/service">
+            <Link href="/service" scroll={false}>
               <button className="bg-black text-white text-xl font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition">
                 Our Services →
               </button>

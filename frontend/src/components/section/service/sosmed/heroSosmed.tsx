@@ -34,13 +34,19 @@ export default function HeroSosmed() {
             </Link>
           </div>
           {/* Image */}
-          <div className="">
+          <div className="absolute right-0 bottom-32 md:bottom-12 w-[200px] md:w-[500px] h-[240px] md:h-[600px] mx-auto">
             <Image
-              src="/assets/service/sosmed/sale.png" // Replace with your actual asset path
+              src="/assets/service/sosmed/sale.png"
               alt="Payday Sale"
-              width={500}
-              height={600}
-              className="right-0 bottom-[100px] md:bottom-0 absolute rounded-md mx-auto w-[200px] md:w-[500px] h-auto"
+              fill
+              priority
+              sizes="(max-width: 768px) 200px, 500px"
+              className="object-contain rounded-md"
+              style={{
+                position: 'absolute',
+                right: 0,
+                bottom: '100px'
+              }}
             />
           </div>
         </div>

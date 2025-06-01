@@ -27,7 +27,7 @@ export default function AchievementSosmed({ data }: Props) {
                         alt={achievement.image.name}
                         width={50}
                         height={40}
-                        className=""
+                        className="w-[50px] h-[40px]"
                       />
                     </div>
                       ) : (
@@ -61,16 +61,16 @@ export default function AchievementSosmed({ data }: Props) {
           <Image
             src="/assets/service/sosmed/sharp_top.svg"
             alt="asterisk orange"
-            width={100}
-            height={100}
+            width={0}
+            height={0}
             className="absolute top-5 right-[10%] sm:right-[20%] md:right-[25%] w-[60px] md:w-[100px]"
           />
 
           <Image
             src="/assets/service/sosmed/sharp_bottom.svg"
             alt="asterisk black"
-            width={100}
-            height={100}
+            width={0}
+            height={0}
             className="absolute bottom-2 left-[5%] sm:left-[20%] md:left-[25%] w-[60px] md:w-[100px]"
           />
         </div>

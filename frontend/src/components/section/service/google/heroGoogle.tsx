@@ -38,8 +38,9 @@ export default function HeroGoogle() {
             <Image
               src="/assets/service/google/hero.svg" // Replace with your actual asset path
               alt="Payday Sale"
-              width={600}
-              height={700}
+              width={0}
+              height={0}
+              priority
               className="right-0 bottom-0 absolute w-[220px] md:w-[600px] h-auto"
             />
           </div>

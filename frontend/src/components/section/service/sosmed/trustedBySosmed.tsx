@@ -25,6 +25,7 @@ export default function TrustedBySosmed({ data }: Props) {
                     src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                     alt={item.image.name}
                     fill
+                    sizes="(max-width: 768px) 12rem, 14rem" // Matches w-48 (12rem) and md:w-56 (14rem)
                     style={{ objectFit: "contain" }}
                   />
                 </div>
