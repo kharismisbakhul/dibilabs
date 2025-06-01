@@ -257,6 +257,7 @@ export default function Navbar() {
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="relative w-8 h-8 focus:outline-none"
+                aria-label="Menu"
               >
                 <span
                   className={`block absolute h-0.5 w-8 bg-white transform transition duration-300 ease-in-out ${
