@@ -1,14 +1,22 @@
 import Homepage from "@/components/section/homepage";
+import { getHomepageAchievementsData, getHomepagePartnersData, getHomepageServicesData, getHomepageArticlesData } from "@/lib/strapi_homepage";
 
 export const metadata = {
   title: "Homepage | Dibilabs",
   description: "Read the latest news and updates from our brand.",
 };
 
-export default function Home() {
+export default async function Home() {
+  const [achievements, partners, services, articles] = await Promise.all([
+    getHomepageAchievementsData(),
+    getHomepagePartnersData(),
+    getHomepageServicesData(),
+    getHomepageArticlesData()
+  ]);
+
   return (
     <>
-      <Homepage/>
+      <Homepage achievements={achievements} partners={partners} services={services} articles={articles} />
     </>
   );
 }
