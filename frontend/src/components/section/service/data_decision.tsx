@@ -25,8 +25,15 @@ export default function Data_decision({ data }: Props) {
                 Decision Making
                 </h1>
             </div>
-            <div className="absolute right-0 animate-pulse-slow w-[150px] md:w-[300px]">
-                <Image src="/assets/service/eyes.svg" alt="Eyes" width={250} height={250} />
+            <div className="absolute right-0 -top-10 animate-pulse-slow w-[150px] md:w-[300px] aspect-square">
+              <Image
+                src="/assets/service/eyes.svg"
+                alt="Eyes"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 150px, 300px"
+                unoptimized={true}
+              />
             </div>
         </div>
 
@@ -43,9 +50,9 @@ export default function Data_decision({ data }: Props) {
               className={`flex flex-col justify-between rounded-none p-6 pt-[150px] md:pt-[250px] min-h-[100px] md:min-h-[280px] ${item.background_color}`}
             >
               <div>
-                <h3 className={`text-xl md:text-2xl font-semibold mb-4 ${item.text_color}`}>
+                <p className={`text-xl md:text-2xl font-semibold mb-4 ${item.text_color}`}>
                   {item.title}
-                </h3>
+                </p>
               </div>
               <div className="mt-auto">
                 <Link

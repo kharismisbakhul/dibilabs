@@ -38,8 +38,9 @@ export default function HeroWebdev() {
             <Image
               src="/assets/service/webdev/hero.svg" // Replace with your actual asset path
               alt="Payday Sale"
-              width={700}
-              height={800}
+              width={0}
+              height={0}
+              priority
               className="right-0 bottom-0 absolute w-[280px] md:w-[700px] h-auto"
             />
           </div>

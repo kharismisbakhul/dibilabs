@@ -87,13 +87,14 @@ export default function Brand_marketing() {
         </div>
 
         {/* Floating SVGs on the right */}
-        <div className="absolute bottom-0 right-0 z-30 w-[150px] md:w-[500px]">
+        <div className="absolute bottom-0 right-[-150px] z-30 w-[150px] md:w-[900px] aspect-square">
           <Image
             src="/assets/service/bubble_white.svg"
             alt="circle 1"
-            width={500}
-            height={500}
+            fill
             className="object-contain"
+            sizes="(max-width: 768px) 150px, 900px"
+            unoptimized={true}
           />
         </div>
       </div>

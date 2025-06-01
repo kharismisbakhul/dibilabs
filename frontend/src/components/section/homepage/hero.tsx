@@ -46,6 +46,7 @@ export default function Hero() {
                 <Image
                   src="/assets/homepage/beaker.png"
                   alt="Beaker Mascot"
+                  priority
                   fill
                   className="object-contain"
                   sizes="(max-width: 768px) 100vw, 500px"

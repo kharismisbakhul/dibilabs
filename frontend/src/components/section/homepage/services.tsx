@@ -73,11 +73,16 @@ export default function Services({ data }: Props) {
                       </h3>
                       <p className="text-sm md:text-base text-center mt-2">{item.description}</p>
                     </div>
-                    <Link href="/service">
-                      <button className="mt-4 px-4 py-2 bg-[#065097] text-white rounded-full text-base md:text-lg">
-                        Learn more →
-                      </button>
-                    </Link>
+                    <div className="mt-4 inline-block"> {/* Wrapper for proper spacing */}
+                      <Link href="/service" scroll={false} className="block">
+                        <button 
+                          className="px-8 py-4 bg-[#065097] text-white rounded-full text-base md:text-lg"
+                          style={{ minWidth: '120px', minHeight: '48px' }}
+                        >
+                          Learn more →
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}

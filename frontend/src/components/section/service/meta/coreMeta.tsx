@@ -20,20 +20,25 @@ export default function CoreMeta({ data }: Props) {
             </h3>
           </div>
           <div className="relative mt-10 md:mt-0">
-            <div className="absolute right-0 -top-10 md:top-[-200px] md:right-0 z-40 w-[180px] md:w-[500px]">
+            {/* Cookie Image */}
+            <div className="absolute right-0 -top-20 md:top-[-300px] md:right-0 z-40 w-[180px] md:w-[500px] h-[180px] md:h-[500px]"> {/* Added height */}
               <Image
-                src="/assets/service/meta/bite-cookies.svg" // Replace with your correct asset path
+                src="/assets/service/meta/bite-cookies.svg"
                 alt="Cookie Illustration"
-                width={500}
-                height={500}
+                fill
+                sizes="(max-width: 768px) 180px, 500px"
+                className="object-contain" // Maintain aspect ratio
               />
             </div>
-            <div className="absolute right-[-30px] bottom-[-150px] md:bottom-[-150px] w-[80px] md:w-[150px]">
+
+            {/* YUM Image */}
+            <div className="absolute right-[-30px] bottom-[-120px] md:bottom-[-150px] w-[80px] md:w-[150px] h-[80px] md:h-[150px]"> {/* Added height */}
               <Image
-                src="/assets/service/meta/yum.svg" // Replace with your correct asset path
+                src="/assets/service/meta/yum.svg"
                 alt="YUM!"
-                width={150}
-                height={150}
+                fill
+                sizes="(max-width: 768px) 80px, 150px"
+                className="object-contain" // Maintain aspect ratio
               />
             </div>
           </div>
@@ -46,13 +51,15 @@ export default function CoreMeta({ data }: Props) {
               key={idx}
               className={`rounded-2xl ${item.background_color} relative overflow-hidden text-white text-center`}
             >
-              <Image
-                src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.background.url}`}
-                alt={item.background.name}
-                width={200}
-                height={200}
-                className="absolute left-0 bottom-0 w-[160px] md:w-[200px]"
-              />
+              <div className="absolute left-0 bottom-0 w-[160px] md:w-[200px] h-[160px] md:h-[200px]">
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.background.url}`}
+                  alt={item.background.name}
+                  fill
+                  sizes="(max-width: 768px) 160px, 200px"
+                  className="object-cover" // or "object-contain"
+                />
+              </div>
               <div className="relative p-[50px] md:p-[100px]">
                 <p className="text-[40px] md:text-[60px] font-bold leading-tight">
                   {item.text1}

@@ -38,8 +38,9 @@ export default function HeroMeta() {
             <Image
               src="/assets/service/meta/hero.svg"
               alt="Payday Sale"
-              width={500}
-              height={600}
+              width={0}
+              height={0}
+              priority
               className="absolute right-0 bottom-0 w-[200px] md:w-[500px] h-auto"
             />
           </div>
