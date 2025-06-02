@@ -86,18 +86,20 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Bubble + Mascot Section */}
-            <div className="relative w-full flex justify-center pt-30 pb-60 bg-orange-500 overflow-visible z-40">
+            <div className="relative w-full flex justify-center pt-30 pb-48 md:pb-60 bg-orange-500 overflow-visible z-40">
               {/* Bubble container */}
               <div className="relative w-full max-w-3xl z-10 overflow-visible">
                 {/* Bubble Image */}
-                <Image
-                  src="/assets/core/bubble.png"
-                  alt="Speech Bubble"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
+                <div className="md:max-w-[600px] mx-auto">
+                  <Image
+                    src="/assets/core/bubble.png"
+                    alt="Speech Bubble"
+                    width={600}
+                    height={400}
+                    className="w-full max-w-[120vw] -mx-[10vw] w-[400px] h-[300px] md:w-[600px] md:h-[320px] md:max-w-full md:mx-0 h-auto"
+                    priority
+                  />
+                </div>
 
                 {/* Text inside bubble */}
                 <div className="absolute inset-0 flex justify-center items-start pt-8 sm:pt-10 px-6 sm:px-12">
@@ -107,7 +109,7 @@ export default function Footer() {
                       Business to The{" "}
                       <span className="text-orange-500">Next Level</span>?
                     </p>
-                    <p className="mt-4 text-sm sm:text-base md:text-md">
+                    <p className="mt-4 text-xs sm:text-base md:text-md">
                       Book a free consultation with our Digital Marketing <br />
                       Strategist to help guide the most strategic <br />
                       next step of your business. We are excited <br />
@@ -118,7 +120,7 @@ export default function Footer() {
               </div>
 
               {/* Mascot centered below the bubble */}
-              <div className="absolute -bottom-11 right-[130px] w-[500px] z-30">
+              <div className="absolute top-24 right-10 w-[350px] md:-bottom-11 md:right-[130px] md:w-[500px] z-30">
                 <Image
                   src="/assets/core/mascot.png"
                   alt="Mascot"
@@ -227,8 +229,14 @@ export default function Footer() {
 
           <div className="text-center mt-10">
             <p className="text-xl font-bold">This is the end of the journey.</p>
-            <Link href="#">
-              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white">
+            <Link href="#" scroll={false}>
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-300"
+              >
                 Back to Top
               </button>
             </Link>

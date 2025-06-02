@@ -35,7 +35,7 @@ export default function Pagination({ current, total, onPageChange }: PaginationP
   const pages = generatePages();
 
   return (
-    <div className="flex justify-center items-center mt-8 space-x-2">
+    <div className="flex justify-center items-center mt-8 space-x-2 text-sm md:text-base">
       <button
         className="border px-3 py-1 rounded disabled:opacity-50"
         onClick={() => onPageChange(current - 1)}

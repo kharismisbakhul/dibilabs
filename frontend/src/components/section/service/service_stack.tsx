@@ -10,11 +10,11 @@ type Props = {
 const backgroundImage = [
   {
     image: "/assets/service/cookies.svg",
-    imageStyle: "absolute right-0 md:right-6 -bottom-[150px] md:-bottom-[250px] w-[250px] md:w-[450px] z-40",
+    imageStyle: "absolute right-0 md:right-6 -bottom-[100px] md:-bottom-[250px] w-[150px] md:w-[450px] z-40",
   },
   {
     image: "/assets/service/stars.svg",
-    imageStyle: "absolute right-[150px] md:right-[500px] -bottom-[20px] md:-bottom-[50px] w-[100px] md:w-[250px] z-40",
+    imageStyle: "absolute right-[100px] md:right-[500px] -bottom-[20px] md:-bottom-[50px] w-[70px] md:w-[250px] z-40",
   }
 ];
 
@@ -25,15 +25,16 @@ export default function Service_stack({ data }: Props) {
         {data.map((item, idx) => (
           <div
             key={idx}
-            className={`relative w-full py-20 px-6 md:px-20 ${item.background_color} ${item.text_color}`}
+            className={`relative w-full py-10 md:py-20 px-6 md:px-20 ${item.background_color} ${item.text_color}`}
           >
-            <h2 className="text-3xl md:text-7xl font-bold z-10 relative">
+            <p className="text-xl md:text-7xl font-bold z-10 relative">
               {item.title}
-            </h2>
+            </p>
             <div className="mt-4 z-10 relative inline-flex items-center">
               <Link
                 href="#"
-                className={`px-10 py-2 rounded-full font-semibold text-xl md:text-2xl ${item.button_color}`}
+                className={`px-10 py-2 rounded-full font-semibold text-base md:text-2xl ${item.button_color}`}
+                scroll={false}
               >
                 <span className={`ml-2 font-bold ${item.button_text_color}`}>
                 Learn more

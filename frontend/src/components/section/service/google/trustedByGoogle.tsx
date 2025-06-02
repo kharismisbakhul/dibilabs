@@ -9,11 +9,11 @@ type Props = {
 
 export default function TrustedByGoogle({ data }: Props) {
   return (
-    <section className="py-8 bg-white">
+    <section className="py-0 md:py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">
-        <h2 className="text-center text-4xl md:text-6xl font-semibold">
+        <p className="text-center text-3xl md:text-6xl font-semibold">
           <span className="text-orange-500 font-bold">Trusted</span> By
-        </h2>
+        </p>
 
         <div className="relative mt-8 overflow-hidden">
           <div className="animate-marquee flex gap-10 whitespace-nowrap justify-center">

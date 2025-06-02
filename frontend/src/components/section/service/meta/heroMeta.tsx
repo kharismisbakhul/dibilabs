@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function HeroMeta() {
   return (
     <>
-      <section className="bg-white pt-24">
+      <section className="bg-white pt-20 md:pt-24">
         {/* Top Section */}
         <div className="bg-black rounded-[24px] text-white px-10 md:px-16 py-16 md:py-24 flex flex-col md:flex-col items-left justify-between max-w-[1600px] mx-auto mt-5 relative overflow-hidden">
           {/* Text */}
@@ -18,8 +18,8 @@ export default function HeroMeta() {
             </h2>
             <br />
             <p className="mt-4 text-lg md:text-3xl text-gray-200">
-              Big ideas need smart execution. Our data-driven <br />
-              precision and creative agility team turn your vision <br />
+              Big ideas need smart execution. Our data-driven <br className="hidden md:block" />
+              precision and creative agility team turn your vision <br className="hidden md:block" />
               into measurable results that keep growing.
             </p>
             <br />
@@ -28,7 +28,7 @@ export default function HeroMeta() {
               target="_blank"
               rel="noopener noreferrer"
               >
-              <button className="bg-[#065097] text-white font-medium text-lg md:text-xl px-6 mr-8 py-2 rounded-full flex items-center gap-2 transition">
+              <button className="bg-[#065097] text-white font-medium text-base md:text-xl px-6 mr-8 py-2 rounded-full flex items-center gap-2 transition">
                 Consultation Here →
               </button>
             </Link>
@@ -41,7 +41,7 @@ export default function HeroMeta() {
               width={0}
               height={0}
               priority
-              className="absolute right-0 bottom-0 w-[200px] md:w-[500px] h-auto"
+              className="absolute right-0 bottom-0 w-[150px] md:w-[500px] h-auto"
             />
           </div>
         </div>

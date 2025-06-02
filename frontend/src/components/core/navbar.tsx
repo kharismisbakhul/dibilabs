@@ -20,7 +20,7 @@ export default function Navbar() {
           <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto font-extrabold">
             <Link href="/homepage" scroll={false}>
               <div className="flex items-center space-x-2">
-                <div className="relative w-[200px] h-[60px]">
+                <div className="relative w-[150px] h-[40px] md:w-[200px] md:h-[60px]">
                   <Image
                     src="/assets/core/logo2.png"
                     alt="Dibilabs Logo"
@@ -208,11 +208,11 @@ export default function Navbar() {
             </Link>
 
             {menuOpen && (
-              <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4">
-                <Link href="/about" scroll={false} className="block text-white font-medium">
+              <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4 right-2">
+                <Link href="/about" scroll={false} className="block text-white font-medium text-base">
                   About Us
                 </Link>
-                <Link href="/service" scroll={false} className="block text-white font-medium">
+                <Link href="/service" scroll={false} className="block text-white font-medium text-base">
                   Services
                 </Link>
                 <ul className="text-base text-white font-medium ml-5">
@@ -235,17 +235,17 @@ export default function Navbar() {
                     Website Development
                   </Link>
                 </ul>
-                <Link href="/article" scroll={false} className="block text-white font-medium">
+                <Link href="/article" scroll={false} className="block text-white font-medium text-base">
                   Article
                 </Link>
-                <Link href="/contact" scroll={false} className="block text-white font-medium">
+                <Link href="/contact" scroll={false} className="block text-white font-medium text-base">
                   Contact Us
                 </Link>
                 <Link
                   href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold"
+                  className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold text-xs"
                   scroll={false}
                 >
                   Free Consultant

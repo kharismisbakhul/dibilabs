@@ -16,7 +16,7 @@ export default function DetailCoreWebdev({ data }: Props) {
         initial={{ y: -10 }}
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute -top-6 md:-top-20 left-[20%] sm:left-[25%] md:left-[30%]"
+        className="absolute -top-9 md:-top-20 left-[20%] sm:left-[25%] md:left-[30%]"
       >
         <Image
           src="/assets/service/meta/left_hand.svg"
@@ -30,7 +30,7 @@ export default function DetailCoreWebdev({ data }: Props) {
         initial={{ y: -10 }}
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute -top-6 md:-top-20 right-[20%] sm:right-[25%] md:right-[30%]"
+        className="absolute -top-9 md:-top-20 right-[20%] sm:right-[25%] md:right-[30%]"
       >
         <Image
           src="/assets/service/meta/right_hand.svg"
@@ -46,13 +46,13 @@ export default function DetailCoreWebdev({ data }: Props) {
         {data.map((core, idx) => (
           <div
             key={idx}
-            className={`${core.background_color} rounded-xl p-8 ${core.text_color} relative`}
+            className={`${core.background_color} rounded-xl px-8 py-10 md:px-10 md:py-24 ${core.text_color} relative`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight pt-10">
+            <p className="text-2xl md:text-5xl font-bold leading-tight pt-10">
               {core.title}
-            </h2>
-            <p className="mt-2 text-base md:text-xl">{core.description}</p>
-            <div className="absolute w-[40px] h-[40px] md:w-[70px] md:h-[70px] right-4 top-4">
+            </p>
+            <p className="mt-2 text-sm md:text-xl">{core.description}</p>
+            <div className="absolute w-[60px] h-[60px] md:w-[70px] md:h-[70px] right-0 md:right-4 top-4">
               <Image
                 src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${core.background_bubble.url}`}
                 alt={core.background_bubble.name}
@@ -65,14 +65,14 @@ export default function DetailCoreWebdev({ data }: Props) {
       </div>
 
       {/* CTA Section */}
-      <div className="mt-12 text-white">
-        <h2 className="text-4xl md:text-7xl font-bold leading-snug">
+      <div className="mt-12 text-white px-2 md:px-0">
+        <h2 className="text-3xl md:text-7xl font-bold leading-snug">
           Ready to Elevate Your <br /> Business to the Next Level?
         </h2>
         <div className="flex justify-end mt-6">
-          <button className="text-base md:text-xl bg-[#F26522] hover:bg-orange-600 text-white font-semibold px-10 py-3 rounded-xl flex items-center gap-2 transition duration-300">
+          <button className="text-sm md:text-xl bg-[#F26522] hover:bg-orange-600 text-white font-semibold px-10 py-3 rounded-xl flex items-center gap-2 transition duration-300">
             Idea Consultation Corner
-            <span className="text-base md:text-lg">→</span>
+            <span className="text-sm md:text-lg">→</span>
           </button>
         </div>
       </div>
