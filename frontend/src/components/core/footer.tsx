@@ -227,8 +227,14 @@ export default function Footer() {
 
           <div className="text-center mt-10">
             <p className="text-xl font-bold">This is the end of the journey.</p>
-            <Link href="#">
-              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white">
+            <Link href="#" scroll={false}>
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-300"
+              >
                 Back to Top
               </button>
             </Link>
