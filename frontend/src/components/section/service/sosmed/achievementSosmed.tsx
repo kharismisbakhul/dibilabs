@@ -8,17 +8,17 @@ type Props = {
 export default function AchievementSosmed({ data }: Props) {
   return (
     <>
-      <section className="relative bg-white py-12 px-4 md:px-0 flex justify-center">
+      <section className="relative bg-white py-12 px-6 md:px-0 flex justify-center">
         <div className="text-center">
-          <h2 className="text-4xl md:text-[50px] font-light text-black">
+          <p className="text-3xl md:text-[50px] font-light text-black">
             We’ve <span className="font-bold text-[#F37021]">Achieved</span>
-          </h2>
+          </p>
 
           <div className="mt-8 space-y-3">
             {data.map((achievement, idx) => (
               <div key={idx} className="flex items-center justify-center">
                 <div
-                  className={`${achievement.background_color} text-white px-8 py-3 flex justify-center items-center rounded-lg`}
+                  className={`${achievement.background_color} text-white px-8 py-4 md:py-5 flex justify-center items-center rounded-lg`}
                 >
                   {achievement.image != null ? (
                     <div className="py-3">
@@ -31,7 +31,7 @@ export default function AchievementSosmed({ data }: Props) {
                       />
                     </div>
                       ) : (
-                      <span className="text-5xl md:text-[60px] font-extrabold text-white">
+                      <span className="text-4xl md:text-[60px] font-extrabold text-white">
                         <span
                           className="px-2"
                           style={{
@@ -48,7 +48,7 @@ export default function AchievementSosmed({ data }: Props) {
                       }
                   
                   <div className="text-left ml-4">
-                    <p className="text-3xl md:text-[40px] leading-none">
+                    <p className="text-xl md:text-[40px] leading-none">
                       {achievement.parameter}
                     </p>
                   </div>
@@ -63,7 +63,7 @@ export default function AchievementSosmed({ data }: Props) {
             alt="asterisk orange"
             width={0}
             height={0}
-            className="absolute top-5 right-[10%] sm:right-[20%] md:right-[25%] w-[60px] md:w-[100px]"
+            className="absolute top-5 right-[10%] sm:right-[20%] md:right-[25%] w-[40px] md:w-[100px]"
           />
 
           <Image
@@ -71,7 +71,7 @@ export default function AchievementSosmed({ data }: Props) {
             alt="asterisk black"
             width={0}
             height={0}
-            className="absolute bottom-2 left-[5%] sm:left-[20%] md:left-[25%] w-[60px] md:w-[100px]"
+            className="absolute bottom-2 left-[5%] sm:left-[20%] md:left-[25%] w-[40px] md:w-[100px]"
           />
         </div>
       </section>

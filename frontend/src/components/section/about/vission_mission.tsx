@@ -18,13 +18,13 @@ export default function Vission_mission() {
               />
             </div>
             <div className="mt-6">
-              <h3 className="text-orange-500 font-bold text-4xl md:text-5xl bg-white inline-block px-7 py-4 rounded-full">
+              <p className="text-orange-500 font-bold text-3xl md:text-5xl bg-white inline-block px-7 py-3 md:px-7 md:py-4 rounded-full">
                 Vision
-              </h3>
-              <p className="mt-4 mx-auto leading-relaxed text-2xl md:text-3xl">
-                Become South East Asia’s #1 Agency <br />
-                assisting corporates and SMEs in <br /> 
-                their 360 digital marketing activity <br />
+              </p>
+              <p className="mt-4 mx-auto leading-relaxed text-xl md:text-3xl px-4 md:px-0">
+                Become South East Asia’s #1 Agency <br className="hidden md:block" />
+                assisting corporates and SMEs in <br className="hidden md:block" /> 
+                their 360 digital marketing activity <br className="hidden md:block" />
                 and strategy.
               </p>
             </div>
@@ -42,13 +42,13 @@ export default function Vission_mission() {
               />
             </div>
             <div className="mt-6">
-              <h3 className="text-orange-500 font-bold text-4xl md:text-5xl bg-white inline-block px-7 py-4 rounded-full">
+              <p className="text-orange-500 font-bold text-3xl md:text-5xl bg-white inline-block px-7 py-3 md:px-7 md:py-4 rounded-full">
                 Mission
-              </h3>
-              <p className="mt-4 mx-auto leading-relaxed text-2xl md:text-3xl">
-                Assist 1000 Indonesian SMEs in <br />
-                achieving their business goals <br />
-                through digital marketing and <br />
+              </p>
+              <p className="mt-4 mx-auto leading-relaxed text-xl md:text-3xl px-4 md:px-0">
+                Assist 1000 Indonesian SMEs in <br className="hidden md:block" />
+                achieving their business goals <br className="hidden md:block" />
+                through digital marketing and <br className="hidden md:block" />
                 digital transitions.
               </p>
             </div>

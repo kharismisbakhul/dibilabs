@@ -25,9 +25,9 @@ export default function ArticleCard( article : Articles) {
           </span>
         </div>
         <div className="p-4">
-          <h3 className="font-semibold text-lg line-clamp-2">{article.title}</h3>
-          <p className="text-sm text-gray-600 line-clamp-2 mt-1">{article.short_desc}</p>
-          <div className="mt-3 text-sm text-gray-500 flex items-center gap-2">
+          <h3 className="font-semibold text-base md:text-lg line-clamp-2">{article.title}</h3>
+          <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mt-1">{article.short_desc}</p>
+          <div className="mt-3 text-xs text-gray-500 flex items-center gap-2">
             <span>👤 {article.author.username}</span>
             <span>|</span>
             <span>📅 {formatDate(article.publishedAt)}</span>

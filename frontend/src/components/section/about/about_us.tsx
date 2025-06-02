@@ -43,39 +43,39 @@ export default function About_us({ data }: Props) {
                 alt="thumbs up"
                 width={200}
                 height={200}
-                className="w-[100px] md:w-[200px] h-auto mx-auto"
+                className="w-[70px] md:w-[200px] h-auto mx-auto"
               />
             </div>
             
-            <h2 className="bg-[#F26522] text-white px-12 py-2 md:px-20 md:py-4 rounded-md text-4xl md:text-7xl font-bold">
+            <p className="bg-[#F26522] text-white px-6 py-2 md:px-20 md:py-4 rounded-md text-2xl md:text-7xl font-bold">
               About Us
-            </h2>
+            </p>
             <div className="mr-[30px] animate-pulse-slow">
               <Image
                 src="/assets/about/eyes.svg"
                 alt="eyes icon"
                 width={200}
                 height={200}
-                className="w-[100px] md:w-[200px] h-auto mx-auto"
+                className="w-[70px] md:w-[200px] h-auto mx-auto"
               />
             </div>
           </div>
 
 
-          <h3 className="mx-auto mt-7 text-xl md:text-3xl leading-relaxed">
-            As part of dibimbing.id, an edu-tech company focusing on solving <br />
-            unemployment with digital skills training, Dibilabs serves as a onestop Digital <br />
+          <p className="mx-auto mt-7 text-lg md:text-3xl leading-relaxed px-4 md:px-0">
+            As part of dibimbing.id, an edu-tech company focusing on solving <br className="hidden md:block" />
+            unemployment with digital skills training, Dibilabs serves as a onestop Digital <br className="hidden md:block" />
             Marketing Activation Service that focuses on your business objectives.
-          </h3>
+          </p>
 
           <br />
 
-          <h3 className="mx-auto mt-7 text-lg md:text-3xl leading-relaxed">
-            Founded in 2022, Dibilabs started off as a social media agency. Further <br />
-            understanding the complexity and challenges of digitalization, we set out a <br />
-            goal to assist the digitalization transition for education institutions and <br />
+          <p className="mx-auto mt-7 text-lg md:text-3xl leading-relaxed px-4 md:px-0">
+            Founded in 2022, Dibilabs started off as a social media agency. Further <br className="hidden md:block" />
+            understanding the complexity and challenges of digitalization, we set out a <br className="hidden md:block" />
+            goal to assist the digitalization transition for education institutions and <br className="hidden md:block" />
             startups.
-          </h3>
+          </p>
         </div>
       </section>
     </>

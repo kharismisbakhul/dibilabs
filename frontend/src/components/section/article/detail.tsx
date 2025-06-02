@@ -41,7 +41,7 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
           href={`${process.env.NEXT_PUBLIC_STRAPI_URL}${articles.thumbnail.url}`}
         />
       </Head>
-      <div className="max-w-7xl mx-auto px-4 py-8 pt-36">
+      <div className="max-w-7xl mx-auto px-4 py-8 pt-24 md:pt-36">
         {/* Breadcrumb */}
         <nav className="text-sm mb-4 text-gray-500">
           <Link href="/article" scroll={false}>
@@ -64,7 +64,7 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
               <span>📅 {formatDate(articles.publishedAt)}</span>
               <span>👁️ {articles.view}</span>
             </div>
-              <span className="bg-orange-400 text-white text-xs px-8 py-1 rounded">
+              <span className="bg-orange-400 text-white text-sm px-8 py-1 rounded">
                 {articles.category}
               </span>
               <br />
@@ -86,12 +86,12 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
             </div>
 
             {/* Title */}
-            <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            <h1 className="text-3xl md:text-3xl font-bold mb-4 p-2">
               {articles.title}
             </h1>
 
             {/* Content */}
-            <article className="prose prose-lg max-w-none">
+            <article className="prose prose-lg max-w-none p-2">
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeSanitize, rehypeHighlight]}
@@ -99,6 +99,11 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
                 {articles.content}
               </ReactMarkdown>
             </article>
+
+            <div className="block md:hidden px-2 py-3 mt-5 border-b border-t">
+              <ShareSection />
+            </div>
+
           </div>
 
           {/* Right Sidebar */}
@@ -167,7 +172,9 @@ export default function ArticleRead( { articles, data }: ArticleReadProps) {
               </div>
             </div>
 
-            <ShareSection />
+            <div className="hidden md:block">
+              <ShareSection />
+            </div>
           </div>
         </div>
       </div>

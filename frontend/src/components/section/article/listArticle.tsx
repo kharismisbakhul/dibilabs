@@ -22,12 +22,12 @@ export default function ListArticle({ data }: Props) {
       <Head>
         <link rel="preconnect" href={`${process.env.NEXT_PUBLIC_STRAPI_URL}`} />
       </Head>
-      <div className="container mx-auto px-8 md:px-4 py-8 pt-36">
+      <div className="container mx-auto px-8 md:px-4 py-8 pt-28 md:pt-36">
         <div className="grid md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
-            <h2 className="text-3xl font-bold mb-4">
+            <p className="text-2xl md:text-3xl font-bold mb-4">
               Artikel <span className="text-orange-500">Terbaru</span>
-            </h2>
+            </p>
 
             <div className="grid md:grid-cols-2 gap-6">
 
@@ -50,10 +50,10 @@ export default function ListArticle({ data }: Props) {
                       </span>
                     </div>
                     <div className="p-4">
-                      <h3 className="text-lg font-semibold">
+                      <p className="text-base md:text-lg font-semibold">
                         {item.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 mt-2">
+                      </p>
+                      <p className="text-xs md:text-sm text-gray-600 mt-2">
                         {item.short_desc}
                       </p>
                       <div className="flex items-center gap-2 text-xs text-gray-400 mt-4">
@@ -71,7 +71,7 @@ export default function ListArticle({ data }: Props) {
 
           {/* Rekomendasi Kami */}
           <div>
-            <h2 className="text-3xl font-bold p-4">
+            <h2 className="text-2xl md:text-3xl font-bold p-4">
               Rekomendasi <span className="text-orange-500">Kami</span>
             </h2>
             <div className="space-y-4">

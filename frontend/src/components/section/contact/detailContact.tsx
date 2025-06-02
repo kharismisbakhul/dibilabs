@@ -7,10 +7,10 @@ export default function DetailContact() {
   return (
     <div className="relative bg-white py-12 px-4 sm:px-6 lg:px-8 pt-32">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-xl md:text-3xl font-bold text-orange-500 mb-2 mt-5">Have a questions? Call Us!</h2>
-        <h3 className="text-base md:text-lg text-orange-500 mb-10">
+        <p className="text-xl md:text-3xl font-bold text-orange-500 mb-2 mt-5">Have a questions? Call Us!</p>
+        <p className="text-base md:text-lg text-orange-500 mb-10">
           We are ready to answer all of your questions. You can call us from our contact below.
-        </h3>
+        </p>
         <div className="bg-orange-500 rounded-xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 h-[300px] md:h-[400px]">
             <iframe
@@ -66,7 +66,7 @@ export default function DetailContact() {
         </div>
       </div>
 
-      <div className="absolute right-0 top-[100px] md:top-[500px] z-0 md:w-[200px] md:h-[200px] w-[80px] h-[80px]">
+      <div className="absolute right-0 top-[80px] md:top-[500px] z-0 md:w-[200px] md:h-[200px] w-[80px] h-[80px]">
         <Image
           src="/assets/contact/right_bubble.svg"
           alt="Bubbles Decoration"
@@ -75,7 +75,7 @@ export default function DetailContact() {
         />
       </div>
 
-      <div className="absolute left-0 top-[100px] md:top-[150px] z-0 md:w-[200px] md:h-[200px] w-[80px] h-[80px] scale-x-[-1]">
+      <div className="absolute left-0 top-[80px] md:top-[150px] z-0 md:w-[200px] md:h-[200px] w-[80px] h-[80px] scale-x-[-1]">
         <Image
           src="/assets/contact/right_bubble.svg"
           alt="Bubbles Decoration"

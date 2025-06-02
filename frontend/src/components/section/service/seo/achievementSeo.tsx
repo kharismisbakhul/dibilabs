@@ -35,7 +35,7 @@ export default function AchievementSeo({ data }: Props) {
                 </div>
               </div>
               <br />
-              <div className="relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] mt-10 animate-bounce-smooth">
+              <div className="relative w-[130px] h-[130px] md:w-[200px] md:h-[200px] mt-10 animate-bounce-smooth">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                   alt={item.image.name}
