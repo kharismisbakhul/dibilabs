@@ -4,9 +4,9 @@ module.exports = {
       name: "frontend-staging",
       cwd: "./frontend",
       script: "npm",
-      args: "run dev",
+      args: "start",
       env: {
-        NODE_ENV: "development",
+        NODE_ENV: "production",
         PORT: 3000
       }
     },
@@ -14,9 +14,10 @@ module.exports = {
       name: "backend-staging",
       cwd: "./backend",
       script: "npm",
-      args: "run dev",
+      args: "start",
       env: {
-        NODE_ENV: "development",
+        NODE_ENV: "production",
+        HOST: "0.0.0.0",
         PORT: 1337
       }
     }
