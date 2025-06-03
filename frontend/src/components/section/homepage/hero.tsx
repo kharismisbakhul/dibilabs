@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export default function Hero() {
@@ -18,14 +17,14 @@ export default function Hero() {
                 <p className="text-xl md:text-3xl mb-6 font-medium">
                   Dibilabs.id Digital Marketing Agency
                 </p>
-                <p className="text-2xl md:text-5xl font-light leading-snug mb-6">
-                  The creative <span className="font-bold">formulators</span>,{" "}
-                  <br />
-                  driven to <span className="font-bold">
-                    experiment
-                  </span> and <br />
-                  deliver{" "}
-                  <span className="font-bold">beyond expectations!</span>
+                <p className="text-2xl md:text-5xl font-light">
+                  The creative <span className="font-bold">formulators</span>,
+                </p>
+                <p className="text-2xl md:text-5xl font-light">
+                  driven to <span className="font-bold">experiment</span> and 
+                </p>
+                <p className="text-2xl md:text-5xl font-light mb-6">
+                  deliver <span className="font-bold">beyond expectations!</span>
                 </p>
                 {/* Button & Text Row */}
                 <div className="w-full flex flex-col sm:flex-row sm:justify-between gap-4 text-center sm:text-left">
@@ -34,7 +33,7 @@ export default function Hero() {
                   </p>
                   <Link href="#footer" className="shrink-0 sm:self-auto self-center">
                     <button className="text-base bg-white text-black px-6 py-3 rounded-full flex items-center gap-2 font-semibold hover:bg-black hover:text-white whitespace-nowrap">
-                      Grow Together <ArrowRight className="w-5 h-5" />
+                      Grow Together →
                     </button>
                   </Link>
                 </div>
