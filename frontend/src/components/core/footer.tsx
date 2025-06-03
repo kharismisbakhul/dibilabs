@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa6"; // for X (Twitter)
+import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa6";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -96,7 +95,7 @@ export default function Footer() {
                     alt="Speech Bubble"
                     width={600}
                     height={400}
-                    className="w-full max-w-[120vw] -mx-[10vw] w-[400px] h-[300px] md:w-[600px] md:h-[320px] md:max-w-full md:mx-0 h-auto"
+                    className="w-full max-w-[120vw] -mx-[9vw] w-[410px] h-[300px] md:w-[600px] md:h-[320px] md:max-w-full md:mx-0 h-auto"
                     priority
                   />
                 </div>
