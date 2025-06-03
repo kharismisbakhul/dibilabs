@@ -1,7 +1,4 @@
 import Link from "next/link";
-// import { useRouter } from 'next/router';
-// import { Articles } from "@/types/json/articles";
-// import { FaFacebookF, FaShareAlt } from "react-icons/fa";
 import ShareSection from "./shareSection";
 import Image from "next/image";
 import { Articles } from "@/types/json/articles";
