@@ -315,7 +315,7 @@ export default function Footer() {
                     scroll={false}
                     aria-label="Visit our Tiktok page"
                   >
-                    <FaTiktok className="text-[#0077B5] text-2xl" />
+                    <FaTiktok className="text-[#000000] text-2xl" />
                   </Link>
 
                   {/* LinkedIn */}
@@ -327,7 +327,7 @@ export default function Footer() {
                     scroll={false}
                     aria-label="Visit our LinkedIn page"
                   >
-                    <FaLinkedinIn className="text-[#0077B5] text-2xl" />
+                    <FaLinkedinIn className="text-[#0A66C2] text-2xl" />
                   </Link>
 
                   {/* Instagram */}
@@ -339,7 +339,7 @@ export default function Footer() {
                     scroll={false}
                     aria-label="Visit our Instagram page"
                   >
-                    <FaInstagram className="text-[#E4405F] text-2xl" />
+                    <FaInstagram className="text-[#E1306C] text-2xl" />
                   </Link>
 
                   {/* Facebook */}
@@ -351,7 +351,7 @@ export default function Footer() {
                     scroll={false}
                     aria-label="Visit our Facebook page"
                   >
-                    <FaFacebookF className="text-[#E4405F] text-2xl" />
+                    <FaFacebookF className="text-[#4267B2] text-2xl" />
                   </Link>
 
                   {/* Email */}
@@ -361,7 +361,7 @@ export default function Footer() {
                     scroll={false}
                     aria-label="Email us about partnership opportunities"
                   >
-                    <FaEnvelope className="text-[#ff5733] text-2xl" />
+                    <FaEnvelope className="text-[#DB4437] text-2xl" />
                   </Link>
                 </div>
               </div>
