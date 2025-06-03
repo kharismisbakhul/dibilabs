@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FaMapMarkerAlt, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaQuestion, FaMapPin, FaWhatsapp, FaEnvelope } from 'react-icons/fa6';
 
 export default function DetailContact() {
   return (
@@ -24,7 +24,7 @@ export default function DetailContact() {
           <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-10 space-y-6 text-left">
             <div>
               <div className="flex items-center text-lg font-semibold text-white">
-                <FaMapMarkerAlt className="text-white mr-4" /> <span>Questions/Feedback</span>
+                <FaQuestion className="text-white mr-4" /> <span>Questions/Feedback</span>
               </div>
               <p className="text-sm text-white ml-9">Sunday - Monday (09.00 - 17.00 WIB)</p>
             </div>
@@ -53,7 +53,7 @@ export default function DetailContact() {
 
             <div>
               <div className="flex items-center text-lg font-semibold text-white">
-                <FaMapMarkerAlt className="text-white mr-4" /> Office Address
+                <FaMapPin className="text-white mr-4" /> Office Address
               </div>
               <p className="text-sm text-white ml-9">
                 Plaza Cityview, Jl. Kemang Timur No.1 Lt.2, <br />

@@ -1,6 +1,6 @@
 'use client';
 
-import { FaFacebookF, FaShareAlt } from 'react-icons/fa';
+import { FaFacebookF, FaShare } from 'react-icons/fa6';
 
 export default function ShareSection() {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
@@ -39,7 +39,7 @@ export default function ShareSection() {
           onClick={handleNativeShare}
           className="bg-orange-400 hover:bg-orange-500 text-white p-2 rounded-full"
         >
-          <FaShareAlt size={16} />
+          <FaShare size={16} />
         </button>
       </div>
     </div>

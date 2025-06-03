@@ -2,10 +2,7 @@
 
 import Image from "next/image";
 
-import { FaMeta, FaGoogle } from "react-icons/fa6";
-import { IoShareSocial, IoApps } from "react-icons/io5";
-import { FaSearch } from "react-icons/fa";
-import { CgWebsite } from "react-icons/cg";
+import { FaMeta, FaGoogle, FaShareNodes, FaMedapps, FaSearchengin, FaSitemap } from "react-icons/fa6";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -97,7 +94,7 @@ export default function Navbar() {
 
                     {/* Item 3 */}
                     <div className="flex gap-3">
-                      <IoShareSocial className="text-orange-500 text-6xl mt-1" />
+                      <FaShareNodes className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/sosmed"
@@ -117,7 +114,7 @@ export default function Navbar() {
 
                     {/* Item 4 */}
                     <div className="flex gap-3">
-                      <FaSearch className="text-orange-500 text-6xl mt-1" />
+                      <FaSearchengin className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/seo"
@@ -136,7 +133,7 @@ export default function Navbar() {
 
                     {/* Item 5 */}
                     <div className="flex gap-3">
-                      <IoApps className="text-orange-500 text-6xl mt-1" />
+                      <FaMedapps className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/software"
@@ -156,7 +153,7 @@ export default function Navbar() {
 
                     {/* Item 6 */}
                     <div className="flex gap-3">
-                      <CgWebsite className="text-orange-500 text-6xl mt-1" />
+                      <FaSitemap className="text-orange-500 text-6xl mt-1" />
                       <div>
                         <Link
                           href="/service/webdev"
