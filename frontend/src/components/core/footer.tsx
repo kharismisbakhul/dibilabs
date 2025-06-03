@@ -351,7 +351,7 @@ export default function Footer() {
                     scroll={false}
                     aria-label="Visit our Facebook page"
                   >
-                    <FaInstagram className="text-[#E4405F] text-2xl" />
+                    <FaFacebookF className="text-[#E4405F] text-2xl" />
                   </Link>
 
                   {/* Email */}
