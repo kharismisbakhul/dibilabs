@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedinIn, FaInstagram, FaEnvelope } from "react-icons/fa6";
+import { FaTiktok, FaLinkedinIn, FaInstagram, FaFacebookF, FaEnvelope } from "react-icons/fa6";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -306,6 +306,18 @@ export default function Footer() {
               <div className="mt-4">
                 <h3 className="font-semibold">Follow us</h3>
                 <div className="flex space-x-3 mt-2">
+                  {/* Tiktok */}
+                  <Link
+                    href="https://www.tiktok.com/@dibilabs.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Visit our Tiktok page"
+                  >
+                    <FaTiktok className="text-[#0077B5] text-2xl" />
+                  </Link>
+
                   {/* LinkedIn */}
                   <Link
                     href="https://www.linkedin.com/company/dibilabs-id"
@@ -325,12 +337,24 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                     scroll={false}
-                    aria-label="Visit our Instagram profile"
+                    aria-label="Visit our Instagram page"
                   >
                     <FaInstagram className="text-[#E4405F] text-2xl" />
                   </Link>
 
-                  {/* X (Twitter) */}
+                  {/* Facebook */}
+                  <Link
+                    href="https://www.facebook.com/dibilabs.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Visit our Facebook page"
+                  >
+                    <FaInstagram className="text-[#E4405F] text-2xl" />
+                  </Link>
+
+                  {/* Email */}
                   <Link
                     href="mailto:partnership@dibilabs.id?subject=Partnership%20Opportunity&body=Hi%20Dibilabs%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20partnership%20with%20your%20agency.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0ARegards%2C"
                     className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
