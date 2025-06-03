@@ -1,43 +1,36 @@
+import { Articles } from "@/types/json/articles";
 import Image from "next/image";
 import Link from "next/link";
+import { format } from 'date-fns';
 
-export default function Articles() {
-  const articles = [
-    {
-      image: "/assets/homepage/article1.png",
-      title:
-        "Fitur Instagram Shopping : Pengertian, Manfaat, dan Cara Mengaktifkannya",
-      date: "22 Januari 2024",
-    },
-    {
-      image: "/assets/homepage/article2.png",
-      title:
-        "Insight Instagram Shopping : Pengertian, Manfaat, dan Cara Melihatnya",
-      date: "22 Januari 2024",
-    },
-    {
-      image: "/assets/homepage/article3.png",
-      title: "Rekomendasi 10 Tools Analisis Instagram yang Wajib Dicoba",
-      date: "22 Januari 2024",
-    },
-    {
-      image: "/assets/homepage/article4.png",
-      title: "Apa itu Cost Per Acquisition dan Cara Menghitungnya",
-      date: "22 Januari 2024",
-    },
-  ];
+type Props = {
+  data: Articles[]; // or Record<string, any>[]
+};
+
+const formatDate = (dateString: string) => {
+  return format(new Date(dateString), 'dd MMMM yyyy');
+};
+
+export default function ArticlesH({ data }: Props) {
+  const sortedByDateDesc = data.sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  );
+  const latestFour = sortedByDateDesc.slice(0, 4);
+  const lengthArticle = latestFour.length;
+
   return (
     <>
       {/* Article */}
       <section className="relative bg-white">
         {/* Article cards */}
-        <div className="grid grid-cols-4 md:grid-cols-4">
-          {articles.map((item, idx) => (
-            <div key={idx} className="relative h-[250px] md:h-[350px] overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105">
-              <Link href="/article">
+        <div className={`grid grid-cols-${lengthArticle} md:grid-cols-${lengthArticle}`}>
+          {latestFour.map((item, idx) => (
+            <div key={idx} className="h-[250px] md:h-[350px] overflow-hidden shadow-md hover:shadow-xl transform hover:scale-105">
+              <Link href={`/article/${item.slug}`} scroll={false}>
+              <div className="relative w-full h-full">
                 <Image
-                  src={item.image}
-                  alt={item.title}
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.thumbnail.url}`}
+                  alt={item.thumbnail.name}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
@@ -47,8 +40,11 @@ export default function Articles() {
                   <h3 className="text-sm md:text-lg font-semibold leading-tight mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs md:text-base">{item.date}</p>
+                  <p className="text-xs md:text-base">
+                    <span>📅 {formatDate(item.publishedAt)}</span>
+                  </p>
                 </div>
+              </div>
               </Link>
             </div>
           ))}

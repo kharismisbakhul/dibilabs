@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa6"; // for X (Twitter)
+import { FaTiktok, FaLinkedinIn, FaInstagram, FaFacebookF, FaEnvelope } from "react-icons/fa6";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -86,18 +85,20 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Bubble + Mascot Section */}
-            <div className="relative w-full flex justify-center pt-30 pb-60 bg-orange-500 overflow-visible z-40">
+            <div className="relative w-full flex justify-center pt-30 pb-48 md:pb-60 bg-orange-500 overflow-visible z-40">
               {/* Bubble container */}
               <div className="relative w-full max-w-3xl z-10 overflow-visible">
                 {/* Bubble Image */}
-                <Image
-                  src="/assets/core/bubble.png"
-                  alt="Speech Bubble"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
+                <div className="md:max-w-[600px] mx-auto">
+                  <Image
+                    src="/assets/core/bubble.png"
+                    alt="Speech Bubble"
+                    width={600}
+                    height={400}
+                    className="w-full max-w-[120vw] -mx-[9vw] w-[410px] h-[300px] md:w-[600px] md:h-[320px] md:max-w-full md:mx-0 h-auto"
+                    priority
+                  />
+                </div>
 
                 {/* Text inside bubble */}
                 <div className="absolute inset-0 flex justify-center items-start pt-8 sm:pt-10 px-6 sm:px-12">
@@ -107,7 +108,7 @@ export default function Footer() {
                       Business to The{" "}
                       <span className="text-orange-500">Next Level</span>?
                     </p>
-                    <p className="mt-4 text-sm sm:text-base md:text-md">
+                    <p className="mt-4 text-xs sm:text-base md:text-md">
                       Book a free consultation with our Digital Marketing <br />
                       Strategist to help guide the most strategic <br />
                       next step of your business. We are excited <br />
@@ -118,7 +119,7 @@ export default function Footer() {
               </div>
 
               {/* Mascot centered below the bubble */}
-              <div className="absolute -bottom-11 right-[130px] w-[500px] z-30">
+              <div className="absolute top-24 right-10 w-[350px] md:-bottom-11 md:right-[130px] md:w-[500px] z-30">
                 <Image
                   src="/assets/core/mascot.png"
                   alt="Mascot"
@@ -134,8 +135,9 @@ export default function Footer() {
               onSubmit={handleSubmit}
               className="grid grid-cols-1 gap-2 w-full"
             >
-              <label className="text-white text-sm">Your name</label>
+              <label htmlFor="name" className="text-white text-sm">Your name</label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 value={form.name}
@@ -143,8 +145,9 @@ export default function Footer() {
                 placeholder="Your name"
                 className="px-4 py-2 rounded text-black"
               />
-              <label className="text-white text-sm">Brand Name</label>
+              <label htmlFor="brand" className="text-white text-sm">Brand Name</label>
               <input
+                id="brand"
                 type="text"
                 name="brand"
                 value={form.brand}
@@ -152,8 +155,9 @@ export default function Footer() {
                 placeholder="Brand Name"
                 className="px-4 py-2 rounded text-black"
               />
-              <label className="text-white text-sm">Email</label>
+              <label htmlFor="email" className="text-white text-sm">Email</label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 value={form.email}
@@ -161,8 +165,9 @@ export default function Footer() {
                 placeholder="Email"
                 className="px-4 py-2 rounded text-black"
               />
-              <label className="text-white text-sm">Whatsapp Number</label>
+              <label htmlFor="wa" className="text-white text-sm">Whatsapp Number</label>
               <input
+                id="wa"
                 type="text"
                 name="number"
                 value={form.number}
@@ -170,12 +175,13 @@ export default function Footer() {
                 placeholder="Whatsapp Number"
                 className="px-4 py-2 rounded text-black"
               />
-              <label className="text-white text-sm">Industry</label>
+              <label htmlFor="industry-select" className="text-white text-sm">Industry</label>
               <select
-                className={`px-4 py-2 rounded ${
+                id="industry-select"
+                className={`px-4 py-2 rounded w-full ${
                   form.industry === "" ? "text-gray-400" : "text-black"
                 }`}
-                name="industry"
+                name="industry" 
                 onChange={handleChange}
                 value={form.industry}
               >
@@ -190,9 +196,10 @@ export default function Footer() {
                 <option className="text-black">Government</option>
                 <option className="text-black">Others</option>
               </select>
-              <label className="text-white text-sm">Services</label>
+              <label htmlFor="services-select" className="text-white text-sm">Services</label>
               <select
-                className={`px-4 py-2 rounded ${
+                id="services-select"
+                className={`px-4 py-2 rounded w-full ${
                   form.services === "" ? "text-gray-400" : "text-black"
                 }`}
                 name="services"
@@ -221,8 +228,14 @@ export default function Footer() {
 
           <div className="text-center mt-10">
             <p className="text-xl font-bold">This is the end of the journey.</p>
-            <Link href="#">
-              <button className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white">
+            <Link href="#" scroll={false}>
+              <button 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="mt-2 px-4 py-1 bg-white text-black rounded-full font-semibold hover:bg-black hover:text-white transition-colors duration-300"
+              >
                 Back to Top
               </button>
             </Link>
@@ -232,7 +245,7 @@ export default function Footer() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
             {/* Column 1 - Branding */}
             <div>
-              <Link href="/homepage">
+              <Link href="/homepage" scroll={false}>
                 <div className="relative w-[150px] h-[60px]">
                   <Image
                     src="/assets/core/logo2.png"
@@ -259,24 +272,24 @@ export default function Footer() {
               <h3 className="font-semibold">Services</h3>
               <ul className="text-sm space-y-1 mt-2">
                 <li>
-                  <Link href="/service/meta">Meta Ads</Link>
+                  <Link href="/service/meta" scroll={false}>Meta Ads</Link>
                 </li>
                 <li>
-                  <Link href="/service/google">Google Ads</Link>
+                  <Link href="/service/google" scroll={false}>Google Ads</Link>
                 </li>
                 <li>
-                  <Link href="/service/sosmed">Social Media Management</Link>
+                  <Link href="/service/sosmed" scroll={false}>Social Media Management</Link>
                 </li>
                 <li>
-                  <Link href="/service/seo">Search Engine Optimization Service</Link>
+                  <Link href="/service/seo" scroll={false}>Search Engine Optimization Service</Link>
                 </li>
                 <li>
-                  <Link href="/service/software">
+                  <Link href="/service/software" scroll={false}>
                     Software and Web App Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/service/webdev">Website Development</Link>
+                  <Link href="/service/webdev" scroll={false}>Website Development</Link>
                 </li>
               </ul>
             </div>
@@ -293,14 +306,28 @@ export default function Footer() {
               <div className="mt-4">
                 <h3 className="font-semibold">Follow us</h3>
                 <div className="flex space-x-3 mt-2">
+                  {/* Tiktok */}
+                  <Link
+                    href="https://www.tiktok.com/@dibilabs.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Visit our Tiktok page"
+                  >
+                    <FaTiktok className="text-[#000000] text-2xl" />
+                  </Link>
+
                   {/* LinkedIn */}
                   <Link
                     href="https://www.linkedin.com/company/dibilabs-id"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white rounded-full p-2"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Visit our LinkedIn page"
                   >
-                    <FaLinkedinIn className="text-[#0077B5] text-2xl" />
+                    <FaLinkedinIn className="text-[#0A66C2] text-2xl" />
                   </Link>
 
                   {/* Instagram */}
@@ -308,17 +335,33 @@ export default function Footer() {
                     href="https://www.instagram.com/dibilabs.id"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white rounded-full p-2"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Visit our Instagram page"
                   >
-                    <FaInstagram className="text-[#E4405F] text-2xl" />
+                    <FaInstagram className="text-[#E1306C] text-2xl" />
                   </Link>
 
-                  {/* X (Twitter) */}
+                  {/* Facebook */}
+                  <Link
+                    href="https://www.facebook.com/dibilabs.id"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Visit our Facebook page"
+                  >
+                    <FaFacebookF className="text-[#4267B2] text-2xl" />
+                  </Link>
+
+                  {/* Email */}
                   <Link
                     href="mailto:partnership@dibilabs.id?subject=Partnership%20Opportunity&body=Hi%20Dibilabs%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20partnership%20with%20your%20agency.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0ARegards%2C"
-                    className="bg-white rounded-full p-2"
+                    className="bg-white rounded-full p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    scroll={false}
+                    aria-label="Email us about partnership opportunities"
                   >
-                    <FaEnvelope className="text-[#ff5733] text-2xl" />
+                    <FaEnvelope className="text-[#DB4437] text-2xl" />
                   </Link>
                 </div>
               </div>
@@ -330,6 +373,7 @@ export default function Footer() {
                 <h3 className="font-semibold mb-2">Join Our Newsletter</h3>
                 <div className="flex bg-white rounded-xl">
                   <input
+                    id="email-subscription"
                     type="email"
                     value={subcription}
                     onChange={handleChangeSubcription}

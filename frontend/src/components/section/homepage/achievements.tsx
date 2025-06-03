@@ -10,7 +10,7 @@ export default function Achievements({ data }: Props) {
     <>
       <section className="bg-white py-12 px-4 md:px-16 lg:px-24 relative overflow-hidden">
         {/* Top Right Bubble Decoration */}
-        <div className="absolute right-0 top-0 z-0 md:w-[180px] md:h-[180px] w-[100px] h-[100px]">
+        <div className="absolute right-0 top-0 z-0 md:w-[180px] md:h-[180px] w-[80px] h-[80px]">
           <Image
             src="/assets/homepage/right_bubble.svg"
             alt="Bubbles Decoration"
@@ -19,11 +19,11 @@ export default function Achievements({ data }: Props) {
           />
         </div>
 
-        <div className="text-center z-10 relative text-orange-600">
-          <h2 className="text-3xl md:text-6xl ">
+        <div className="text-center z-10 relative text-orange-600 mt-8">
+          <h2 className="text-2xl md:text-6xl ">
             Our Partners <span className="font-bold">Achievements</span>,
           </h2>
-          <p className="text-3xl md:text-6xl mt-2">
+          <p className="text-2xl md:text-6xl mt-2">
             a Testament to <span className="font-bold">Our Excellence</span>.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function Achievements({ data }: Props) {
                 </div>
               </div>
               <br />
-              <div className="relative w-[150px] h-[150px] md:w-[200px] md:h-[200px] mt-10 animate-bounce-smooth">
+              <div className="relative w-[130px] h-[130px] md:w-[200px] md:h-[200px] mt-10 animate-bounce-smooth">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                   alt={item.image.name}

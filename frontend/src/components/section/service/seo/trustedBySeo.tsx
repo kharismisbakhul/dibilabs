@@ -9,11 +9,11 @@ type Props = {
 
 export default function TrustedBySeo({ data }: Props) {
   return (
-    <section className="py-8 bg-white">
+    <section className="py-0 md:py-8 bg-white">
       <div className="overflow-hidden bg-white py-10">
-        <h2 className="text-center text-4xl md:text-6xl font-semibold">
+        <p className="text-center text-3xl md:text-6xl font-semibold">
           <span className="text-orange-500 font-bold">Trusted</span> By
-        </h2>
+        </p>
 
         <div className="relative mt-8 overflow-hidden">
           <div className="animate-marquee flex gap-10 whitespace-nowrap justify-center">
@@ -25,6 +25,7 @@ export default function TrustedBySeo({ data }: Props) {
                     src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                     alt={item.image.name}
                     fill
+                    sizes="(max-width: 768px) 12rem, 14rem" // Matches w-48 (12rem) and md:w-56 (14rem)
                     style={{ objectFit: "contain" }}
                   />
                 </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import { HomepagePartners } from "@/types/json/homepage_partners";
@@ -16,7 +18,7 @@ export default function Partners({ data }: Props) {
         <div className="bg-[#1A1617] rounded-t-full pt-[5vw] pb-[4vw] px-4 md:px-10 text-white text-center relative z-10">
           {/* Animated Eyes */}
           <motion.div
-            className="absolute top-[-100px] md:top-[-180px] left-[41%] md:left-[44%] lg:left-[44%] transform -translate-x-1/2 flex z-20 w-28 h-28 md:w-[200px] md:h-[200px]"
+            className="absolute top-[-100px] md:top-[-180px] left-[36%] md:left-[44%] lg:left-[44%] transform -translate-x-1/2 flex z-20 w-28 h-28 md:w-[200px] md:h-[200px]"
             animate={{ scale: [1, 1.05, 1], y: [0, -3, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
@@ -32,7 +34,7 @@ export default function Partners({ data }: Props) {
 
           {/* Hands with precision */}
           <motion.div
-            className="absolute -top-3 md:-top-10 left-[15%] md:left-[250px] z-10 w-24 h-24 md:w-[200px] md:h-[200px]"
+            className="absolute -top-5 md:-top-10 left-[15%] md:left-[250px] z-10 w-20 h-20 md:w-[200px] md:h-[200px]"
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
           >
@@ -47,7 +49,7 @@ export default function Partners({ data }: Props) {
           </motion.div>
 
           <motion.div
-            className="absolute -top-3 md:-top-10 right-[15%] md:right-[250px] z-10 w-24 h-24 md:w-[200px] md:h-[200px]"
+            className="absolute -top-5 md:-top-10 right-[15%] md:right-[250px] z-10 w-20 h-20 md:w-[200px] md:h-[200px]"
             animate={{ y: [0, 5, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
           >
@@ -61,7 +63,7 @@ export default function Partners({ data }: Props) {
             </div>
           </motion.div>
 
-          <h2 className="text-4xl md:text-6xl lg:text-8xl font-bold text-orange-500">
+          <h2 className="mt-7 md:mt-0 text-3xl md:text-6xl lg:text-8xl font-bold text-orange-500">
             Partners
           </h2>
           <div className="relative inline-block">
@@ -70,7 +72,7 @@ export default function Partners({ data }: Props) {
             </p>
 
             {/* Left Star */}
-            <div className="absolute -left-10 -bottom-0 w-5 h-5 md:-left-20 md:-bottom-15 md:w-16 md:h-16">
+            <div className="absolute -left-8 -bottom-0 w-5 h-5 md:-left-20 md:-bottom-15 md:w-16 md:h-16">
               <div className="relative w-full h-full">
                 <Image
                   src="/assets/homepage/star.svg"
@@ -82,7 +84,7 @@ export default function Partners({ data }: Props) {
             </div>
 
             {/* Right Star */}
-            <div className="absolute -right-4 -top-10 w-5 h-5 md:-right-12 md:-top-14 md:w-16 md:h-16">
+            <div className="absolute -right-0 -top-10 w-5 h-5 md:-right-12 md:-top-14 md:w-16 md:h-16">
               <div className="relative w-full h-full">
                 <Image
                   src="/assets/homepage/star.svg"
@@ -106,9 +108,9 @@ export default function Partners({ data }: Props) {
                 {[...data, ...data].map((item, idx) => (
                   <div
                     key={idx}
-                    className="min-w-[120px] h-[80px] flex items-center justify-center p-4 bg-white rounded-xl shadow-md"
+                    className="h-[60px] md:h-[80px] flex items-center justify-center p-4 bg-white rounded-xl shadow-md"
                   >
-                    <div className="relative w-[120px] h-[80px]">
+                    <div className="relative w-[100px] h-[60px] md:w-[120px] md:h-[80px]">
                       <Image
                         src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                         alt={item.image.name}
@@ -128,9 +130,9 @@ export default function Partners({ data }: Props) {
                 {[...data, ...data].map((item, idx) => (
                   <div
                     key={idx}
-                    className="min-w-[120px] h-[80px] flex items-center justify-center p-4 bg-white rounded-xl shadow-md"
+                    className="h-[60px] md:h-[80px] flex items-center justify-center p-4 bg-white rounded-xl shadow-md"
                   >
-                    <div className="relative w-[120px] h-[80px]">
+                    <div className="relative w-[100px] h-[60px] md:w-[120px] md:h-[80px]">
                       <Image
                         src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${item.image.url}`}
                         alt={item.image.name}
@@ -144,14 +146,14 @@ export default function Partners({ data }: Props) {
               </div>
             </div>
 
-            <p className="text-xl text-white mt-6">
+            <p className="text-base md:text-xl text-white mt-6">
               and many more... <span className="text-xl">👀</span>
             </p>
           </div>
         </div>
 
         {/* Decorative bubbles */}
-        <div className="absolute top-4 left-4 w-32 h-32 md:w-48 md:h-48 z-0">
+        <div className="absolute top-4 left-4 w-24 h-24 md:w-48 md:h-48 z-0">
           <Image
             src="/assets/homepage/left_bubble.svg"
             alt="Bubbles Decoration"

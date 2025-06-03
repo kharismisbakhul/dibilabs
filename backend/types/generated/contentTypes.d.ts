@@ -446,12 +446,15 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     >;
     category: Schema.Attribute.Enumeration<
       ['Bite Size Strategies', 'Case Studies']
-    >;
-    content: Schema.Attribute.RichText;
+    > &
+      Schema.Attribute.Required;
+    content: Schema.Attribute.RichText & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    is_published: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    is_published: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -459,16 +462,19 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     published: Schema.Attribute.DateTime &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'2025-05-21T00:00:00.000Z'>;
     publishedAt: Schema.Attribute.DateTime;
-    short_desc: Schema.Attribute.Text;
+    short_desc: Schema.Attribute.Text & Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    thumbnail: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Schema.Attribute.String;
+    thumbnail: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    view: Schema.Attribute.BigInteger & Schema.Attribute.DefaultTo<'0'>;
+    view: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'0'>;
   };
 }
 

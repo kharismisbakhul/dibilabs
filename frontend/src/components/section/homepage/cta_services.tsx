@@ -22,7 +22,7 @@ export default function Cta_services() {
         <div className="flex flex-col justify-center px-6 md:px-12 py-10 gap-6 text-left">
           {/* Icon + Headline */}
           <div>
-            <div className="relative w-[150px] h-[150px] mb-2">
+            <div className="relative w-[100px] h-[100px] md:w-[150px] md:h-[150px] mb-2">
               <Image
                 src="/assets/homepage/raise-bar.svg"
                 alt="Raise Icon"
@@ -31,7 +31,7 @@ export default function Cta_services() {
                 priority
               />
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-orange-500 leading-snug">
+            <h2 className="text-3xl md:text-6xl font-bold text-orange-500 leading-snug">
               Ready to raise the bar?
               <br />
               <span className="text-orange-600">Because we are!</span>
@@ -39,7 +39,7 @@ export default function Cta_services() {
           </div>
 
           {/* Paragraph */}
-          <p className="text-xl md:text-2xl leading-relaxed text-black max-w-md">
+          <p className="text-lg md:text-2xl leading-relaxed text-black max-w-md">
             Business <strong>isn’t just about one layer</strong>—<br />
             it’s built on many, each essential for <br />
             achieving big goals.
@@ -52,8 +52,8 @@ export default function Cta_services() {
 
           {/* Button - aligned right */}
           <div className="w-full flex justify-end">
-            <Link href="/service">
-              <button className="bg-black text-white text-xl font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition">
+            <Link href="/service" scroll={false}>
+              <button className="bg-black text-white text-lg md:text-xl font-semibold px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black hover:text-white transition">
                 Our Services →
               </button>
             </Link>

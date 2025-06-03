@@ -1,3 +1,5 @@
+'use client'
+
 import ArticleCard from "./articleCard";
 import Pagination from "./pagination";
 import { Articles } from "@/types/json/articles";
@@ -20,16 +22,16 @@ export default function CaseStudiesPage({ data }: Props) {
   const currentArticles = sortedByDateDesc.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   return (
-    <div className="mx-8 md:mx-24 py-10">
-      <h2 className="text-2xl font-bold text-orange-500 mb-2">Case Studies</h2>
+    <div className="mx-8 md:mx-24 py-4 md:py-10">
+      <p className="text-2xl md:text-2xl font-bold text-orange-500 mb-2">Case Studies</p>
       <hr className="border-orange-500 mb-6" />
       <div className="grid md:grid-cols-3 gap-6">
         {currentArticles.map((item, index) => (
           <ArticleCard key={index} {...item} />
         ))}
       </div>
-      <div className="flex items-center justify-between mt-10">
-        <p className="text-sm text-gray-700">
+      <div className="flex items-center justify-between mt-5 md:mt-10">
+        <p className="text-xs md:text-sm text-gray-700">
           Total: <span className="font-bold">{sortedByDateDesc.length} Data</span>
         </p>
         <div className="flex items-center h-full">

@@ -12,7 +12,8 @@
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
@@ -20,17 +21,15 @@
       "required": true
     },
     "short_desc": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "thumbnail": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "category": {
@@ -38,7 +37,8 @@
       "enum": [
         "Bite Size Strategies",
         "Case Studies"
-      ]
+      ],
+      "required": true
     },
     "author": {
       "type": "relation",
@@ -47,18 +47,22 @@
     },
     "published": {
       "type": "datetime",
-      "default": "2025-05-21T00:00:00.000Z"
+      "default": "2025-05-21T00:00:00.000Z",
+      "required": true
     },
     "is_published": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "required": true
     },
     "view": {
       "type": "biginteger",
-      "default": "0"
+      "default": "0",
+      "required": true
     },
     "content": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

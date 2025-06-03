@@ -8,23 +8,23 @@ export default function Vission_mission() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center item-center gap-16 mb-32 px-4 text-center">
           {/* Vision */}
           <div className="text-center flex-1 flex flex-col items-center">
-            <div className="relative inline-block animate-float">
+            <div className="relative inline-block animate-float aspect-[1/1] w-[200px] md:w-[300px]">
               <Image
-                src="/assets/about/vision.svg" // replace with your image path
+                src="/assets/about/vision.svg"
                 alt="Vision"
-                width={300}
-                height={300}
-                className="w-[200px] md:w-[300px] h-auto mx-auto"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 200px, 300px"
               />
             </div>
             <div className="mt-6">
-              <h3 className="text-orange-500 font-bold text-4xl md:text-5xl bg-white inline-block px-7 py-4 rounded-full">
+              <p className="text-orange-500 font-bold text-3xl md:text-5xl bg-white inline-block px-7 py-3 md:px-7 md:py-4 rounded-full">
                 Vision
-              </h3>
-              <p className="mt-4 mx-auto leading-relaxed text-2xl md:text-3xl">
-                Become South East Asia’s #1 Agency <br />
-                assisting corporates and SMEs in <br /> 
-                their 360 digital marketing activity <br />
+              </p>
+              <p className="mt-4 mx-auto leading-relaxed text-xl md:text-3xl px-4 md:px-0">
+                Become South East Asia’s #1 Agency <br className="hidden md:block" />
+                assisting corporates and SMEs in <br className="hidden md:block" /> 
+                their 360 digital marketing activity <br className="hidden md:block" />
                 and strategy.
               </p>
             </div>
@@ -32,23 +32,23 @@ export default function Vission_mission() {
 
           {/* Mission */}
           <div className="text-center flex-1 flex flex-col items-center">
-            <div className="relative inline-block animate-float">
+            <div className="relative inline-block animate-float aspect-[1/1] w-[200px] md:w-[300px]">
               <Image
                 src="/assets/about/mission.svg"
                 alt="Mission"
-                width={300}
-                height={300}
-                className="w-[200px] md:w-[300px] h-auto mx-auto"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 200px, 300px"
               />
             </div>
             <div className="mt-6">
-              <h3 className="text-orange-500 font-bold text-4xl md:text-5xl bg-white inline-block px-7 py-4 rounded-full">
+              <p className="text-orange-500 font-bold text-3xl md:text-5xl bg-white inline-block px-7 py-3 md:px-7 md:py-4 rounded-full">
                 Mission
-              </h3>
-              <p className="mt-4 mx-auto leading-relaxed text-2xl md:text-3xl">
-                Assist 1000 Indonesian SMEs in <br />
-                achieving their business goals <br />
-                through digital marketing and <br />
+              </p>
+              <p className="mt-4 mx-auto leading-relaxed text-xl md:text-3xl px-4 md:px-0">
+                Assist 1000 Indonesian SMEs in <br className="hidden md:block" />
+                achieving their business goals <br className="hidden md:block" />
+                through digital marketing and <br className="hidden md:block" />
                 digital transitions.
               </p>
             </div>
