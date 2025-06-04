@@ -176,44 +176,58 @@ export default function Footer() {
                 className="px-4 py-2 rounded text-black"
               />
               <label htmlFor="industry-select" className="text-white text-sm">Industry</label>
-              <select
-                id="industry-select"
-                className={`px-4 py-2 rounded w-full ${
-                  form.industry === "" ? "text-gray-400" : "text-black"
-                }`}
-                name="industry" 
-                onChange={handleChange}
-                value={form.industry}
-              >
-                <option disabled value="" hidden>--- Choose Industry ---</option>
-                <option className="text-black">Tech</option>
-                <option className="text-black">Health</option>
-                <option className="text-black">Education</option>
-                <option className="text-black">Fashion</option>
-                <option className="text-black">Beauty</option>
-                <option className="text-black">Food and Beverage</option>
-                <option className="text-black">Services</option>
-                <option className="text-black">Government</option>
-                <option className="text-black">Others</option>
-              </select>
+              <div className="relative">
+                <select
+                  id="industry-select"
+                  className={`appearance-none px-4 pr-10 py-2 rounded w-full bg-white ${
+                    form.industry === "" ? "text-gray-400" : "text-black"
+                  }`}
+                  name="industry"
+                  onChange={handleChange}
+                  value={form.industry}
+                >
+                  <option disabled value="" hidden>--- Choose Industry ---</option>
+                  <option className="text-black">Tech</option>
+                  <option className="text-black">Health</option>
+                  <option className="text-black">Education</option>
+                  <option className="text-black">Fashion</option>
+                  <option className="text-black">Beauty</option>
+                  <option className="text-black">Food and Beverage</option>
+                  <option className="text-black">Services</option>
+                  <option className="text-black">Government</option>
+                  <option className="text-black">Others</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-500">
+                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" />
+                  </svg>
+                </div>
+              </div>
               <label htmlFor="services-select" className="text-white text-sm">Services</label>
-              <select
-                id="services-select"
-                className={`px-4 py-2 rounded w-full ${
-                  form.services === "" ? "text-gray-400" : "text-black"
-                }`}
-                name="services"
-                onChange={handleChange}
-                value={form.services}
-              >
-                <option disabled value="" hidden>--- Choose Services ---</option>
-                <option className="text-black">Meta Ads</option>
-                <option className="text-black">Google Ads</option>
-                <option className="text-black">Social Media Management</option>
-                <option className="text-black">Search Engine Optimization Service</option>
-                <option className="text-black">Software and Web App Development</option>
-                <option className="text-black">Website Development</option>
-              </select>
+              <div className="relative">
+                <select
+                  id="services-select"
+                  className={`appearance-none px-4 pr-10 py-2 rounded w-full bg-white ${
+                    form.services === "" ? "text-gray-400" : "text-black"
+                  }`}
+                  name="services"
+                  onChange={handleChange}
+                  value={form.services}
+                >
+                  <option disabled value="" hidden>--- Choose Services ---</option>
+                  <option className="text-black">Meta Ads</option>
+                  <option className="text-black">Google Ads</option>
+                  <option className="text-black">Social Media Management</option>
+                  <option className="text-black">Search Engine Optimization Service</option>
+                  <option className="text-black">Software and Web App Development</option>
+                  <option className="text-black">Website Development</option>
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-500">
+                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" />
+                  </svg>
+                </div>
+              </div>
               {/* Right-aligned button */}
               <div className="flex justify-end">
                 <button
