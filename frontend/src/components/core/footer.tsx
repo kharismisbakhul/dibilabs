@@ -87,44 +87,48 @@ export default function Footer() {
             {/* Bubble + Mascot Section */}
             <div className="relative w-full flex justify-center pt-30 pb-48 md:pb-60 bg-orange-500 overflow-visible z-40">
               {/* Bubble container */}
-              <div className="relative w-full max-w-3xl z-10 overflow-visible">
-                {/* Bubble Image */}
-                <div className="md:max-w-[600px] mx-auto">
-                  <Image
-                    src="/assets/core/bubble.png"
-                    alt="Speech Bubble"
-                    width={600}
-                    height={400}
-                    className="w-full max-w-[120vw] -mx-[9vw] w-[410px] h-[300px] md:w-[600px] md:h-[320px] md:max-w-full md:mx-0 h-auto"
-                    priority
-                  />
-                </div>
-
-                {/* Text inside bubble */}
-                <div className="absolute inset-0 flex justify-center items-start pt-8 sm:pt-10 px-6 sm:px-12">
-                  <div className="text-center text-black text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
-                    <p className="font-bold text-sm sm:text-2xl md:text-2xl leading-snug">
-                      Ready to Elevate Your <br />
-                      Business to The{" "}
-                      <span className="text-orange-500">Next Level</span>?
-                    </p>
-                    <p className="mt-4 text-xs sm:text-base md:text-md">
-                      Book a free consultation with our Digital Marketing <br />
-                      Strategist to help guide the most strategic <br />
-                      next step of your business. We are excited <br />
-                      to grow with you!
-                    </p>
+              <div className="relative w-full z-10 flex justify-center px-4 sm:px-8">
+                {/* Bubble wrapper with max width */}
+                <div className="relative w-full max-w-4xl">
+                  {/* Bubble Image */}
+                  <div className="w-full max-w-[95%] sm:max-w-[600px] md:max-w-[800px] mx-auto min-w-[380px] translate-x-[-16%] xs:translate-x-[-10%] md:translate-x-[0%]">
+                    <Image
+                      src="/assets/core/bubble.png"
+                      alt="Speech Bubble"
+                      width={800}
+                      height={400}
+                      className="w-full h-auto object-contain"
+                      priority
+                    />
                   </div>
+
+                  {/* Text inside bubble */}
+                  <div className="absolute inset-0 flex justify-center items-start pt-6 sm:pt-10 px-4 sm:px-8">
+                    <div className="text-center text-black text-base sm:text-lg md:text-xl leading-relaxed max-w- xl">
+                      <p className="font-bold text-sm sm:text-2xl md:text-2xl leading-snug">
+                        Ready to Elevate Your <br />
+                        Business to The{" "}
+                        <span className="text-orange-500">Next Level</span>?
+                      </p>
+                      <p className="mt-3 text-xs sm:text-base md:text-md">
+                        Book a free consultation with our Digital Marketing <br className="hidden md:block" />
+                        Strategist to help guide the most strategic <br className="hidden md:block" />
+                        next step of your business. We are excited <br className="hidden md:block" />
+                        to grow with you!
+                      </p>
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
 
               {/* Mascot centered below the bubble */}
-              <div className="absolute top-24 right-10 w-[350px] md:-bottom-11 md:right-[130px] md:w-[500px] z-30">
+              <div className="absolute -bottom-[20%] right-[-10%] w-[400px] md:-bottom-11 md:right-[130px] md:w-[500px] z-30">
                 <Image
                   src="/assets/core/mascot.png"
                   alt="Mascot"
-                  width={400}
-                  height={400}
+                  width={500}
+                  height={500}
                   className="w-full h-full object-contain"
                 />
               </div>

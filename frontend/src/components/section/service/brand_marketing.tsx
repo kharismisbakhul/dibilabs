@@ -31,7 +31,7 @@ export default function Brand_marketing() {
           </div>
         </div>
 
-        <div className="absolute z-30 top-[330px] left-[25px] md:top-[1050px] md:left-[100px] text-white">
+        <div className="absolute z-30 top-[310px] xs:top-[330px] left-[25px] md:top-[1050px] md:left-[100px] text-white">
           <h2 className="text-xl md:text-8xl font-bold">Digital</h2>
           <p className="text-xl md:text-8xl mb-4">Advertising</p>
           <button className="bg-orange-500 text-white py-2 px-4 md:py-3 md:px-8 rounded-full text-sm md:text-3xl font-bold">
@@ -39,7 +39,7 @@ export default function Brand_marketing() {
           </button>
         </div>
 
-        <div className="absolute z-30 top-[280px] right-[65px] md:top-[820px] md:right-[230px] text-white text-center">
+        <div className="absolute z-30 top-[260px] xs:top-[280px] right-[55px] xs:right-[65px] md:top-[820px] md:right-[230px] text-white text-center">
           <h2 className="text-xl md:text-8xl font-semibold">Social Media</h2>
           <p className="text-xl md:text-8xl mb-4">Handling</p>
           <button className="bg-white text-black py-2 px-3 md:py-3 md:px-8 rounded-full text-xs md:text-3xl font-bold">
@@ -47,7 +47,7 @@ export default function Brand_marketing() {
           </button>
         </div>
 
-        <div className="absolute z-30 top-[465px] right-[15px] md:top-[1580px] md:right-[100px] text-white text-right">
+        <div className="absolute z-30 top-[440px] xs:top-[465px] right-[15px] md:top-[1580px] md:right-[100px] text-white text-right">
           <h2 className="text-base md:text-6xl font-semibold">Shoppertainment</h2>
           <p className="text-xl md:text-9xl mb-4">Hacks</p>
           <button className="bg-[#065097] text-white py-2 px-3 md:py-3 md:px-8 rounded-full text-sm md:text-3xl font-bold">
@@ -55,7 +55,7 @@ export default function Brand_marketing() {
           </button>
         </div>
 
-        <div className="absolute z-30 top-[570px] left-[80px] md:top-[2000px] md:left-[250px] text-white text-center">
+        <div className="absolute z-30 top-[550px] xs:top-[570px] left-[80px] md:top-[2000px] md:left-[250px] text-white text-center">
           <h2 className="text-2xl md:text-9xl font-bold">Influencer</h2>
           <p className="text-2xl md:text-9xl mb-4">Marketing</p>
           <button className="bg-white text-black px-3 py-2 md:py-3 md:px-8 rounded-full text-sm md:text-3xl font-bold">

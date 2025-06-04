@@ -20,6 +20,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '400px', // custom breakpoint at 400px
+      },
       keyframes: {
         'scroll-ltr': {
           '0%': { transform: 'translateX(0)' },

@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 
-import { FaMeta, FaGoogle, FaShareNodes, FaMedapps, FaSearchengin, FaSitemap } from "react-icons/fa6";
+import { FaMeta, FaGoogle, FaShareNodes, FaMedapps, FaSearchengin, FaSitemap, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <div className="fixed top-0 left-0 w-full bg-orange-500 text-white shadow-md z-50">
@@ -204,52 +205,6 @@ export default function Navbar() {
               </button>
             </Link>
 
-            {menuOpen && (
-              <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4 right-2">
-                <Link href="/about" scroll={false} className="block text-white font-medium text-base">
-                  About Us
-                </Link>
-                <Link href="/service" scroll={false} className="block text-white font-medium text-base">
-                  Services
-                </Link>
-                <ul className="text-base text-white font-medium ml-5">
-                  <Link href="/service/meta" scroll={false} className="block mb-2">
-                    Meta Ads
-                  </Link>
-                  <Link href="/service/google" scroll={false} className="block mb-2">
-                    Google Ads
-                  </Link>
-                  <Link href="/service/sosmed" scroll={false} className="block mb-2">
-                    Social Media Management
-                  </Link>
-                  <Link href="/service/seo" scroll={false} className="block mb-2">
-                    Search Engine Optimization Service
-                  </Link>
-                  <Link href="/service/software" scroll={false} className="block mb-2">
-                    Software and Web App Development
-                  </Link>
-                  <Link href="/service/webdev" scroll={false} className="block mb-2">
-                    Website Development
-                  </Link>
-                </ul>
-                <Link href="/article" scroll={false} className="block text-white font-medium text-base">
-                  Article
-                </Link>
-                <Link href="/contact" scroll={false} className="block text-white font-medium text-base">
-                  Contact Us
-                </Link>
-                <Link
-                  href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold text-xs"
-                  scroll={false}
-                >
-                  Free Consultant
-                </Link>
-              </div>
-            )}
-
             <div className="md:hidden flex items-center shrink-0">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -274,8 +229,71 @@ export default function Navbar() {
               </button>
             </div>
 
-            
           </nav>
+
+          {menuOpen && (
+              <div className="md:hidden bg-orange-500 px-8 py-4 space-y-4 right-2 text-left">
+                <Link href="/about" scroll={false} className="block text-white font-medium text-base border-b p-3">
+                  About Us
+                </Link>
+                <div className="relative">
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="relative flex text-white font-medium text-base border-b p-3 w-full"
+                  >
+                    <span className="">Services</span>
+                    <span className="absolute right-4">
+                      {isOpen ? (
+                        <FaChevronUp className="transition-transform duration-200" />
+                      ) : (
+                        <FaChevronDown className="transition-transform duration-200" />
+                      )}
+                    </span>
+                  </button>
+                  {isOpen && 
+                    <ul className="text-base text-white font-medium ml-5 mt-2">
+                      <Link href="/service" scroll={false} className="block mb-2 border-b p-3">
+                        Details
+                      </Link>
+                      <Link href="/service/meta" scroll={false} className="block mb-2 border-b p-3">
+                        Meta Ads
+                      </Link>
+                      <Link href="/service/google" scroll={false} className="block mb-2 border-b p-3">
+                        Google Ads
+                      </Link>
+                      <Link href="/service/sosmed" scroll={false} className="block mb-2 border-b p-3">
+                        Social Media Management
+                      </Link>
+                      <Link href="/service/seo" scroll={false} className="block mb-2 border-b p-3">
+                        Search Engine Optimization Service
+                      </Link>
+                      <Link href="/service/software" scroll={false} className="block mb-2 border-b p-3">
+                        Software and Web App Development
+                      </Link>
+                      <Link href="/service/webdev" scroll={false} className="block mb-2 border-b p-3">
+                        Website Development
+                      </Link>
+                    </ul>
+                  } 
+                </div>
+                <Link href="/article" scroll={false} className="block text-white font-medium text-base border-b p-3">
+                  Article
+                </Link>
+                <Link href="/contact" scroll={false} className="block text-white font-medium text-base border-b p-3">
+                  Contact Us
+                </Link>
+                <Link
+                  href="https://wa.me/6281234567890?text=Halo%20tim%20Dibilabs%20,%20Saya%20tertarik%20untuk%20konsultasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-black bg-white px-4 py-2 rounded-full text-center font-semibold text-base"
+                  scroll={false}
+                >
+                  Free Consultant
+                </Link>
+              </div>
+            )}
+
         </div>
       </div>
     </>
