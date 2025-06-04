@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* Navbar */}
         <div className="">
           <nav className="flex items-center justify-between pr-10 py-4 w-full md:w-auto font-extrabold">
-            <Link href="/homepage" scroll={false}>
+            <Link href="/" scroll={false}>
               <div className="flex items-center space-x-2">
                 <div className="relative w-[150px] h-[40px] md:w-[200px] md:h-[60px]">
                   <Image
