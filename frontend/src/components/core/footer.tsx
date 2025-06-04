@@ -259,7 +259,7 @@ export default function Footer() {
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pt-10">
             {/* Column 1 - Branding */}
             <div>
-              <Link href="/homepage" scroll={false}>
+              <Link href="/" scroll={false}>
                 <div className="relative w-[150px] h-[60px]">
                   <Image
                     src="/assets/core/logo2.png"
