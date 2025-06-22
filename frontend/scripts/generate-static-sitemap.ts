@@ -1,6 +1,6 @@
-import fs from 'fs';
+import * as fs from 'node:fs';
 import { SitemapStream, streamToPromise } from 'sitemap';
-import { Readable } from 'stream';
+import { Readable } from 'node:stream';
 
 const baseUrl = 'https://dibilabs.id';
 

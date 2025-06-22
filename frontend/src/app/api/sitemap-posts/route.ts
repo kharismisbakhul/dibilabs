@@ -1,5 +1,5 @@
 import { SitemapStream, streamToPromise } from 'sitemap';
-import { Readable } from 'stream';
+import { Readable } from 'node:stream';
 import axios from 'axios';
 import { NextResponse } from 'next/server';
 import { Articles } from '@/types/json/articles';
@@ -9,7 +9,7 @@ const baseUrl = 'https://dibilabs.id';
 export async function GET() {
   try {
     const res = await axios.get('https://strapi.dibilabs.id/api/articles?populate=*');
-    const posts = res.data;
+    const posts = res.data.data;
 
     const links = posts.map((post: Articles) => ({
       url: `/article/${post.slug}`,

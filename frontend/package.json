@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "ts-node scripts/generate-static-sitemap.ts"
+    "postbuild": "tsc scripts/generate-static-sitemap.ts --outDir dist-sitemap && node dist-sitemap/generate-static-sitemap.js"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.69.0",
